@@ -5,14 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chọn môn ôn tập</title>
 <link rel="stylesheet" href="style.css">
-<script>
-try {
-    document.documentElement.dataset.theme =
-        localStorage.getItem('xstk-theme') || 'light';
-} catch {}
-</script></head>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('xstk-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}</script>
+</head>
 <body><main><section class="setup panel">
 <h1>Chọn môn ôn tập</h1>
+<a class="secondary course-link" href="./MI1131/">MI1131<span>153 câu</span></a>
 <a class="secondary course-link" href="./MI2021/">MI2021<span>60 câu</span></a>
 <a class="secondary course-link" href="./MI2110/">MI2110<span>116 câu</span></a>
 </section></main></body></html>
