@@ -1,5 +1,5 @@
 'use strict';
-const $=id=>document.getElementById(id), KEY='xstk-study-v1';
+const $=id=>document.getElementById(id), KEY=window.COURSE_CODE==='MI2021'?'xstk-study-v1':`xstk-study-v1:${window.COURSE_CODE}`;
 let saved={};try{saved=JSON.parse(localStorage.getItem(KEY))||{}}catch{}
 let scope=String(saved.scope||'all'), sessions=saved.sessions||{};
 if(!['all','1','2','3','4'].includes(scope))scope='all';
