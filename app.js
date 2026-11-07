@@ -8,9 +8,12 @@ let shuffled = !!saved.shuffled;
 const sessionKey = () => scope + (shuffled ? ':random' : '');
 function shuffle(items) { const result = [...items]; for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[result[i], result[j]] = [result[j], result[i]] } return result }
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-// Normalize line-break spellings in imported questions and choices.
+// Allow basic formatting without accepting HTML attributes or executable markup.
 function renderText(text) {
-    return esc(text).replace(/&lt;\s*\/?\s*br\s*[/\\]?\s*&gt;/gi, '<br>');
+    return esc(text)
+        .replace(/&lt;\s*\/?\s*br\s*[/\\]?\s*&gt;/gi, '<br>')
+        .replace(/&lt;(\/?)\s*(b|strong|i|em|u|sub|sup)\s*&gt;/gi,
+            (_, closing, tag) => '<' + closing + tag.toLowerCase() + '>');
 }
 for (const c of CHAPTERS) { const o = document.createElement('option'); o.value = c.number; o.textContent = `Chương ${c.number} · ${c.title} (${c.questions.length} câu)`; $('chapter').append(o) }
 function save() { try { localStorage.setItem(KEY, JSON.stringify({ scope, shuffled, sessions })) } catch { $('save-note').textContent = 'Không thể lưu tiến độ trên trình duyệt này' } }
