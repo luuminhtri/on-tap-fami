@@ -1,6 +1,6 @@
 'use strict';
 const $ = id => document.getElementById(id), KEY = window.COURSE_CODE === 'MI2021' ? 'xstk-study-v1' : `xstk-study-v1:${window.COURSE_CODE}`;
-const progressKey = window.STUDY_MODE === 'midterm' ? KEY + ':midterm' : KEY;
+const progressKey = ['midterm', 'google'].includes(window.STUDY_MODE) ? KEY + ':' + window.STUDY_MODE : KEY;
 let saved = {}; try { saved = JSON.parse(localStorage.getItem(progressKey)) || {} } catch { }
 let scope = String(saved.scope || 'all'), sessions = saved.sessions || {};
 if (scope !== 'all' && !CHAPTERS.some(chapter => String(chapter.number) === scope)) scope = 'all';
@@ -36,6 +36,11 @@ function isCorrect(q, selected) {
 }
 function renderSource(source) {
     if (!source) return '';
+    if (source.url) {
+        const url = new URL(source.url);
+        if (url.protocol !== 'https:' || url.hostname !== 'developer.android.com') return '';
+        return `<p class="source-ref"><a href="${esc(url.href)}" target="_blank" rel="noopener">${esc(source.title || 'Google quiz')}</a></p>`;
+    }
     const links = source.pages.map(page => {
         const file = String(Number(page)).padStart(2, '0');
         return `<a href="scans/${encodeURIComponent(source.term)}-${file}.jpg" target="_blank" rel="noopener">${Number(page)}</a>`;
@@ -86,7 +91,8 @@ function render() {
         ${q.note ? `<p class="source-ref">${esc(q.note)}</p>` : ''}
     </div>
     ${options ? `<div class="options" role="group" aria-labelledby="question-text">${options}</div>` : ''}
-    <div class="result ${resultStyle}" role="status">${result}</div>`;
+    <div class="result ${resultStyle}" role="status">${result}</div>
+    ${a.confirmed && q.explanation ? `<p class="result">${esc(q.explanation)}</p>` : ''}`;
     if (!q.plain && window.renderMathInElement) renderMathInElement($('question'), {
         delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }, { left: '\\\\(', right: '\\\\)', display: false }, { left: '\\\\[', right: '\\\\]', display: true }],
         throwOnError: false, trust: false

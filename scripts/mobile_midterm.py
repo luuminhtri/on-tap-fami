@@ -3,6 +3,8 @@
 from copy import deepcopy
 import json
 
+from google_quiz import write_google_quiz
+
 
 # The first ID is the displayed question. Other IDs retain the sources of
 # equivalent copies, including copies with options in a different order.
@@ -92,6 +94,7 @@ def write_mobile_pages(target, bank, bank_html):
         + "window.CHAPTERS = " + json.dumps(midterm, ensure_ascii=False) + ";\n",
         encoding="utf-8",
     )
+    google_count = write_google_quiz(target, bank_page, bank_count)
     theme = bank_html[bank_html.index("<script>"):bank_html.index("</script>") + len("</script>")]
     (target / "index.html").write_text(f"""<!doctype html>
 <html lang="vi">
@@ -109,6 +112,7 @@ def write_mobile_pages(target, bank, bank_html):
 <a class="secondary course-link" href="midterm.html">Giữa kì<span>{midterm_count} câu</span></a>
 <p class="source-ref">{NOTE}</p>
 <a class="secondary course-link" href="bank.html">Ngân hàng câu hỏi<span>{bank_count} câu · 8 bộ</span></a>
+<a class="secondary course-link" href="google.html">Quizz Google<span>{google_count} câu · 9 pathway</span></a>
 </section>
 </main></body></html>
 """, encoding="utf-8")

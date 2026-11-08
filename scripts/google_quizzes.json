@@ -1,0 +1,1085 @@
+[
+  {
+    "unit": 1,
+    "pathway": 1,
+    "title": "Intro to Programming",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en",
+    "questions": [
+      {
+        "text": "Which of the following variable declarations is valid?",
+        "type": "single",
+        "options": [
+          "var hello: Int? = \"\"",
+          "String \"hello\" = hello",
+          "val hello = \"hello\"",
+          "hello: String = \"hello\""
+        ],
+        "id": "google-u1-p1-q1",
+        "fingerprint": "649b0e76a9457667a94bcaab2b59a1a8494bdc5d0455c66c1629d4c8378e6b42"
+      },
+      {
+        "text": "It is considered best practice to declare a variable that will not change using var instead of val .",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u1-p1-q2",
+        "fingerprint": "e2accc171b8377205f7b4bcb891d3af49ff5742ca8202a56d8e937a0b9634ca3"
+      },
+      {
+        "text": "Which of the following are valid ways to update a variable?",
+        "type": "multi",
+        "options": [
+          "total++",
+          "total - 1",
+          "total--",
+          "total = total + 1"
+        ],
+        "id": "google-u1-p1-q3",
+        "fingerprint": "289066b2439f05062032684452871fe56b6391a08dcfee11810d3038f71b1d7c"
+      },
+      {
+        "text": "In Kotlin, comments can be single or multi-line and are ignored by the compiler.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u1-p1-q4",
+        "fingerprint": "bfd1c4d29f624ee888308be42a2c3a9043f71902d390ee9bc3f650ab2643b6a6"
+      },
+      {
+        "text": "Which of the following is not a data type in Kotlin?",
+        "type": "single",
+        "options": [
+          "String",
+          "Decimal",
+          "Int",
+          "Boolean"
+        ],
+        "id": "google-u1-p1-q5",
+        "fingerprint": "947ba85b34d101f2ac31c30c6e94b4e8543ec507508641c902433afcdb8af208"
+      },
+      {
+        "text": "Float also represents a decimal, but is less precise than Double .",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u1-p1-q6",
+        "fingerprint": "30ab7831d7e7a7c44186d4dd209123d701ac1bc5ff4ab871ce1bb48c91e141e6"
+      },
+      {
+        "text": "In Kotlin, the entrypoint of a program is the ___.",
+        "type": "single",
+        "options": [
+          "println() statement",
+          "val variable",
+          "main() function",
+          "return statement"
+        ],
+        "id": "google-u1-p1-q7",
+        "fingerprint": "2f8a49a11dc03939b4ea017993e485e7b52ee32d89c3c5864bfb98e725b8c8d5"
+      },
+      {
+        "text": "Which of the following are true about function return values?",
+        "type": "multi",
+        "options": [
+          "If a function does not specify a return type, the return type is Unit .",
+          "A return value can be stored in a variable.",
+          "Functions with a return type of Unit must include a return statement.",
+          "A return value's type must match the return type of a function."
+        ],
+        "id": "google-u1-p1-q8",
+        "fingerprint": "a96b75be9d68b82e35cf2ebe91eb6e7b6158ac36a3f8219d09f422525649a230"
+      },
+      {
+        "text": "Which of the following are true about functions?",
+        "type": "multi",
+        "options": [
+          "Functions can take parameters, or variables as inputs.",
+          "Function parameters are required to have default arguments.",
+          "When calling a function with parameters, the values passed in are called arguments.",
+          "Breaking up your code into separate functions makes your code easier to maintain."
+        ],
+        "id": "google-u1-p1-q9",
+        "fingerprint": "a8207d6c088a654d1e02fd77bd0e3aea8b0f08a50ef59165f2c82873ee693c6f"
+      },
+      {
+        "text": "With named arguments, you can change the order in which you pass arguments into a function.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u1-p1-q10",
+        "fingerprint": "07411839396bb8ee9f4ec808e98ae4122a1046366d7a1a356359d76a91ee3bee"
+      }
+    ]
+  },
+  {
+    "unit": 1,
+    "pathway": 2,
+    "title": "Set up Android Studio",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en",
+    "questions": [
+      {
+        "text": "What does IDE stand for?",
+        "type": "single",
+        "options": [
+          "Integrated Development Environment",
+          "Independent Design Environment",
+          "Ideal Developer Environment",
+          "Intelligent Design Environment"
+        ],
+        "id": "google-u1-p2-q1",
+        "fingerprint": "c9e619118108c1dc000fdbd02333b2f8b7b276bce8516b38b25689373cd3d2aa"
+      },
+      {
+        "text": "Which of the following are advantages of using Android Studio?",
+        "type": "multi",
+        "options": [
+          "It can help prevent typos and other mistakes in your code.",
+          "It comes with a virtual device called an emulator that can run your app.",
+          "It can show you a real-time preview of how your app will look on-screen while you code.",
+          "It can automatically translate your app into other languages."
+        ],
+        "id": "google-u1-p2-q2",
+        "fingerprint": "1f2feefded46b4b0a46236603dc7d85f31a87be501f000c469d84b36ed668ae7"
+      },
+      {
+        "text": "What is the purpose of using a virtual device, or emulator, in Android Studio?",
+        "type": "single",
+        "options": [
+          "To show a variety of error messages to users",
+          "To experiment with app code safely",
+          "To test your app on a device without having that physical device",
+          "To see what your app looks like in a web browser"
+        ],
+        "id": "google-u1-p2-q3",
+        "fingerprint": "7e451516e6089d21f40f33ad8f9ab2dd2d418fa1f513f8d62f2fcb57a82f74e8"
+      },
+      {
+        "text": "In Android Studio, what is a project template good for?",
+        "type": "multi",
+        "options": [
+          "It causes Android Studio to download files faster.",
+          "It makes getting started on building a new app faster.",
+          "It provides a structure that follows best practices.",
+          "It is the only way to build apps that can be previewed in Android Studio.",
+          "It makes building a new app less error-prone by pre-populating the project with some app code."
+        ],
+        "id": "google-u1-p2-q4",
+        "fingerprint": "3dbaecd241260f52952a74bfeed478bdd89ec2991276fc3da67679f148f61606"
+      },
+      {
+        "text": "How do you create a new project in Android Studio?",
+        "type": "single",
+        "options": [
+          "A. Log out of Android Studio, and navigate to your project folder to find instructions.",
+          "B. If you have a project already open, select File > New > New Project from the Android Studio menu.",
+          "C. In the “Welcome to Android Studio” window, click “Start a new Android Studio project.”",
+          "D. Create a new file on your computer, and title it “New Android Studio Project.\"",
+          "Both B and C are ways to create a new project in Android Studio.",
+          "None of the above"
+        ],
+        "id": "google-u1-p2-q5",
+        "fingerprint": "9b84d9adf2737e6383be56ef7a99d41d9553d201329b4d63361b78fd16bad980"
+      },
+      {
+        "text": "___ is a function that is used to define a layout in your app using Composable functions.",
+        "type": "single",
+        "options": [
+          "ComponentActivity()",
+          "onCreate()",
+          "DefaultPreview()",
+          "setContent()"
+        ],
+        "id": "google-u1-p2-q6",
+        "fingerprint": "855c8fc7e12f8429112ab41634253703310aeffef617068d5a3d5ffd8dc692b9"
+      },
+      {
+        "text": "A Compose function requires the @Composable annotation.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u1-p2-q7",
+        "fingerprint": "150fd5f29f7a5e0a06d994453116b7095e359f5795ecd666094693894dd77c61"
+      },
+      {
+        "text": "A ___ is a Composable that has a background color and can contain other Composables.",
+        "type": "single",
+        "options": [
+          "Color",
+          "Container",
+          "Surface",
+          "Box"
+        ],
+        "id": "google-u1-p2-q8",
+        "fingerprint": "a10f8b9d5bab244c8c6eeb95f3c2e029ebe33858b6a200d3b7f06fae10d28fbf"
+      },
+      {
+        "text": "Padding is an example of a ___",
+        "type": "single",
+        "options": [
+          "Property",
+          "Composable",
+          "Attribute",
+          "Modifier"
+        ],
+        "id": "google-u1-p2-q9",
+        "fingerprint": "be663d437085ed013d286b2b66ea6beee5361ade629ef0b4a7c00373b7137ece"
+      },
+      {
+        "text": "Which of the following is false about Compose?",
+        "type": "single",
+        "options": [
+          "The Empty Compose Activity template is used to create a simple app.",
+          "Layouts can be viewed in the Preview window, without actually running your app.",
+          "All elements and themes in a Compose app are contained in a Surface.",
+          "Themes, such as GreetingCardTheme allow you to style Composables."
+        ],
+        "id": "google-u1-p2-q10",
+        "fingerprint": "42d84d61f25bbc446e4ad2a499020f61b167105ea926503eed3cb1e18ce74341"
+      }
+    ]
+  },
+  {
+    "unit": 1,
+    "pathway": 3,
+    "title": "Build a basic layout",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en",
+    "questions": [
+      {
+        "text": "What is Jetpack Compose?",
+        "type": "single",
+        "options": [
+          "A Modern toolkit to develop Android UI",
+          "Toolkit to design libraries",
+          "Database Interface",
+          "Plugin to build APK"
+        ],
+        "id": "google-u1-p3-q1",
+        "fingerprint": "f4986418877f903e6148b88bf3388b1a819a2f4d2adc4f70513da8ab82e21ff4"
+      },
+      {
+        "text": "Composable functions are the basic building block of Compose.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u1-p3-q2",
+        "fingerprint": "0a00533f805ceaf18531a30485cc035833bdf19031365f9f5a197010b7be1b7a"
+      },
+      {
+        "text": "What annotation is used to annotate a Composable function?",
+        "type": "single",
+        "options": [
+          "@Annotation",
+          "@ComposableFunction",
+          "@Composable",
+          "@Preview"
+        ],
+        "id": "google-u1-p3-q3",
+        "fingerprint": "26da142c7c88de96f51c654d78e19d5c805e319f6a4eda4a05b82677af94c032"
+      },
+      {
+        "text": "The basic standard layout elements in Compose are:",
+        "type": "multi",
+        "options": [
+          "Column",
+          "Row",
+          "Text",
+          "Box"
+        ],
+        "id": "google-u1-p3-q4",
+        "fingerprint": "16c5b790bae0b6795d4758521d82849dc0d7e3e79157e06a88c60c5dcfb4d510"
+      },
+      {
+        "text": "What is the tool window for importing, creating, managing, and using resources in your app?",
+        "type": "single",
+        "options": [
+          "Application Manager",
+          "Resource Manager",
+          "Resource Tool",
+          "Layout Manager"
+        ],
+        "id": "google-u1-p3-q5",
+        "fingerprint": "5b6a7f16ceb4a037f8292af0137dc8bed621d9283cc74db55b8424ae888197fa"
+      },
+      {
+        "text": "Which class is an automatically generated class by Android that contains the IDs of all resources in the project.",
+        "type": "single",
+        "options": [
+          "The Android class",
+          "The Resource class",
+          "The R Class",
+          "The ResourceID class"
+        ],
+        "id": "google-u1-p3-q6",
+        "fingerprint": "75cad04b936dcbdf555887bb39e1af248e055fa72c0016e94643ffa71ba89467"
+      },
+      {
+        "text": "Which function is used is to load a drawable image resource.",
+        "type": "single",
+        "options": [
+          "The stringResource() function",
+          "The painterResource() function",
+          "The ImageResource() function",
+          "The loadResource() function"
+        ],
+        "id": "google-u1-p3-q7",
+        "fingerprint": "86b19713b2190031b3a9c8655e4276cddba8753ed8ac0118fa62cd612443606a"
+      },
+      {
+        "text": "What is the function parameter used to add accessibility text, used by talkback?",
+        "type": "single",
+        "options": [
+          "accessibilityText",
+          "contentText",
+          "accessibilityDescription",
+          "contentDescription"
+        ],
+        "id": "google-u1-p3-q8",
+        "fingerprint": "9cc32be75def693b0d680c59e2fecd9153df6848a245a3754ef5e5d4b4944f18"
+      },
+      {
+        "text": "The Box layout stacks the UI elements on top of one another.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u1-p3-q9",
+        "fingerprint": "6e0250b80c745b50e5fa148d88a21268562faf2ce408385a2e3982ea38e839cf"
+      },
+      {
+        "text": "What parameter is used to align the child element to the beginning of the parent?",
+        "type": "single",
+        "options": [
+          "Alignment.End",
+          "Alignment.Begin",
+          "Alignment.Start",
+          "Alignment.Top"
+        ],
+        "id": "google-u1-p3-q10",
+        "fingerprint": "e0ab8f07a6585ca85415e27c025e06b23782b127ca4f70b2566228258a3e19ec"
+      }
+    ]
+  },
+  {
+    "unit": 2,
+    "pathway": 1,
+    "title": "Kotlin fundamentals",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en",
+    "questions": [
+      {
+        "text": "The following code will print \"Divisible by 5\" if number is equal to 25 .\n\nif (number % 10 == 0) {\n  println(\"Divisible by 10\")\n} else if (number == 5) {\n  println(\"Divisible by 5\")\n}",
+        "type": "single",
+        "options": [
+          "true",
+          "false"
+        ],
+        "id": "google-u2-p1-q1",
+        "fingerprint": "0f1b3abd7fa440c82ab5fbd43261fee9d5443170928dfeeec3662bbc410bf7b5"
+      },
+      {
+        "text": "Which of the following conditions are satisfied when x = 5 ?",
+        "type": "multi",
+        "options": [
+          "x == 5",
+          "x in 1..5",
+          "x is Int",
+          "x % 5"
+        ],
+        "id": "google-u2-p1-q2",
+        "fingerprint": "d9bb81f17501db285323b332a8be393ac733628517092e1241ea9a5546a4d8ae"
+      },
+      {
+        "text": "Which is not a basic concept of object-oriented programming",
+        "type": "single",
+        "options": [
+          "Abstraction",
+          "Readability",
+          "Inheritance",
+          "Polymorphism"
+        ],
+        "id": "google-u2-p1-q3",
+        "fingerprint": "6aae29cc70130678b259baa2a2bdbaa36c80e99b4179dd3d33d8dab1143eaa02"
+      },
+      {
+        "text": "Which are the four visibility modifiers in Kotlin?",
+        "type": "single",
+        "options": [
+          "public , private , protected , abstract",
+          "static , override , internal , external",
+          "private , protected , public , internal",
+          "public , protected , static , internal"
+        ],
+        "id": "google-u2-p1-q4",
+        "fingerprint": "e1fb9e589dfc29e15281fd3c503cca8ac7a35350b0dd4f4baa40da4a44a6c2bc"
+      },
+      {
+        "text": "The ___ keyword is used to call a method from the parent class.",
+        "type": "single",
+        "options": [
+          "this",
+          "super",
+          "parent",
+          "self"
+        ],
+        "id": "google-u2-p1-q5",
+        "fingerprint": "5eac50f8e3795761e67cfcdac3441a1b10a2b8889f6781c8c2b08bc097918ac2"
+      },
+      {
+        "text": "A(n) ___ defines properties or methods that a class needs to implement.",
+        "type": "single",
+        "options": [
+          "Delegate",
+          "Generic type",
+          "Interface",
+          "Subclass"
+        ],
+        "id": "google-u2-p1-q6",
+        "fingerprint": "0c12411256193bdb49a6a3324fe8d2c00aea49fcb80de8800e051c669914341d"
+      },
+      {
+        "text": "Which of the following is best represented by a nullable type?",
+        "type": "single",
+        "options": [
+          "The number of followers (0 or more) in a social media app.",
+          "An optional profile picture.",
+          "A username that must be at least one character.",
+          "A unique ID given to every user."
+        ],
+        "id": "google-u2-p1-q7",
+        "fingerprint": "02f4ca9cc6442eefabb2f232619c8845d92c9b2c57d63f87c39fffcd518cd4cb"
+      },
+      {
+        "text": "The ___ operator allows you to call a method only if the object is non-null.",
+        "type": "single",
+        "options": [
+          ".",
+          "!!",
+          "?:",
+          "?."
+        ],
+        "id": "google-u2-p1-q8",
+        "fingerprint": "3bf0fee306be7faf4e41e4cc08ed28e14f12508d1ab086ac5c83b919660c9a9a"
+      },
+      {
+        "text": "Which is not true of functions in Kotlin?",
+        "type": "single",
+        "options": [
+          "A function can be changed to another data type, and vice versa.",
+          "A function can be returned from another function.",
+          "A function can take another function as a parameter.",
+          "A function has a data type, such as (Int) -> Unit ."
+        ],
+        "id": "google-u2-p1-q9",
+        "fingerprint": "7a5569792c61734e3c932bacf87178d9999180ac30879f0f82ab06ae59056be9"
+      },
+      {
+        "text": "A function literal is another name for a ___",
+        "type": "single",
+        "options": [
+          "Function type",
+          "Lambda expression",
+          "Function reference",
+          "Trailing lambda"
+        ],
+        "id": "google-u2-p1-q10",
+        "fingerprint": "7bc21b0a519ebab7b7c734899b22df93db8b2f9c3c2185b1f5ff6a48472bda01"
+      }
+    ]
+  },
+  {
+    "unit": 2,
+    "pathway": 2,
+    "title": "Add a button to an app",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-2/android-basics-compose-unit-2-pathway-2?hl=en",
+    "questions": [
+      {
+        "text": "Use a ___ Composable to display an image",
+        "type": "single",
+        "options": [
+          "Button",
+          "Text",
+          "Image",
+          "Icon"
+        ],
+        "id": "google-u2-p2-q1",
+        "fingerprint": "e82c323bd45569b8077d43222a8b31b034f4fbca91b7d5c3569ebd5adc2ca8b6"
+      },
+      {
+        "text": "Alignment.Center centers UI components both horizontally and vertically.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u2-p2-q2",
+        "fingerprint": "8c93f7a3a7e4b992c2076761107a93abe69671e20d1dc67e091ebfdcf1320702"
+      },
+      {
+        "text": "Composable functions can store an object in memory using the ___ composable",
+        "type": "single",
+        "options": [
+          "remember",
+          "Column",
+          "Modifier",
+          "@Composable"
+        ],
+        "id": "google-u2-p2-q3",
+        "fingerprint": "56098f2cad6b429c9e1b60186545bc268fb6857843cd8d358895fdfa223aabff"
+      },
+      {
+        "text": "The debugger allows you to inspect variables when code execution has been suspended.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u2-p2-q4",
+        "fingerprint": "1fce1704605076a024ef1c2f263f25573f9356a45a9182146f1292ada0c70162"
+      },
+      {
+        "text": "By using ___ values in a composable function, variables can be made into observables that schedule a recomposition when their value is changed.",
+        "type": "single",
+        "options": [
+          "remember",
+          "Modifier",
+          "@Composable",
+          "mutableStateOf"
+        ],
+        "id": "google-u2-p2-q5",
+        "fingerprint": "ed35c5828582c6291dd477fd3cb1ed2b77f74e53038dd92976e4e69c0a4280a3"
+      },
+      {
+        "text": "The ___ composable places its children in a vertical sequence.",
+        "type": "single",
+        "options": [
+          "Row",
+          "Box",
+          "Column",
+          "Modifier"
+        ],
+        "id": "google-u2-p2-q6",
+        "fingerprint": "4d375fce3b3aa4b0bf8c526247d8605728c6d1e019c50d249c841b28ed2b742c"
+      },
+      {
+        "text": "The ___ debugger feature allows you to navigate back up the call stack.",
+        "type": "single",
+        "options": [
+          "Step over",
+          "Step out",
+          "Step into",
+          "Resume program"
+        ],
+        "id": "google-u2-p2-q7",
+        "fingerprint": "e7382ba4eec535fa1da21edceda9e5d027db6d5c71ee92323390196c5bdc50df"
+      }
+    ]
+  },
+  {
+    "unit": 2,
+    "pathway": 3,
+    "title": "Interacting with UI and state",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en",
+    "questions": [
+      {
+        "text": "Jetpack Compose runs your composables for the first time, during ___ it will keep track of the composables that you call to describe your UI.",
+        "type": "single",
+        "options": [
+          "Initial composition",
+          "Recomposition",
+          "State change",
+          "App termination"
+        ],
+        "id": "google-u2-p3-q1",
+        "fingerprint": "580bc831cb4448675f69b9c4a8f7e8690494b8ce44d5199868e32c59afbbdd12"
+      },
+      {
+        "text": "The only way to modify a Composition is through recomposition.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u2-p3-q2",
+        "fingerprint": "f1e7d3e79c083a183e3c71b6dc15495505be3d2c701a82ca51b8031ff599aa2b"
+      },
+      {
+        "text": "___ is when Jetpack Compose re-executes the composables that may have changed in response to data changes.",
+        "type": "single",
+        "options": [
+          "Initial composition",
+          "Recomposition",
+          "State change",
+          "App termination"
+        ],
+        "id": "google-u2-p3-q3",
+        "fingerprint": "6614b5c2873b36a06fe6fea6d809c414c0f97f92cfe46974cb8eec6c3584d457"
+      },
+      {
+        "text": "___ in an application is any value that can change over time.",
+        "type": "single",
+        "options": [
+          "State",
+          "value",
+          "valueChange",
+          "StateValue"
+        ],
+        "id": "google-u2-p3-q4",
+        "fingerprint": "8654c8b1a1fca2ae0431c238066d82a812098213c7e4a9f3d537aa2162f47c9f"
+      },
+      {
+        "text": "___ is a pattern of moving state up to make a component stateless.",
+        "type": "single",
+        "options": [
+          "State change",
+          "State hoisting",
+          "Hoist composition",
+          "Recomposition"
+        ],
+        "id": "google-u2-p3-q5",
+        "fingerprint": "fe37009e32ff8acd4fd53be6603bc0e0ce1a2db4f4bbbad503f161abebcccd35"
+      },
+      {
+        "text": "Which KeyboardAction property is used to move the focus to the next composable?",
+        "type": "single",
+        "options": [
+          "onDone",
+          "onNext",
+          "onGo",
+          "onSend"
+        ],
+        "id": "google-u2-p3-q6",
+        "fingerprint": "f819a8318ad9b6068c2d6d333f0b493d0eb10515a2e5422efecfd4d7ba499d7c"
+      },
+      {
+        "text": "Which of the following Kotlin functions is used to round up a Double or Float?",
+        "type": "single",
+        "options": [
+          "kotlin.math.ceilUp()",
+          "kotlin.math.ceil()",
+          "kotlin.math.roundDown()",
+          "kotlin.math.roundUp()"
+        ],
+        "id": "google-u2-p3-q7",
+        "fingerprint": "3faaddb2094bbb239f49c5325611eb49037fab00d1212f5b4bba2e6514f223a5"
+      },
+      {
+        "text": "Layout Inspector is a tool in Jetpack Compose that allows you to inspect a Compose layout inside a running app in an emulator or physical device.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u2-p3-q8",
+        "fingerprint": "c9a30b4835338e011dc5ffc1184feda8f3b01240abe49abfdc921e15674a932f"
+      },
+      {
+        "text": "UI tests are stored in the ___ directory.",
+        "type": "single",
+        "options": [
+          "main",
+          "androidTest",
+          "test",
+          "res"
+        ],
+        "id": "google-u2-p3-q9",
+        "fingerprint": "1ebe46a3aaeb5201bdc0d72d4566acd180fc1dc24b805517ffcfaa672125cfe4"
+      },
+      {
+        "text": "Local tests and UI tests should be annotated with the ___ annotation.",
+        "type": "single",
+        "options": [
+          "@VisibleForTesting",
+          "@Preview",
+          "@Test",
+          "@Composable"
+        ],
+        "id": "google-u2-p3-q10",
+        "fingerprint": "194ad1640b96bc37f5849c2c58ef49d86e639342a391960679a4d07725469dd9"
+      }
+    ]
+  },
+  {
+    "unit": 3,
+    "pathway": 1,
+    "title": "More Kotlin fundamentals",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en",
+    "questions": [
+      {
+        "text": "Which of the following is a valid way to define a data class in Kotlin?",
+        "type": "single",
+        "options": [
+          "data class Person(val name: String, val age: Int)",
+          "class Person(val name: String, val age: Int): data",
+          "class Person (val name: String, val age: Int)",
+          "data class Person{val name: String, val age: Int}"
+        ],
+        "id": "google-u3-p1-q1",
+        "fingerprint": "78d82d7736dd8a9914f854aca575a9e360dc455ea4244f12c4514b45d4e3047b"
+      },
+      {
+        "text": "When using a sealed class, all direct subclasses must be in the same package.",
+        "type": "single",
+        "options": [
+          "true",
+          "false"
+        ],
+        "id": "google-u3-p1-q2",
+        "fingerprint": "9ce35f4cef7d94fe3e5e7136731dba11a8a63bac1f5ca06ed59db86d260c65f5"
+      },
+      {
+        "text": "When using generics, the generic data type goes inside ___.",
+        "type": "single",
+        "options": [
+          "[]",
+          "{}",
+          "()",
+          "<>"
+        ],
+        "id": "google-u3-p1-q3",
+        "fingerprint": "e7d28672f3f877f87593c3fb1b81d68a1dd08c9d87106e7e99e2a903260f469e"
+      },
+      {
+        "text": "A(n) ___ class is useful when you have a fixed set of values.",
+        "type": "single",
+        "options": [
+          "enum",
+          "sealed",
+          "data",
+          "inherited"
+        ],
+        "id": "google-u3-p1-q4",
+        "fingerprint": "ee1f75b386d3165ff79d4d1158e8b626579ddf3e765abb93c1e3d4509b888558"
+      },
+      {
+        "text": "To create a list object that has the ability to change its size, you would call ___.",
+        "type": "single",
+        "options": [
+          "modifiableListOf()",
+          "immutableListOf()",
+          "listOf()",
+          "mutableListOf()"
+        ],
+        "id": "google-u3-p1-q5",
+        "fingerprint": "bf9b32f935934fcc82f69f959e39a6b58c098004882cd4d82968e8a105435f3f"
+      },
+      {
+        "text": "Which of the following are higher-order functions?",
+        "type": "multi",
+        "options": [
+          "map",
+          "arrangeBy",
+          "filter",
+          "forEach"
+        ],
+        "id": "google-u3-p1-q6",
+        "fingerprint": "96e22db27314c366180fdf3397ba95d979dbd462d8e868c7a0ed01b7f63dedc9"
+      },
+      {
+        "text": "Given the following line of code, which of the following commands will print Blue ? (Hint: If you are not sure, try running the code in the Kotlin Playground.)\n\nval colors = listOf(\"Red\", \"Green\", \"Blue\")",
+        "type": "multi",
+        "options": [
+          "println(colors[2])",
+          "println(colors.get(2))",
+          "println(colors.contains(2))",
+          "println(colors.getOrDefaultValue(index = 2, defaultValue = 10))"
+        ],
+        "id": "google-u3-p1-q7",
+        "fingerprint": "19bf42d1b4cba9c53589649d116604578414e77242047b8c980e39d8db246982"
+      },
+      {
+        "text": "The programming concept of a class that has only one instance is called a ___.",
+        "type": "single",
+        "options": [
+          "Uniqueness",
+          "Singleton",
+          "Mono-object",
+          "Lambda"
+        ],
+        "id": "google-u3-p1-q8",
+        "fingerprint": "7cd806c726b4c7a918fecf33006bd77ddb18bbd544f7dd42a838ff776f61528f"
+      },
+      {
+        "text": "Which of the following statements is true regarding sets and maps?",
+        "type": "single",
+        "options": [
+          "A set must contain distinct values and a map’s keys must be distinct.",
+          "A set must contain distinct values and a map’s keys can contain duplicates.",
+          "A set can contain duplicate values and a map’s values can contain duplicate values.",
+          "A set can contain duplicate values and a map’s keys must be distinct."
+        ],
+        "id": "google-u3-p1-q9",
+        "fingerprint": "9c824c8f3ab603fa4f3efeabb04f9a74081b8efd4e3bfb52e362b847d1d98919"
+      },
+      {
+        "text": "If you have a variable named records , which is a collection, to determine the number of items it contains, you can call ___.",
+        "type": "single",
+        "options": [
+          "records.length",
+          "records.quantity",
+          "len(records)",
+          "records.size"
+        ],
+        "id": "google-u3-p1-q10",
+        "fingerprint": "462ef0daa0c5f9a9f69e0141ffdd4cadc6771171d3410790324f702f2a1d0631"
+      }
+    ]
+  },
+  {
+    "unit": 3,
+    "pathway": 2,
+    "title": "Build a scrollable list",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en",
+    "questions": [
+      {
+        "text": "Adaptive launcher icons for Android apps consist of a foreground and background vector drawable.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u3-p2-q1",
+        "fingerprint": "fe2e047172752545a8136ce394e95ae9f95b354af459fe41e53ce7796335a6d7"
+      },
+      {
+        "text": "When building a UI that requires a scrolling list with a variable number of items, which Composable should you use?",
+        "type": "single",
+        "options": [
+          "Column",
+          "Row",
+          "LazyColumn",
+          "Card"
+        ],
+        "id": "google-u3-p2-q2",
+        "fingerprint": "29209ea1b6bca024e1f5092f3bab6b93506c3a72018b4ea322beecc1a092dc93"
+      },
+      {
+        "text": "What file type is used for the launcher icon foreground and background vectors?",
+        "type": "single",
+        "options": [
+          ".txt",
+          ".jpg",
+          ".png",
+          ".xml"
+        ],
+        "id": "google-u3-p2-q3",
+        "fingerprint": "4459f6054ed5bbd6e1bb639aa93129a12610d23828be4f0c5e90a1f589b743e6"
+      },
+      {
+        "text": "Which Composable should you use to create a vertically scrollable grid with an undetermined number of items?",
+        "type": "single",
+        "options": [
+          "LazyColumn",
+          "LazyVerticalGrid",
+          "LazyHorizontalGrid",
+          "Row"
+        ],
+        "id": "google-u3-p2-q4",
+        "fingerprint": "a9da94377af75fe84009305df838d4d6bf632c5300d21e19a709238f35dbcb61"
+      },
+      {
+        "text": "The Column composable is not a good option for a list of items of unknown quantity because ___.",
+        "type": "single",
+        "options": [
+          "It can only hold a small, finite number of predefined items",
+          "It arranges items vertically",
+          "It provides scrolling by default without any additional code",
+          "It can add content on demand"
+        ],
+        "id": "google-u3-p2-q5",
+        "fingerprint": "df7d699590285e9d423e794c2c09951c5535303745fdbc041e84026be1ca74c1"
+      },
+      {
+        "text": "The ___ method is used to add content to a LazyColumn Composable.",
+        "type": "single",
+        "options": [
+          "painterResource()",
+          "Modifier.padding()",
+          "items()",
+          "onCreate()"
+        ],
+        "id": "google-u3-p2-q6",
+        "fingerprint": "9ba1b9b4f164dbfadaf349fa97d9db322a170352b562ae4e2ed143b52c06857e"
+      },
+      {
+        "text": "Which Composable arranges items horizontally?",
+        "type": "single",
+        "options": [
+          "Column",
+          "Card",
+          "Image",
+          "Row"
+        ],
+        "id": "google-u3-p2-q7",
+        "fingerprint": "3f6472c2d4c19b3cf27cdcfd1a44a307611dec458948f519d06aadfecb87ed50"
+      },
+      {
+        "text": "Which Composable arranges items vertically?",
+        "type": "single",
+        "options": [
+          "Column",
+          "Card",
+          "Image",
+          "Row"
+        ],
+        "id": "google-u3-p2-q8",
+        "fingerprint": "00137d40e47fa110d12f42a03e7922f530e314f3905413999562ca6e99e9ced3"
+      }
+    ]
+  },
+  {
+    "unit": 3,
+    "pathway": 3,
+    "title": "Build beautiful apps",
+    "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en",
+    "questions": [
+      {
+        "text": "Animations in your Android app can:",
+        "type": "single",
+        "options": [
+          "Add visual cues about what's going on in your app.",
+          "Add a polished look to your app.",
+          "Help the user see what changed.",
+          "All of the above."
+        ],
+        "id": "google-u3-p3-q1",
+        "fingerprint": "e37b49c9ceaba5171aa92299d80a69f755704d575017da29e12fb2788712b24c"
+      },
+      {
+        "text": "Spring animation is based on:",
+        "type": "single",
+        "options": [
+          "Start and end values over the specified duration.",
+          "Damping ratio and stiffness.",
+          "Snapshot values specified at different timestamps.",
+          "Interpolation between two keyframe values."
+        ],
+        "id": "google-u3-p3-q2",
+        "fingerprint": "b208947c7496cd67f79d67c74c27ed5fc885ff14282876680d1bc29a838dbd1f"
+      },
+      {
+        "text": "Spring animation is a physics-based animation driven by spring force.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u3-p3-q3",
+        "fingerprint": "2433defaa646401af2f71009a5b82f25ae5da179e6d2c4316b57d250f5e97fdd"
+      },
+      {
+        "text": "In the Material theming, the ___ color is the color displayed most frequently across your app's screens and components.",
+        "type": "single",
+        "options": [
+          "primary",
+          "secondary",
+          "surface",
+          "background"
+        ],
+        "id": "google-u3-p3-q4",
+        "fingerprint": "387571e0e4765d84eff612b04dbb9262094466c516082ac8e7730a30d2e4fef3"
+      },
+      {
+        "text": "The following file is used to define shapes of components in Compose.",
+        "type": "single",
+        "options": [
+          "Theme.kt",
+          "Color.kt",
+          "Shape.kt",
+          "Colors.kt"
+        ],
+        "id": "google-u3-p3-q5",
+        "fingerprint": "0975790e4192262432cd8575634b2e7c316130a9faca07ea5c5c94144d0d7e18"
+      },
+      {
+        "text": "You can only have one @Preview composable",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u3-p3-q6",
+        "fingerprint": "960e702a31c79176ea7476a38b2dd23769da8102208f2212829d9cafd9396e15"
+      },
+      {
+        "text": "A hex color code starts with a pound (#) character, and is followed by six letters and/or numbers that represent the red, green, and blue (RGB) components of that color.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u3-p3-q7",
+        "fingerprint": "0900c77a908e70e846a1c6882516968349dcd5b24fae00256ec66de6515b0952"
+      },
+      {
+        "text": "The ___ file is the file that holds all the information about the theme of the app which is defined through color, shape, and typography.",
+        "type": "single",
+        "options": [
+          "Theme.kt",
+          "Color.kt",
+          "Shape.kt",
+          "Colors.kt"
+        ],
+        "id": "google-u3-p3-q8",
+        "fingerprint": "c00c7d600eb31c7d6254f3e5e99162be2d8f3c8fa8db946983534f59ddd17d4e"
+      },
+      {
+        "text": "___  creates contrast between the Card and the background by adding a shadow to make the app look more realistic and visually interesting?",
+        "type": "single",
+        "options": [
+          "Elevation",
+          "Shape",
+          "Color",
+          "Theme"
+        ],
+        "id": "google-u3-p3-q9",
+        "fingerprint": "e56093cd90ccc1ece6cdab297c1fc97006597c135feb1d4c28e6ed3ec6569842"
+      },
+      {
+        "text": "What are reasons that someone may use Dark Theme on their device?",
+        "type": "single",
+        "options": [
+          "It can reduce power usage by a significant amount (depending on the device’s screen technology).",
+          "It improves visibility for users with low vision and those who are sensitive to bright light.",
+          "It makes it easier for anyone to use a device in a low-light environment.",
+          "All of the above."
+        ],
+        "id": "google-u3-p3-q10",
+        "fingerprint": "76f192a6497251768d2b12c3e8871b394a6abaf342bb0271a4261ac3ed34005d"
+      },
+      {
+        "text": "TalkBack allows a user to navigate an app using switches instead of the touchscreen.",
+        "type": "single",
+        "options": [
+          "True",
+          "False"
+        ],
+        "id": "google-u3-p3-q11",
+        "fingerprint": "a9ef08eecd13489bd79d01f3f971827404112f73911af5faa6a3aefe8b1881fc"
+      },
+      {
+        "text": "Which attribute allows TalkBack to speak a meaningful representation of an image or icon?",
+        "type": "single",
+        "options": [
+          "elevation",
+          "shape",
+          "contentDescription",
+          "style"
+        ],
+        "id": "google-u3-p3-q12",
+        "fingerprint": "3ea294b7cd5e5a7a5588b73cbf9d42111abcfa785911efe25385c266aba961e7"
+      }
+    ]
+  }
+]
