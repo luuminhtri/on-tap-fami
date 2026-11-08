@@ -953,3 +953,40 @@ html[data-theme="dark"] .legend .filled {
     font-size: .88rem;
     color: var(--muted);
 }
+
+#chapter-picker {
+    min-width: 0;
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px;
+}
+.chapter-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+#chapter-checks {
+    display: grid;
+    gap: 10px;
+    max-height: 330px;
+    overflow-y: auto;
+}
+.chapter-choice {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.chapter-choice input {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--green);
+}
+.exam-bar {
+    gap: 12px;
+    flex-wrap: wrap;
+}
