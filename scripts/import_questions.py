@@ -1,3 +1,4 @@
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -110,3 +111,21 @@ __LINKS__
 </section></main></body></html>
 """
 (dist / "index.html").write_text(home.replace("__LINKS__", "\n".join(links)), encoding="utf-8")
+
+
+# Change asset URLs with their contents so cached scripts cannot break newer HTML.
+for page_path in dist.rglob("*.html"):
+    def version_asset(match):
+        attribute, url = match.groups()
+        asset_path = page_path.parent / url
+        if not asset_path.is_file():
+            return match.group(0)
+        version = hashlib.sha256(asset_path.read_bytes()).hexdigest()[:12]
+        return f'{attribute}="{url}?v={version}"'
+
+    markup = re.sub(
+        r'(src|href)="([^"?:]+\.(?:js|css))(?:\?[^" ]*)?"',
+        version_asset,
+        page_path.read_text(encoding="utf-8"),
+    )
+    page_path.write_text(markup, encoding="utf-8")
