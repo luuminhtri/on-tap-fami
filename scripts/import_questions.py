@@ -38,7 +38,8 @@ def read_chapter(path, number, used_ids):
             for option in raw["lua_chon"]
         ]
         answers = raw["dap_an"]
-        if not answers or not set(answers) <= {option["id"] for option in options}:
+        has_source = "source" in raw
+        if (not answers and not has_source) or not set(answers) <= {option["id"] for option in options}:
             raise ValueError(f"{path}: đáp án không hợp lệ ở câu {question_id}")
         questions.append({
             "id": question_id,
@@ -46,6 +47,7 @@ def read_chapter(path, number, used_ids):
             "type": raw["loai"],
             "options": options,
             "answers": answers,
+            **{key: raw[key] for key in ("source", "note", "fields", "plain") if key in raw},
         })
     return {"number": number, "title": rows[0]["chuong"]["ten"], "questions": questions}
 
@@ -75,14 +77,18 @@ for code, chapters in courses.items():
     target = dist / code
     target.mkdir(parents=True, exist_ok=True)
     (target / "index.html").write_text(
-        template.replace("__COURSE__", code).replace("__TOTAL__", str(count)), encoding="utf-8"
+        template.replace("__COURSE__", code).replace("__TOTAL__", str(count)).replace(
+            "__SOURCE_LINK__",
+            '<a href="scans.html">Xem ảnh nguồn</a>' if code == "IT4785E" else "",
+        ), encoding="utf-8"
     )
     (target / "data.js").write_text(
         f"window.COURSE_CODE = {json.dumps(code)};\n"
         + "window.CHAPTERS = " + json.dumps(chapters, ensure_ascii=False) + ";\n",
         encoding="utf-8",
     )
-    links.append(f'<a class="secondary course-link" href="./{code}/">{code}<span>{count} câu</span></a>')
+    label = 'IT4785E · Mobile Programming' if code == 'IT4785E' else code
+    links.append(f'<a class="secondary course-link" href="./{code}/">{label}<span>{count} câu</span></a>')
     print(f"/{code} · {len(chapters)} chương · {count} câu")
 
 home = """<!doctype html>
