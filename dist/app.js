@@ -22,7 +22,7 @@ function renderText(text) {
             (_, closing, tag) => '<' + closing + tag.toLowerCase() + '>');
 }
 for (const c of CHAPTERS) {
-    const label = `${window.COURSE_CODE === "IT4785E" ? "" : `Chương ${c.number} · `}${c.title} (${c.questions.length} câu)`;
+    const label = `${["IT4785E", "HOADUOC"].includes(window.COURSE_CODE) ? "" : `Chương ${c.number} · `}${c.title} (${c.questions.length} câu)`;
     const row = document.createElement('label');
     row.className = 'chapter-choice';
     row.innerHTML = `<input type="checkbox" value="${c.number}" ${scopeIds().includes(String(c.number)) ? 'checked' : ''}><span>${esc(label)}</span>`;
@@ -119,7 +119,7 @@ function updateResume() {
     $('resume-wrong').hidden = !sessions[reviewSessionKey()];
     const list = selectedQuestions();
     $('start').disabled = !list.length;
-    $('selection-count').textContent = `${scopeIds().length} chương · ${list.length} câu`;
+    $('selection-count').textContent = `${scopeIds().length} ${window.COURSE_CODE === "HOADUOC" ? "cụm" : "chương"} · ${list.length} câu`;
     save();
 }
 function wrongQuestions(list = questions, attempt = session) {
@@ -207,7 +207,7 @@ function render() {
     </div>
     ${options ? `<div class="options" role="group" aria-labelledby="question-text">${options}</div>` : ''}
     <div class="result ${resultStyle}" role="status">${result}</div>
-    ${a.confirmed && q.explanation ? `<p class="result">${esc(q.explanation)}</p>` : ''}`;
+    ${a.confirmed && q.explanation ? `<p class="result">${format(q.explanation)}</p>` : ''}`;
     if (!q.plain && window.renderMathInElement) renderMathInElement($('question'), {
         delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }, { left: '\\\\(', right: '\\\\)', display: false }, { left: '\\\\[', right: '\\\\]', display: true }],
         throwOnError: false, trust: false

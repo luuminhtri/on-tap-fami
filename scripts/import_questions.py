@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 
 from mobile_midterm import write_mobile_pages
+from hoaduoc_quiz import write_hoaduoc
 
 project = Path(__file__).resolve().parents[1]
 dist = project / "dist"
@@ -95,6 +96,8 @@ for code, chapters in courses.items():
     label = 'IT4785E · Mobile Programming' if code == 'IT4785E' else code
     links.append(f'<a class="secondary course-link" href="./{code}/">{label}<span>{count} câu</span></a>')
     print(f"/{code} · {len(chapters)} chương · {count} câu")
+
+links.append(write_hoaduoc(dist, template))
 
 home = """<!doctype html>
 <html lang="vi">
