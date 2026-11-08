@@ -2,6 +2,8 @@ import json
 import re
 from pathlib import Path
 
+from mobile_midterm import write_mobile_pages
+
 project = Path(__file__).resolve().parents[1]
 dist = project / "dist"
 
@@ -76,12 +78,14 @@ for code, chapters in courses.items():
     count = sum(len(chapter["questions"]) for chapter in chapters)
     target = dist / code
     target.mkdir(parents=True, exist_ok=True)
-    (target / "index.html").write_text(
-        template.replace("__COURSE__", code).replace("__TOTAL__", str(count)).replace(
-            "__SOURCE_LINK__",
-            '<a href="scans.html">Xem ảnh nguồn</a>' if code == "IT4785E" else "",
-        ), encoding="utf-8"
+    page = template.replace("__COURSE__", code).replace("__TOTAL__", str(count)).replace(
+        "__SOURCE_LINK__",
+        '<a href="scans.html">Xem ảnh nguồn</a>' if code == "IT4785E" else "",
     )
+    if code == "IT4785E":
+        write_mobile_pages(target, chapters, page)
+    else:
+        (target / "index.html").write_text(page, encoding="utf-8")
     (target / "data.js").write_text(
         f"window.COURSE_CODE = {json.dumps(code)};\n"
         + "window.CHAPTERS = " + json.dumps(chapters, ensure_ascii=False) + ";\n",
