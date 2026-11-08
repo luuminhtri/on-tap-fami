@@ -4,14 +4,26 @@
     "answers": [
       "C"
     ],
-    "explanation": "val hello = \"hello\" suy ra kiểu String."
+    "explanation": "val hello = \"hello\" suy ra kiểu String.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q2": {
     "fingerprint": "e2accc171b8377205f7b4bcb891d3af49ff5742ca8202a56d8e937a0b9634ca3",
     "answers": [
       "B"
     ],
-    "explanation": "Biến không gán lại nên dùng val."
+    "explanation": "Biến không gán lại nên dùng val.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q3": {
     "fingerprint": "289066b2439f05062032684452871fe56b6391a08dcfee11810d3038f71b1d7c",
@@ -20,35 +32,65 @@
       "C",
       "D"
     ],
-    "explanation": "total - 1 chỉ tạo kết quả, không gán lại. ++, -- và phép gán mới cập nhật biến."
+    "explanation": "total - 1 chỉ tạo kết quả, không gán lại. ++, -- và phép gán mới cập nhật biến.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q4": {
     "fingerprint": "bfd1c4d29f624ee888308be42a2c3a9043f71902d390ee9bc3f650ab2643b6a6",
     "answers": [
       "A"
     ],
-    "explanation": "Kotlin hỗ trợ // và /* ... */."
+    "explanation": "Kotlin hỗ trợ // và /* ... */.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q5": {
     "fingerprint": "947ba85b34d101f2ac31c30c6e94b4e8543ec507508641c902433afcdb8af208",
     "answers": [
       "B"
     ],
-    "explanation": "Kotlin không có kiểu Decimal dựng sẵn."
+    "explanation": "Kotlin không có kiểu Decimal dựng sẵn.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q6": {
     "fingerprint": "30ab7831d7e7a7c44186d4dd209123d701ac1bc5ff4ab871ce1bb48c91e141e6",
     "answers": [
       "A"
     ],
-    "explanation": "Float có độ chính xác thấp hơn Double."
+    "explanation": "Float có độ chính xác thấp hơn Double.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q7": {
     "fingerprint": "2f8a49a11dc03939b4ea017993e485e7b52ee32d89c3c5864bfb98e725b8c8d5",
     "answers": [
       "C"
     ],
-    "explanation": "main() là điểm bắt đầu chương trình Kotlin."
+    "explanation": "main() là điểm bắt đầu chương trình Kotlin.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q8": {
     "fingerprint": "a96b75be9d68b82e35cf2ebe91eb6e7b6158ac36a3f8219d09f422525649a230",
@@ -57,7 +99,13 @@
       "B",
       "D"
     ],
-    "explanation": "Theo ngữ cảnh hàm thân khối ở bài nhập môn, không khai báo kiểu trả về thì dùng Unit. Ngoại lệ cần nhớ: hàm thân biểu thức như fun double(x: Int) = x * 2 được suy ra kiểu trả về. Giá trị trả về có thể lưu vào biến và phải phù hợp kiểu."
+    "explanation": "Theo ngữ cảnh hàm thân khối ở bài nhập môn, không khai báo kiểu trả về thì dùng Unit. Ngoại lệ cần nhớ: hàm thân biểu thức như fun double(x: Int) = x * 2 được suy ra kiểu trả về. Giá trị trả về có thể lưu vào biến và phải phù hợp kiểu.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q9": {
     "fingerprint": "a8207d6c088a654d1e02fd77bd0e3aea8b0f08a50ef59165f2c82873ee693c6f",
@@ -66,21 +114,39 @@
       "C",
       "D"
     ],
-    "explanation": "Tham số không bắt buộc có giá trị mặc định. Các nhận định còn lại đúng."
+    "explanation": "Tham số không bắt buộc có giá trị mặc định. Các nhận định còn lại đúng.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p1-q10": {
     "fingerprint": "07411839396bb8ee9f4ec808e98ae4122a1046366d7a1a356359d76a91ee3bee",
     "answers": [
       "A"
     ],
-    "explanation": "Named arguments cho phép chỉ rõ tên tham số thay vì phụ thuộc vị trí."
+    "explanation": "Named arguments cho phép chỉ rõ tên tham số thay vì phụ thuộc vị trí.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-1/android-basics-compose-unit-1-pathway-1?hl=en"
+    }
   },
   "google-u1-p2-q1": {
     "fingerprint": "c9e619118108c1dc000fdbd02333b2f8b7b276bce8516b38b25689373cd3d2aa",
     "answers": [
       "A"
     ],
-    "explanation": "IDE là Integrated Development Environment."
+    "explanation": "IDE là Integrated Development Environment.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q2": {
     "fingerprint": "1f2feefded46b4b0a46236603dc7d85f31a87be501f000c469d84b36ed668ae7",
@@ -89,14 +155,26 @@
       "B",
       "C"
     ],
-    "explanation": "Android Studio hỗ trợ kiểm tra code, emulator và preview. Tự dịch toàn bộ ứng dụng không phải chức năng mặc định."
+    "explanation": "Android Studio hỗ trợ kiểm tra code, emulator và preview. Tự dịch toàn bộ ứng dụng không phải chức năng mặc định.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q3": {
     "fingerprint": "7e451516e6089d21f40f33ad8f9ab2dd2d418fa1f513f8d62f2fcb57a82f74e8",
     "answers": [
       "C"
     ],
-    "explanation": "Emulator mô phỏng thiết bị để chạy thử mà không cần máy thật."
+    "explanation": "Emulator mô phỏng thiết bị để chạy thử mà không cần máy thật.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q4": {
     "fingerprint": "3dbaecd241260f52952a74bfeed478bdd89ec2991276fc3da67679f148f61606",
@@ -105,70 +183,130 @@
       "C",
       "E"
     ],
-    "explanation": "Template cung cấp mã khởi đầu và cấu trúc theo thực hành tốt."
+    "explanation": "Template cung cấp mã khởi đầu và cấu trúc theo thực hành tốt.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q5": {
     "fingerprint": "9b84d9adf2737e6383be56ef7a99d41d9553d201329b4d63361b78fd16bad980",
     "answers": [
       "E"
     ],
-    "explanation": "Cả menu New Project và màn hình Welcome đều tạo được dự án."
+    "explanation": "Cả menu New Project và màn hình Welcome đều tạo được dự án.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q6": {
     "fingerprint": "855c8fc7e12f8429112ab41634253703310aeffef617068d5a3d5ffd8dc692b9",
     "answers": [
       "D"
     ],
-    "explanation": "setContent nhận nội dung UI được mô tả bởi composable."
+    "explanation": "setContent nhận nội dung UI được mô tả bởi composable.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q7": {
     "fingerprint": "150fd5f29f7a5e0a06d994453116b7095e359f5795ecd666094693894dd77c61",
     "answers": [
       "A"
     ],
-    "explanation": "Composable cần được đánh dấu @Composable."
+    "explanation": "Composable cần được đánh dấu @Composable.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q8": {
     "fingerprint": "a10f8b9d5bab244c8c6eeb95f3c2e029ebe33858b6a200d3b7f06fae10d28fbf",
     "answers": [
       "C"
     ],
-    "explanation": "Surface có thể cung cấp màu nền và bao composable con."
+    "explanation": "Surface có thể cung cấp màu nền và bao composable con.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q9": {
     "fingerprint": "be663d437085ed013d286b2b66ea6beee5361ade629ef0b4a7c00373b7137ece",
     "answers": [
       "D"
     ],
-    "explanation": "Padding được thiết lập qua Modifier."
+    "explanation": "Padding được thiết lập qua Modifier.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p2-q10": {
     "fingerprint": "42d84d61f25bbc446e4ad2a499020f61b167105ea926503eed3cb1e18ce74341",
     "answers": [
       "C"
     ],
-    "explanation": "Theme có thể bao Surface, nên không có yêu cầu mọi phần tử và theme đều nằm trong Surface."
+    "explanation": "Theme có thể bao Surface, nên không có yêu cầu mọi phần tử và theme đều nằm trong Surface.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-2/android-basics-compose-unit-1-pathway-2?hl=en"
+    }
   },
   "google-u1-p3-q1": {
     "fingerprint": "f4986418877f903e6148b88bf3388b1a819a2f4d2adc4f70513da8ab82e21ff4",
     "answers": [
       "A"
     ],
-    "explanation": "Jetpack Compose là toolkit xây dựng giao diện Android."
+    "explanation": "Jetpack Compose là toolkit xây dựng giao diện Android.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q2": {
     "fingerprint": "0a00533f805ceaf18531a30485cc035833bdf19031365f9f5a197010b7be1b7a",
     "answers": [
       "A"
     ],
-    "explanation": "Composable mô tả các thành phần giao diện."
+    "explanation": "Composable mô tả các thành phần giao diện.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q3": {
     "fingerprint": "26da142c7c88de96f51c654d78e19d5c805e319f6a4eda4a05b82677af94c032",
     "answers": [
       "C"
     ],
-    "explanation": "Annotation đúng là @Composable."
+    "explanation": "Annotation đúng là @Composable.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q4": {
     "fingerprint": "16c5b790bae0b6795d4758521d82849dc0d7e3e79157e06a88c60c5dcfb4d510",
@@ -177,56 +315,104 @@
       "B",
       "D"
     ],
-    "explanation": "Column, Row và Box bố trí các phần tử. Text dùng để hiển thị văn bản."
+    "explanation": "Column, Row và Box bố trí các phần tử. Text dùng để hiển thị văn bản.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q5": {
     "fingerprint": "5b6a7f16ceb4a037f8292af0137dc8bed621d9283cc74db55b8424ae888197fa",
     "answers": [
       "B"
     ],
-    "explanation": "Resource Manager quản lý tài nguyên ứng dụng."
+    "explanation": "Resource Manager quản lý tài nguyên ứng dụng.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q6": {
     "fingerprint": "75cad04b936dcbdf555887bb39e1af248e055fa72c0016e94643ffa71ba89467",
     "answers": [
       "C"
     ],
-    "explanation": "Lớp R chứa các resource ID được sinh tự động."
+    "explanation": "Lớp R chứa các resource ID được sinh tự động.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q7": {
     "fingerprint": "86b19713b2190031b3a9c8655e4276cddba8753ed8ac0118fa62cd612443606a",
     "answers": [
       "B"
     ],
-    "explanation": "painterResource nạp drawable thành Painter."
+    "explanation": "painterResource nạp drawable thành Painter.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q8": {
     "fingerprint": "9cc32be75def693b0d680c59e2fecd9153df6848a245a3754ef5e5d4b4944f18",
     "answers": [
       "D"
     ],
-    "explanation": "contentDescription cung cấp mô tả cho công nghệ hỗ trợ."
+    "explanation": "contentDescription cung cấp mô tả cho công nghệ hỗ trợ.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q9": {
     "fingerprint": "6e0250b80c745b50e5fa148d88a21268562faf2ce408385a2e3982ea38e839cf",
     "answers": [
       "A"
     ],
-    "explanation": "Box xếp các phần tử chồng lên nhau."
+    "explanation": "Box xếp các phần tử chồng lên nhau.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u1-p3-q10": {
     "fingerprint": "e0ab8f07a6585ca85415e27c025e06b23782b127ca4f70b2566228258a3e19ec",
     "answers": [
       "C"
     ],
-    "explanation": "Alignment.Start căn về cạnh bắt đầu theo hướng bố cục."
+    "explanation": "Alignment.Start căn về cạnh bắt đầu theo hướng bố cục.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-1-pathway-3/android-basics-compose-unit-1-pathway-3?hl=en"
+    }
   },
   "google-u2-p1-q1": {
     "fingerprint": "0f1b3abd7fa440c82ab5fbd43261fee9d5443170928dfeeec3662bbc410bf7b5",
     "answers": [
       "B"
     ],
-    "explanation": "Với number = 25, 25 % 10 khác 0 và 25 không bằng 5. Không nhánh nào in dòng Divisible by 5."
+    "explanation": "Với number = 25, 25 % 10 khác 0 và 25 không bằng 5. Không nhánh nào in dòng Divisible by 5.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q2": {
     "fingerprint": "d9bb81f17501db285323b332a8be393ac733628517092e1241ea9a5546a4d8ae",
@@ -235,217 +421,403 @@
       "B",
       "C"
     ],
-    "explanation": "5 bằng 5, nằm trong 1..5 và có kiểu Int. x % 5 là biểu thức số, không phải Boolean."
+    "explanation": "5 bằng 5, nằm trong 1..5 và có kiểu Int. x % 5 là biểu thức số, không phải Boolean.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q3": {
     "fingerprint": "6aae29cc70130678b259baa2a2bdbaa36c80e99b4179dd3d33d8dab1143eaa02",
     "answers": [
       "B"
     ],
-    "explanation": "Abstraction, inheritance và polymorphism là khái niệm OOP. Readability là chất lượng mã."
+    "explanation": "Abstraction, inheritance và polymorphism là khái niệm OOP. Readability là chất lượng mã.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q4": {
     "fingerprint": "e1fb9e589dfc29e15281fd3c503cca8ac7a35350b0dd4f4baa40da4a44a6c2bc",
     "answers": [
       "C"
     ],
-    "explanation": "Bốn visibility modifier là private, protected, public, internal."
+    "explanation": "Bốn visibility modifier là private, protected, public, internal.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q5": {
     "fingerprint": "5eac50f8e3795761e67cfcdac3441a1b10a2b8889f6781c8c2b08bc097918ac2",
     "answers": [
       "B"
     ],
-    "explanation": "super tham chiếu phần triển khai của lớp cha."
+    "explanation": "super tham chiếu phần triển khai của lớp cha.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q6": {
     "fingerprint": "0c12411256193bdb49a6a3324fe8d2c00aea49fcb80de8800e051c669914341d",
     "answers": [
       "C"
     ],
-    "explanation": "Interface quy định hợp đồng mà lớp có thể triển khai."
+    "explanation": "Interface quy định hợp đồng mà lớp có thể triển khai.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q7": {
     "fingerprint": "02f4ca9cc6442eefabb2f232619c8845d92c9b2c57d63f87c39fffcd518cd4cb",
     "answers": [
       "B"
     ],
-    "explanation": "Ảnh đại diện tùy chọn có thể vắng mặt, phù hợp nullable."
+    "explanation": "Ảnh đại diện tùy chọn có thể vắng mặt, phù hợp nullable.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q8": {
     "fingerprint": "3bf0fee306be7faf4e41e4cc08ed28e14f12508d1ab086ac5c83b919660c9a9a",
     "answers": [
       "D"
     ],
-    "explanation": "?. chỉ gọi thành viên nếu đối tượng khác null."
+    "explanation": "?. chỉ gọi thành viên nếu đối tượng khác null.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q9": {
     "fingerprint": "7a5569792c61734e3c932bacf87178d9999180ac30879f0f82ab06ae59056be9",
     "answers": [
       "A"
     ],
-    "explanation": "Hàm là giá trị có kiểu hàm, nhưng không có phép chuyển đổi tùy ý giữa hàm và mọi kiểu dữ liệu."
+    "explanation": "Hàm là giá trị có kiểu hàm, nhưng không có phép chuyển đổi tùy ý giữa hàm và mọi kiểu dữ liệu.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p1-q10": {
     "fingerprint": "7bc21b0a519ebab7b7c734899b22df93db8b2f9c3c2185b1f5ff6a48472bda01",
     "answers": [
       "B"
     ],
-    "explanation": "Function literal có thể được biểu diễn bằng lambda expression."
+    "explanation": "Function literal có thể được biểu diễn bằng lambda expression.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-1/android-basics-compose-unit-2-pathway-1?hl=en"
+    }
   },
   "google-u2-p2-q1": {
     "fingerprint": "e82c323bd45569b8077d43222a8b31b034f4fbca91b7d5c3569ebd5adc2ca8b6",
     "answers": [
       "C"
     ],
-    "explanation": "Image hiển thị ảnh trong Compose."
+    "explanation": "Image hiển thị ảnh trong Compose.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 7,
+      "total": 7,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-2/android-basics-compose-unit-2-pathway-2?hl=en"
+    }
   },
   "google-u2-p2-q2": {
     "fingerprint": "8c93f7a3a7e4b992c2076761107a93abe69671e20d1dc67e091ebfdcf1320702",
     "answers": [
       "A"
     ],
-    "explanation": "Alignment.Center căn giữa theo cả hai trục."
+    "explanation": "Alignment.Center căn giữa theo cả hai trục.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 7,
+      "total": 7,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-2/android-basics-compose-unit-2-pathway-2?hl=en"
+    }
   },
   "google-u2-p2-q3": {
     "fingerprint": "56098f2cad6b429c9e1b60186545bc268fb6857843cd8d358895fdfa223aabff",
     "answers": [
       "A"
     ],
-    "explanation": "remember giữ giá trị qua các lần recomposition ở cùng vị trí."
+    "explanation": "remember giữ giá trị qua các lần recomposition ở cùng vị trí.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 7,
+      "total": 7,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-2/android-basics-compose-unit-2-pathway-2?hl=en"
+    }
   },
   "google-u2-p2-q4": {
     "fingerprint": "1fce1704605076a024ef1c2f263f25573f9356a45a9182146f1292ada0c70162",
     "answers": [
       "A"
     ],
-    "explanation": "Khi dừng ở breakpoint có thể kiểm tra biến."
+    "explanation": "Khi dừng ở breakpoint có thể kiểm tra biến.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 7,
+      "total": 7,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-2/android-basics-compose-unit-2-pathway-2?hl=en"
+    }
   },
   "google-u2-p2-q5": {
     "fingerprint": "ed35c5828582c6291dd477fd3cb1ed2b77f74e53038dd92976e4e69c0a4280a3",
     "answers": [
       "D"
     ],
-    "explanation": "mutableStateOf tạo State quan sát được để Compose biết cần cập nhật UI."
+    "explanation": "mutableStateOf tạo State quan sát được để Compose biết cần cập nhật UI.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 7,
+      "total": 7,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-2/android-basics-compose-unit-2-pathway-2?hl=en"
+    }
   },
   "google-u2-p2-q6": {
     "fingerprint": "4d375fce3b3aa4b0bf8c526247d8605728c6d1e019c50d249c841b28ed2b742c",
     "answers": [
       "C"
     ],
-    "explanation": "Column xếp con theo chiều dọc."
+    "explanation": "Column xếp con theo chiều dọc.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 7,
+      "total": 7,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-2/android-basics-compose-unit-2-pathway-2?hl=en"
+    }
   },
   "google-u2-p2-q7": {
     "fingerprint": "e7382ba4eec535fa1da21edceda9e5d027db6d5c71ee92323390196c5bdc50df",
     "answers": [
       "B"
     ],
-    "explanation": "Step out chạy đến khi thoát lời gọi hàm hiện tại để quay về caller."
+    "explanation": "Step out chạy đến khi thoát lời gọi hàm hiện tại để quay về caller.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 7,
+      "total": 7,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-2/android-basics-compose-unit-2-pathway-2?hl=en"
+    }
   },
   "google-u2-p3-q1": {
     "fingerprint": "580bc831cb4448675f69b9c4a8f7e8690494b8ce44d5199868e32c59afbbdd12",
     "answers": [
       "A"
     ],
-    "explanation": "Initial composition ghi nhận cây composable ban đầu."
+    "explanation": "Initial composition ghi nhận cây composable ban đầu.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q2": {
     "fingerprint": "f1e7d3e79c083a183e3c71b6dc15495505be3d2c701a82ca51b8031ff599aa2b",
     "answers": [
       "A"
     ],
-    "explanation": "UI đã composition được cập nhật thông qua recomposition."
+    "explanation": "UI đã composition được cập nhật thông qua recomposition.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q3": {
     "fingerprint": "6614b5c2873b36a06fe6fea6d809c414c0f97f92cfe46974cb8eec6c3584d457",
     "answers": [
       "B"
     ],
-    "explanation": "Recomposition thực thi lại composable bị ảnh hưởng bởi thay đổi dữ liệu."
+    "explanation": "Recomposition thực thi lại composable bị ảnh hưởng bởi thay đổi dữ liệu.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q4": {
     "fingerprint": "8654c8b1a1fca2ae0431c238066d82a812098213c7e4a9f3d537aa2162f47c9f",
     "answers": [
       "A"
     ],
-    "explanation": "State là dữ liệu có thể thay đổi theo thời gian."
+    "explanation": "State là dữ liệu có thể thay đổi theo thời gian.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q5": {
     "fingerprint": "fe37009e32ff8acd4fd53be6603bc0e0ce1a2db4f4bbbad503f161abebcccd35",
     "answers": [
       "B"
     ],
-    "explanation": "State hoisting đưa quyền quản lý state lên caller."
+    "explanation": "State hoisting đưa quyền quản lý state lên caller.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q6": {
     "fingerprint": "f819a8318ad9b6068c2d6d333f0b493d0eb10515a2e5422efecfd4d7ba499d7c",
     "answers": [
       "B"
     ],
-    "explanation": "onNext xử lý hành động Next để chuyển focus."
+    "explanation": "onNext xử lý hành động Next để chuyển focus.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q7": {
     "fingerprint": "3faaddb2094bbb239f49c5325611eb49037fab00d1212f5b4bba2e6514f223a5",
     "answers": [
       "B"
     ],
-    "explanation": "ceil làm tròn về phía dương vô cùng."
+    "explanation": "ceil làm tròn về phía dương vô cùng.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q8": {
     "fingerprint": "c9a30b4835338e011dc5ffc1184feda8f3b01240abe49abfdc921e15674a932f",
     "answers": [
       "A"
     ],
-    "explanation": "Layout Inspector kiểm tra cây layout đang chạy."
+    "explanation": "Layout Inspector kiểm tra cây layout đang chạy.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q9": {
     "fingerprint": "1ebe46a3aaeb5201bdc0d72d4566acd180fc1dc24b805517ffcfaa672125cfe4",
     "answers": [
       "B"
     ],
-    "explanation": "Instrumented UI tests nằm trong androidTest."
+    "explanation": "Instrumented UI tests nằm trong androidTest.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u2-p3-q10": {
     "fingerprint": "194ad1640b96bc37f5849c2c58ef49d86e639342a391960679a4d07725469dd9",
     "answers": [
       "C"
     ],
-    "explanation": "JUnit nhận diện phương thức kiểm thử bằng @Test."
+    "explanation": "JUnit nhận diện phương thức kiểm thử bằng @Test.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-2-pathway-3/android-basics-compose-unit-2-pathway-3?hl=en"
+    }
   },
   "google-u3-p1-q1": {
     "fingerprint": "78d82d7736dd8a9914f854aca575a9e360dc455ea4244f12c4514b45d4e3047b",
     "answers": [
       "A"
     ],
-    "explanation": "data class có primary constructor chứa các thuộc tính val hoặc var."
+    "explanation": "data class có primary constructor chứa các thuộc tính val hoặc var.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q2": {
     "fingerprint": "9ce35f4cef7d94fe3e5e7136731dba11a8a63bac1f5ca06ed59db86d260c65f5",
     "answers": [
       "A"
     ],
-    "explanation": "Direct subclass của sealed class phải ở cùng package và module theo quy tắc Kotlin hiện tại."
+    "explanation": "Direct subclass của sealed class phải ở cùng package và module theo quy tắc Kotlin hiện tại.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q3": {
     "fingerprint": "e7d28672f3f877f87593c3fb1b81d68a1dd08c9d87106e7e99e2a903260f469e",
     "answers": [
       "D"
     ],
-    "explanation": "Tham số kiểu generic đặt trong dấu < >."
+    "explanation": "Tham số kiểu generic đặt trong dấu < >.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q4": {
     "fingerprint": "ee1f75b386d3165ff79d4d1158e8b626579ddf3e765abb93c1e3d4509b888558",
     "answers": [
       "A"
     ],
-    "explanation": "enum biểu diễn một tập hằng số cố định."
+    "explanation": "enum biểu diễn một tập hằng số cố định.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q5": {
     "fingerprint": "bf9b32f935934fcc82f69f959e39a6b58c098004882cd4d82968e8a105435f3f",
     "answers": [
       "D"
     ],
-    "explanation": "mutableListOf tạo MutableList có thể thêm và xóa phần tử."
+    "explanation": "mutableListOf tạo MutableList có thể thêm và xóa phần tử.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q6": {
     "fingerprint": "96e22db27314c366180fdf3397ba95d979dbd462d8e868c7a0ed01b7f63dedc9",
@@ -454,7 +826,13 @@
       "C",
       "D"
     ],
-    "explanation": "map, filter và forEach nhận hàm làm tham số. arrangeBy không phải hàm chuẩn ở đây."
+    "explanation": "map, filter và forEach nhận hàm làm tham số. arrangeBy không phải hàm chuẩn ở đây.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q7": {
     "fingerprint": "19bf42d1b4cba9c53589649d116604578414e77242047b8c980e39d8db246982",
@@ -462,167 +840,311 @@
       "A",
       "B"
     ],
-    "explanation": "Chỉ số danh sách bắt đầu từ 0 nên colors[2] và colors.get(2) lấy Blue."
+    "explanation": "Chỉ số danh sách bắt đầu từ 0 nên colors[2] và colors.get(2) lấy Blue.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q8": {
     "fingerprint": "7cd806c726b4c7a918fecf33006bd77ddb18bbd544f7dd42a838ff776f61528f",
     "answers": [
       "B"
     ],
-    "explanation": "Singleton là đối tượng có một instance."
+    "explanation": "Singleton là đối tượng có một instance.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q9": {
     "fingerprint": "9c824c8f3ab603fa4f3efeabb04f9a74081b8efd4e3bfb52e362b847d1d98919",
     "answers": [
       "A"
     ],
-    "explanation": "Set loại phần tử trùng, còn key trong Map phải duy nhất."
+    "explanation": "Set loại phần tử trùng, còn key trong Map phải duy nhất.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p1-q10": {
     "fingerprint": "462ef0daa0c5f9a9f69e0141ffdd4cadc6771171d3410790324f702f2a1d0631",
     "answers": [
       "D"
     ],
-    "explanation": "Collection.size là số phần tử."
+    "explanation": "Collection.size là số phần tử.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 10,
+      "total": 10,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-1/android-basics-compose-unit-3-pathway-1?hl=en"
+    }
   },
   "google-u3-p2-q1": {
     "fingerprint": "fe2e047172752545a8136ce394e95ae9f95b354af459fe41e53ce7796335a6d7",
     "answers": [
       "A"
     ],
-    "explanation": "Trong bài học này, adaptive icon được tạo bằng foreground và background vector drawable. Android nói chung cũng cho phép drawable khác; vector không phải yêu cầu bắt buộc của mọi adaptive icon."
+    "explanation": "Trong bài học này, adaptive icon được tạo bằng foreground và background vector drawable. Android nói chung cũng cho phép drawable khác; vector không phải yêu cầu bắt buộc của mọi adaptive icon.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 8,
+      "total": 8,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en"
+    }
   },
   "google-u3-p2-q2": {
     "fingerprint": "29209ea1b6bca024e1f5092f3bab6b93506c3a72018b4ea322beecc1a092dc93",
     "answers": [
       "C"
     ],
-    "explanation": "LazyColumn dựng các phần tử cần thiết cho danh sách dọc cuộn."
+    "explanation": "LazyColumn dựng các phần tử cần thiết cho danh sách dọc cuộn.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 8,
+      "total": 8,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en"
+    }
   },
   "google-u3-p2-q3": {
     "fingerprint": "4459f6054ed5bbd6e1bb639aa93129a12610d23828be4f0c5e90a1f589b743e6",
     "answers": [
       "D"
     ],
-    "explanation": "Vector drawable được mô tả bằng XML."
+    "explanation": "Vector drawable được mô tả bằng XML.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 8,
+      "total": 8,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en"
+    }
   },
   "google-u3-p2-q4": {
     "fingerprint": "a9da94377af75fe84009305df838d4d6bf632c5300d21e19a709238f35dbcb61",
     "answers": [
       "B"
     ],
-    "explanation": "LazyVerticalGrid bố trí lưới cuộn theo chiều dọc."
+    "explanation": "LazyVerticalGrid bố trí lưới cuộn theo chiều dọc.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 8,
+      "total": 8,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en"
+    }
   },
   "google-u3-p2-q5": {
     "fingerprint": "df7d699590285e9d423e794c2c09951c5535303745fdbc041e84026be1ca74c1",
     "answers": [
       "A"
     ],
-    "explanation": "A là lựa chọn dự kiến của quiz. Cách diễn đạt bị đơn giản hóa: Column có thể nhận danh sách động nhưng dựng tất cả children và không tự cuộn. LazyColumn phù hợp hơn cho danh sách lớn hoặc chưa biết kích thước."
+    "explanation": "A là lựa chọn dự kiến của quiz. Cách diễn đạt bị đơn giản hóa: Column có thể nhận danh sách động nhưng dựng tất cả children và không tự cuộn. LazyColumn phù hợp hơn cho danh sách lớn hoặc chưa biết kích thước.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 8,
+      "total": 8,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en"
+    }
   },
   "google-u3-p2-q6": {
     "fingerprint": "9ba1b9b4f164dbfadaf349fa97d9db322a170352b562ae4e2ed143b52c06857e",
     "answers": [
       "C"
     ],
-    "explanation": "items cung cấp nhiều phần tử cho LazyColumn."
+    "explanation": "items cung cấp nhiều phần tử cho LazyColumn.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 8,
+      "total": 8,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en"
+    }
   },
   "google-u3-p2-q7": {
     "fingerprint": "3f6472c2d4c19b3cf27cdcfd1a44a307611dec458948f519d06aadfecb87ed50",
     "answers": [
       "D"
     ],
-    "explanation": "Row xếp theo chiều ngang."
+    "explanation": "Row xếp theo chiều ngang.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 8,
+      "total": 8,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en"
+    }
   },
   "google-u3-p2-q8": {
     "fingerprint": "00137d40e47fa110d12f42a03e7922f530e314f3905413999562ca6e99e9ced3",
     "answers": [
       "A"
     ],
-    "explanation": "Column xếp theo chiều dọc."
+    "explanation": "Column xếp theo chiều dọc.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 8,
+      "total": 8,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-2/android-basics-compose-unit-3-pathway-2?hl=en"
+    }
   },
   "google-u3-p3-q1": {
     "fingerprint": "e37b49c9ceaba5171aa92299d80a69f755704d575017da29e12fb2788712b24c",
     "answers": [
       "D"
     ],
-    "explanation": "Animation có thể cung cấp tín hiệu, làm rõ thay đổi và tạo chuyển động trau chuốt."
+    "explanation": "Animation có thể cung cấp tín hiệu, làm rõ thay đổi và tạo chuyển động trau chuốt.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q2": {
     "fingerprint": "b208947c7496cd67f79d67c74c27ed5fc885ff14282876680d1bc29a838dbd1f",
     "answers": [
       "B"
     ],
-    "explanation": "Spring animation được cấu hình qua damping ratio và stiffness."
+    "explanation": "Spring animation được cấu hình qua damping ratio và stiffness.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q3": {
     "fingerprint": "2433defaa646401af2f71009a5b82f25ae5da179e6d2c4316b57d250f5e97fdd",
     "answers": [
       "A"
     ],
-    "explanation": "Spring mô phỏng lực lò xo."
+    "explanation": "Spring mô phỏng lực lò xo.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q4": {
     "fingerprint": "387571e0e4765d84eff612b04dbb9262094466c516082ac8e7730a30d2e4fef3",
     "answers": [
       "A"
     ],
-    "explanation": "Trong cách mô tả Material của quiz, primary là màu thương hiệu được dùng thường xuyên."
+    "explanation": "Trong cách mô tả Material của quiz, primary là màu thương hiệu được dùng thường xuyên.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q5": {
     "fingerprint": "0975790e4192262432cd8575634b2e7c316130a9faca07ea5c5c94144d0d7e18",
     "answers": [
       "C"
     ],
-    "explanation": "Shape.kt khai báo hình dạng component trong cấu trúc dự án bài học."
+    "explanation": "Shape.kt khai báo hình dạng component trong cấu trúc dự án bài học.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q6": {
     "fingerprint": "960e702a31c79176ea7476a38b2dd23769da8102208f2212829d9cafd9396e15",
     "answers": [
       "B"
     ],
-    "explanation": "Có thể có nhiều @Preview để xem các cấu hình khác nhau."
+    "explanation": "Có thể có nhiều @Preview để xem các cấu hình khác nhau.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q7": {
     "fingerprint": "0900c77a908e70e846a1c6882516968349dcd5b24fae00256ec66de6515b0952",
     "answers": [
       "A"
     ],
-    "explanation": "RGB sáu chữ số biểu diễn ba kênh màu. Kotlin Color thường còn dùng alpha, ví dụ 0xFFRRGGBB."
+    "explanation": "RGB sáu chữ số biểu diễn ba kênh màu. Kotlin Color thường còn dùng alpha, ví dụ 0xFFRRGGBB.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q8": {
     "fingerprint": "c00c7d600eb31c7d6254f3e5e99162be2d8f3c8fa8db946983534f59ddd17d4e",
     "answers": [
       "A"
     ],
-    "explanation": "Theme.kt kết hợp color, shape và typography."
+    "explanation": "Theme.kt kết hợp color, shape và typography.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q9": {
     "fingerprint": "e56093cd90ccc1ece6cdab297c1fc97006597c135feb1d4c28e6ed3ec6569842",
     "answers": [
       "A"
     ],
-    "explanation": "Elevation tạo bóng và cảm giác nổi khỏi nền."
+    "explanation": "Elevation tạo bóng và cảm giác nổi khỏi nền.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q10": {
     "fingerprint": "76f192a6497251768d2b12c3e8871b394a6abaf342bb0271a4261ac3ed34005d",
     "answers": [
       "D"
     ],
-    "explanation": "Cả ba lý do đều đúng; tiết kiệm điện còn tùy công nghệ màn hình."
+    "explanation": "Cả ba lý do đều đúng; tiết kiệm điện còn tùy công nghệ màn hình.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q11": {
     "fingerprint": "a9ef08eecd13489bd79d01f3f971827404112f73911af5faa6a3aefe8b1881fc",
     "answers": [
       "B"
     ],
-    "explanation": "TalkBack là trình đọc màn hình. Điều khiển bằng switch thuộc Switch Access."
+    "explanation": "TalkBack là trình đọc màn hình. Điều khiển bằng switch thuộc Switch Access.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   },
   "google-u3-p3-q12": {
     "fingerprint": "3ea294b7cd5e5a7a5588b73cbf9d42111abcfa785911efe25385c266aba961e7",
     "answers": [
       "C"
     ],
-    "explanation": "contentDescription là mô tả ngữ nghĩa cho ảnh hoặc icon."
+    "explanation": "contentDescription là mô tả ngữ nghĩa cho ảnh hoặc icon.",
+    "verification": {
+      "method": "Google quiz Submit answers",
+      "score": 12,
+      "total": 12,
+      "url": "https://developer.android.com/courses/quizzes/android-basics-compose-unit-3-pathway-3/android-basics-compose-unit-3-pathway-3?hl=en"
+    }
   }
 }
