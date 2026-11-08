@@ -3,10 +3,16 @@ const $ = id => document.getElementById(id), KEY = window.COURSE_CODE === 'MI202
 const progressKey = ['midterm', 'google'].includes(window.STUDY_MODE) ? KEY + ':' + window.STUDY_MODE : KEY;
 let saved = {}; try { saved = JSON.parse(localStorage.getItem(progressKey)) || {} } catch { }
 let scope = String(saved.scope || 'all'), sessions = saved.sessions || {};
-if (scope !== 'all' && !CHAPTERS.some(chapter => String(chapter.number) === scope)) scope = 'all';
+const chapterIds = CHAPTERS.map(chapter => String(chapter.number));
+const scopeIds = () => scope === 'all' ? chapterIds : scope.replace(/^mix:/, '').split(',').filter(id => chapterIds.includes(id));
+if (scope !== 'all' && !scopeIds().length && scope !== 'mix:') scope = 'all';
+let customSelected = Boolean(saved.customSelected || scope.startsWith('mix:'));
+let activeReview = false;
 let questions = [], session, lastTick = Date.now(), running = false;
 let shuffled = !!saved.shuffled;
-const sessionKey = () => scope + (shuffled ? ':random' : '');
+const baseSessionKey = () => scope + (shuffled ? ':random' : '');
+const reviewSessionKey = () => baseSessionKey() + ':wrong';
+const sessionKey = () => activeReview ? reviewSessionKey() : baseSessionKey();
 function shuffle(items) { const result = [...items]; for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[result[i], result[j]] = [result[j], result[i]] } return result }
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 // Allow basic formatting without accepting HTML attributes or executable markup.
@@ -16,13 +22,67 @@ function renderText(text) {
         .replace(/&lt;(\/?)\s*(b|strong|i|em|u|sub|sup)\s*&gt;/gi,
             (_, closing, tag) => '<' + closing + tag.toLowerCase() + '>');
 }
-for (const c of CHAPTERS) { const o = document.createElement('option'); o.value = c.number; o.textContent = `${window.COURSE_CODE === "IT4785E" ? "" : `Chương ${c.number} · `}${c.title} (${c.questions.length} câu)`; $('chapter').append(o) }
-function save() { try { localStorage.setItem(progressKey, JSON.stringify({ scope, shuffled, sessions })) } catch { $('save-note').textContent = 'Không thể lưu tiến độ trên trình duyệt này' } }
-function pool() { return CHAPTERS.filter(c => scope === 'all' || String(c.number) === scope).flatMap(c => c.questions) }
-function newSession() { const list = pool(); return { index: 0, answers: {}, elapsed: 0, paused: false, order: (shuffled ? shuffle(list) : list).map(q => q.id), options: Object.fromEntries(list.map(q => [q.id, (shuffled ? shuffle(q.options) : q.options).map(o => o.id)])) } }
+for (const c of CHAPTERS) {
+    const label = `${window.COURSE_CODE === "IT4785E" ? "" : `Chương ${c.number} · `}${c.title} (${c.questions.length} câu)`;
+    const option = document.createElement('option');
+    option.value = c.number;
+    option.textContent = label;
+    $('chapter').append(option);
+    const row = document.createElement('label');
+    row.className = 'chapter-choice';
+    row.innerHTML = `<input type="checkbox" value="${c.number}" ${scopeIds().includes(String(c.number)) ? 'checked' : ''}><span>${esc(label)}</span>`;
+    $('chapter-checks').append(row);
+}
+function updateSelection() {
+    const selected = [...$('chapter-checks').querySelectorAll('input:checked')].map(input => input.value);
+    scope = selected.length === chapterIds.length ? 'all' : selected.length === 1 ? selected[0] : 'mix:' + selected.join(',');
+    updateResume();
+}
+function updatePicker() {
+    $('chapter-picker').hidden = !customSelected;
+    $('chapter').value = customSelected ? 'custom' : scope;
+    $('chapter-checks').querySelectorAll('input').forEach(input => {
+        input.checked = scopeIds().includes(input.value);
+    });
+}
+$('chapter-checks').addEventListener('change', updateSelection);
+$('select-all').onclick = () => {
+    $('chapter-checks').querySelectorAll('input').forEach(input => input.checked = true);
+    updateSelection();
+};
+$('select-none').onclick = () => {
+    $('chapter-checks').querySelectorAll('input').forEach(input => input.checked = false);
+    updateSelection();
+};
+function save() { try { localStorage.setItem(progressKey, JSON.stringify({ scope, customSelected, shuffled, sessions })) } catch { $('save-note').textContent = 'Không thể lưu tiến độ trên trình duyệt này' } }
+function selectedQuestions() {
+    const selected = new Set(scopeIds());
+    return CHAPTERS.filter(chapter => selected.has(String(chapter.number))).flatMap(chapter => chapter.questions);
+}
+function pool() {
+    const list = selectedQuestions();
+    if (!activeReview) return list;
+    const ids = new Set(sessions[reviewSessionKey()]?.reviewIds || []);
+    return list.filter(q => ids.has(q.id));
+}
+function newSession(list = pool()) {
+    const attempt = {
+        index: 0,
+        answers: {},
+        elapsed: 0,
+        paused: false,
+        order: (shuffled ? shuffle(list) : list).map(q => q.id),
+        options: Object.fromEntries(list.map(q => [
+            q.id, (shuffled ? shuffle(q.options) : q.options).map(option => option.id),
+        ])),
+    };
+    if (activeReview) attempt.reviewIds = list.map(q => q.id);
+    return attempt;
+}
 function loadScope() {
     session = sessions[sessionKey()];
     const list = pool();
+    if (!list.length) { setup(); return; }
     const byId = new Map(list.map(q => [q.id, q]));
     session.order = (session.order || []).filter(id => byId.has(id));
     const existing = new Set(session.order);
@@ -47,12 +107,45 @@ function loadScope() {
     $('setup').hidden = true;
     $('exam').hidden = false;
     $('back').hidden = false;
+    $('back').textContent = activeReview ? '← Kết quả bài gốc' : '← Chọn bộ câu hỏi';
     render();
     updateTimer();
     save();
 }
-function setup() { running = false; $('exam').hidden = true; $('setup').hidden = false; $('back').hidden = true; $('chapter').value = scope; $('shuffle').checked = shuffled; updateResume() }
-function updateResume() { $('resume').hidden = !sessions[sessionKey()]; save() }
+function setup() {
+    running = false;
+    activeReview = false;
+    $('exam').hidden = true;
+    $('setup').hidden = false;
+    $('back').hidden = true;
+    $('shuffle').checked = shuffled;
+    updatePicker();
+    updateResume();
+}
+function updateResume() {
+    $('resume').hidden = !sessions[baseSessionKey()];
+    $('resume-wrong').hidden = !sessions[reviewSessionKey()];
+    const list = selectedQuestions();
+    $('start').disabled = !list.length;
+    $('selection-count').textContent = `${scopeIds().length} chương · ${list.length} câu`;
+    save();
+}
+function wrongQuestions(list = questions, attempt = session) {
+    return list.filter(q => {
+        const answer = attempt?.answers[q.id];
+        return canGrade(q) && answer?.confirmed && !isCorrect(q, answer.selected);
+    });
+}
+function retryWrong() {
+    const wrong = wrongQuestions();
+    if (!wrong.length) return;
+    tick();
+    activeReview = true;
+    const attempt = newSession(wrong);
+    attempt.reviewIds = wrong.map(q => q.id);
+    sessions[reviewSessionKey()] = attempt;
+    loadScope();
+}
 function canGrade(q) {
     return Boolean(q.fields?.length || q.answers.length);
 }
@@ -112,7 +205,7 @@ function render() {
         </label>`;
     }).join('');
     $('question').innerHTML = `<div class="question-head">
-        <div class="question-meta"><span class="question-number">Câu ${session.index + 1} / ${questions.length}</span>
+        <div class="question-meta"><span class="question-number">${activeReview ? "Ôn câu sai · " : ""}Câu ${session.index + 1} / ${questions.length}</span>
             <span class="badge ${multi ? 'multi' : ''}">${badge}</span></div>
         ${renderSource(q.source)}
         ${q.otherSources?.length ? `<details class="source-ref"><summary>Nguồn trùng (${q.otherSources.length})</summary>
@@ -146,6 +239,9 @@ function render() {
     const done = questions.filter(q => answer(q).confirmed);
     const gradedDone = done.filter(canGrade);
     const right = gradedDone.filter(q => isCorrect(q, answer(q).selected)).length;
+    const wrong = wrongQuestions();
+    $('retry-wrong').disabled = !wrong.length;
+    $('retry-wrong').textContent = `Làm lại câu sai (${wrong.length})`;
     const pct = Math.round(done.length / questions.length * 100);
     $('done').textContent = `${done.length}/${questions.length}`; $('right').textContent = right; $('wrong').textContent = gradedDone.length - right; $('percent').textContent = pct + '%'; $('progress').style.width = pct + '%';
     $('grid').innerHTML = questions.map((q, i) => `<button class="qnav ${answer(q).confirmed ? 'done' : ''} ${i === session.index ? 'current' : ''}" ${i === session.index ? 'aria-current="step"' : ''} aria-label="Câu ${i + 1}, ${answer(q).confirmed ? 'đã làm' : 'chưa xác nhận'}" data-index="${i}">${i + 1}</button>`).join('');
@@ -157,10 +253,26 @@ function tick() { if (!running) return; const now = Date.now(); if (!session.pau
 function updateTimer() { const t = Math.floor(session.elapsed / 1000); $('timer').textContent = [Math.floor(t / 3600), Math.floor(t / 60) % 60, t % 60].map(n => String(n).padStart(2, '0')).join(':'); $('pause').textContent = session.paused ? '▶' : 'Ⅱ'; $('pause').setAttribute('aria-label', session.paused ? 'Tiếp tục thời gian' : 'Tạm dừng thời gian'); $('pause').title = session.paused ? 'Tiếp tục thời gian' : 'Tạm dừng thời gian' }
 $('confirm').onclick = () => { const q = questions[session.index], a = answer(q); if ($('confirm').disabled || a.confirmed) return; tick(); a.confirmed = true; session.answers[q.id] = a; save(); render() };
 $('prev').onclick = () => go(Math.max(0, session.index - 1)); $('next').onclick = () => go(Math.min(questions.length - 1, session.index + 1));
-$('chapter').onchange = () => { scope = $('chapter').value; updateResume() }; $('shuffle').onchange = () => { shuffled = $('shuffle').checked; updateResume() };
-$('start').onclick = () => { if (sessions[sessionKey()]) { $('reset-dialog').showModal(); return } sessions[sessionKey()] = newSession(); loadScope() };
-$('resume').onclick = loadScope;
-$('back').onclick = () => { tick(); save(); setup() };
+$('chapter').onchange = () => {
+    customSelected = $('chapter').value === 'custom';
+    if (!customSelected) scope = $('chapter').value;
+    updatePicker();
+    updateResume();
+}; $('shuffle').onchange = () => { shuffled = $('shuffle').checked; updateResume() };
+$('start').onclick = () => { if (!selectedQuestions().length) return; if (sessions[sessionKey()]) { $('reset-dialog').showModal(); return } sessions[sessionKey()] = newSession(); loadScope() };
+$('resume').onclick = () => { activeReview = false; loadScope(); };
+$('resume-wrong').onclick = () => { activeReview = true; loadScope(); };
+$('retry-wrong').onclick = retryWrong;
+$('back').onclick = () => {
+    tick();
+    save();
+    if (activeReview && sessions[baseSessionKey()]) {
+        activeReview = false;
+        loadScope();
+    } else {
+        setup();
+    }
+};
 $('pause').onclick = () => { tick(); session.paused = !session.paused; updateTimer(); save() };
 $('reset').onclick = () => $('reset-dialog').showModal(); $('cancel-reset').onclick = () => $('reset-dialog').close(); $('accept-reset').onclick = () => { sessions[sessionKey()] = newSession(); $('reset-dialog').close(); loadScope() };
 function updateTheme() { const dark = document.documentElement.dataset.theme === 'dark'; $('theme').textContent = dark ? '☀ Chế độ sáng' : '☾ Chế độ tối'; $('theme').setAttribute('aria-pressed', String(dark)) }
