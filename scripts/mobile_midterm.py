@@ -3,7 +3,7 @@
 from copy import deepcopy
 import json
 
-from google_quiz import write_google_quiz
+from google_quiz import ATTRIBUTION, load_google_questions, write_google_quiz
 
 
 # The first ID is the displayed question. Other IDs retain the sources of
@@ -51,11 +51,50 @@ TOPICS = {
     ],
 }
 
+# Material containers, theming, shape, color, elevation and dark-theme theory.
+# Animation, preview, accessibility, Kotlin and core layouts stay in scope.
+GOOGLE_EXCLUDED = {
+    "google-u1-p2-q8", "google-u1-p2-q10",
+    "google-u3-p3-q4", "google-u3-p3-q5", "google-u3-p3-q7",
+    "google-u3-p3-q8", "google-u3-p3-q9", "google-u3-p3-q10",
+}
+
+# Reviewed semantic duplicates. Keep the existing ID so saved answers survive.
+GOOGLE_DUPLICATES = {
+    "google-u1-p3-q3": "google-u1-p2-q7",  # @Composable annotation
+    "google-u1-p3-q6": "20241-1-4",       # Generated R class
+    "google-u3-p2-q8": "google-u2-p2-q6", # Column vertical layout
+}
+
 NOTE = (
-    "Ôn giữa kì 11/11/2026 bằng câu phù hợp lọc từ các đề cũ. Phạm vi lọc gồm "
-    "3 bài Kotlin và Compose Unit 1–3, bỏ Material Design. "
-    "Đề cũ chưa bao phủ toàn bộ Compose Unit 2–3."
+    "Ôn giữa kì 11/11/2026 từ đề cũ và quiz Google Unit 1–3, "
+    "đã gộp câu trùng và bỏ Material Design. "
+    "Đáp án câu Google đã được kiểm chứng bằng Submit."
 )
+
+
+def add_google_midterm(midterm):
+    google, _ = load_google_questions()
+    retained = {q["id"]: q for chapter in midterm for q in chapter["questions"]}
+    for chapter in google:
+        questions = []
+        for original in chapter["questions"]:
+            if original["id"] in GOOGLE_EXCLUDED:
+                continue
+            question = deepcopy(original)
+            duplicate = GOOGLE_DUPLICATES.get(question["id"])
+            if duplicate:
+                retained[duplicate].setdefault("otherSources", []).append(question["source"])
+                continue
+            retained[question["id"]] = question
+            questions.append(question)
+        if questions:
+            midterm.append({
+                "number": len(midterm) + 1,
+                "title": "Google · " + chapter["title"],
+                "questions": questions,
+            })
+
 
 
 def write_mobile_pages(target, bank, bank_html):
@@ -75,6 +114,7 @@ def write_mobile_pages(target, bank, bank_html):
             questions.append(question)
         midterm.append({"number": number, "title": title, "questions": questions})
 
+    add_google_midterm(midterm)
     midterm_count = sum(len(chapter["questions"]) for chapter in midterm)
     bank_count = sum(len(chapter["questions"]) for chapter in bank)
     back = 'href="../index.html" class="secondary">← Chọn môn'
@@ -88,6 +128,7 @@ def write_mobile_pages(target, bank, bank_html):
         .replace("../IT4785E/data.js", "midterm.js")
         .replace('<a href="scans.html">Xem ảnh nguồn</a>', f'<p class="source-ref">{NOTE}</p>')
     )
+    midterm_page = midterm_page.replace("</main>", ATTRIBUTION + "</main>")
     (target / "midterm.html").write_text(midterm_page, encoding="utf-8")
     (target / "midterm.js").write_text(
         'window.COURSE_CODE = "IT4785E";\nwindow.STUDY_MODE = "midterm";\n'

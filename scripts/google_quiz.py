@@ -12,7 +12,7 @@ Code samples follow the <a href="https://developer.android.com/license">Android 
 </p>"""
 
 
-def write_google_quiz(target, bank_page, bank_count):
+def load_google_questions():
     scripts = Path(__file__).resolve().parent
     quizzes = json.loads((scripts / "google_quizzes.json").read_text())
     keys = json.loads((scripts / "google_quiz_answers.json").read_text())
@@ -44,6 +44,11 @@ def write_google_quiz(target, bank_page, bank_count):
             "title": f"Unit {quiz['unit']} · Pathway {quiz['pathway']} · {quiz['title']}",
             "questions": questions,
         })
+    return chapters, verified_count
+
+
+def write_google_quiz(target, bank_page, bank_count):
+    chapters, verified_count = load_google_questions()
     count = sum(len(chapter["questions"]) for chapter in chapters)
     status = (
         f"{verified_count}/{count} đáp án đã kiểm chứng bằng nút Submit answers trên Google. "
