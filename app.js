@@ -1,6 +1,7 @@
 'use strict';
 const $ = id => document.getElementById(id), KEY = window.COURSE_CODE === 'MI2021' ? 'xstk-study-v1' : `xstk-study-v1:${window.COURSE_CODE}`;
-let saved = {}; try { saved = JSON.parse(localStorage.getItem(KEY)) || {} } catch { }
+const progressKey = window.STUDY_MODE === 'midterm' ? KEY + ':midterm' : KEY;
+let saved = {}; try { saved = JSON.parse(localStorage.getItem(progressKey)) || {} } catch { }
 let scope = String(saved.scope || 'all'), sessions = saved.sessions || {};
 if (scope !== 'all' && !CHAPTERS.some(chapter => String(chapter.number) === scope)) scope = 'all';
 let questions = [], session, lastTick = Date.now(), running = false;
@@ -16,7 +17,7 @@ function renderText(text) {
             (_, closing, tag) => '<' + closing + tag.toLowerCase() + '>');
 }
 for (const c of CHAPTERS) { const o = document.createElement('option'); o.value = c.number; o.textContent = `${window.COURSE_CODE === "IT4785E" ? "" : `Chương ${c.number} · `}${c.title} (${c.questions.length} câu)`; $('chapter').append(o) }
-function save() { try { localStorage.setItem(KEY, JSON.stringify({ scope, shuffled, sessions })) } catch { $('save-note').textContent = 'Không thể lưu tiến độ trên trình duyệt này' } }
+function save() { try { localStorage.setItem(progressKey, JSON.stringify({ scope, shuffled, sessions })) } catch { $('save-note').textContent = 'Không thể lưu tiến độ trên trình duyệt này' } }
 function pool() { return CHAPTERS.filter(c => scope === 'all' || String(c.number) === scope).flatMap(c => c.questions) }
 function newSession() { const list = pool(); return { index: 0, answers: {}, elapsed: 0, paused: false, order: (shuffled ? shuffle(list) : list).map(q => q.id), options: Object.fromEntries(list.map(q => [q.id, (shuffled ? shuffle(q.options) : q.options).map(o => o.id)])) } }
 function loadScope() { session = sessions[sessionKey()]; const list = pool(); if (!session.order) session.order = list.map(q => q.id); if (!session.options) session.options = Object.fromEntries(list.map(q => [q.id, q.options.map(o => o.id)])); questions = session.order.map(id => list.find(q => q.id === id)).filter(Boolean).map(q => ({ ...q, options: session.options[q.id].map(id => q.options.find(o => o.id === id)) })); session.index = Math.max(0, Math.min(questions.length - 1, session.index || 0)); lastTick = Date.now(); running = true; $('setup').hidden = true; $('exam').hidden = false; $('back').hidden = false; render(); updateTimer(); save() }
@@ -79,6 +80,8 @@ function render() {
         <div class="question-meta"><span class="question-number">Câu ${session.index + 1} / ${questions.length}</span>
             <span class="badge ${multi ? 'multi' : ''}">${badge}</span></div>
         ${renderSource(q.source)}
+        ${q.otherSources?.length ? `<details class="source-ref"><summary>Nguồn trùng (${q.otherSources.length})</summary>
+            ${q.otherSources.map(renderSource).join('')}</details>` : ''}
         <div class="question-text ${q.plain ? 'preserve-lines' : ''}" id="question-text">${format(q.text)}</div>
         ${q.note ? `<p class="source-ref">${esc(q.note)}</p>` : ''}
     </div>
