@@ -20,7 +20,37 @@ for (const c of CHAPTERS) { const o = document.createElement('option'); o.value 
 function save() { try { localStorage.setItem(progressKey, JSON.stringify({ scope, shuffled, sessions })) } catch { $('save-note').textContent = 'Không thể lưu tiến độ trên trình duyệt này' } }
 function pool() { return CHAPTERS.filter(c => scope === 'all' || String(c.number) === scope).flatMap(c => c.questions) }
 function newSession() { const list = pool(); return { index: 0, answers: {}, elapsed: 0, paused: false, order: (shuffled ? shuffle(list) : list).map(q => q.id), options: Object.fromEntries(list.map(q => [q.id, (shuffled ? shuffle(q.options) : q.options).map(o => o.id)])) } }
-function loadScope() { session = sessions[sessionKey()]; const list = pool(); if (!session.order) session.order = list.map(q => q.id); if (!session.options) session.options = Object.fromEntries(list.map(q => [q.id, q.options.map(o => o.id)])); questions = session.order.map(id => list.find(q => q.id === id)).filter(Boolean).map(q => ({ ...q, options: session.options[q.id].map(id => q.options.find(o => o.id === id)) })); session.index = Math.max(0, Math.min(questions.length - 1, session.index || 0)); lastTick = Date.now(); running = true; $('setup').hidden = true; $('exam').hidden = false; $('back').hidden = false; render(); updateTimer(); save() }
+function loadScope() {
+    session = sessions[sessionKey()];
+    const list = pool();
+    const byId = new Map(list.map(q => [q.id, q]));
+    session.order = (session.order || []).filter(id => byId.has(id));
+    const existing = new Set(session.order);
+    const added = list.filter(q => !existing.has(q.id));
+    session.order.push(...(shuffled ? shuffle(added) : added).map(q => q.id));
+    session.options ||= {};
+    for (const q of list) {
+        const current = session.options[q.id] || (shuffled ? shuffle(q.options) : q.options).map(option => option.id);
+        const ids = new Set(q.options.map(option => option.id));
+        session.options[q.id] = [
+            ...current.filter(id => ids.has(id)),
+            ...q.options.filter(option => !current.includes(option.id)).map(option => option.id),
+        ];
+    }
+    questions = session.order.map(id => {
+        const q = byId.get(id);
+        return { ...q, options: session.options[id].map(id => q.options.find(option => option.id === id)) };
+    });
+    session.index = Math.max(0, Math.min(questions.length - 1, session.index || 0));
+    lastTick = Date.now();
+    running = true;
+    $('setup').hidden = true;
+    $('exam').hidden = false;
+    $('back').hidden = false;
+    render();
+    updateTimer();
+    save();
+}
 function setup() { running = false; $('exam').hidden = true; $('setup').hidden = false; $('back').hidden = true; $('chapter').value = scope; $('shuffle').checked = shuffled; updateResume() }
 function updateResume() { $('resume').hidden = !sessions[sessionKey()]; save() }
 function canGrade(q) {
