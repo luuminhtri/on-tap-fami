@@ -961,16 +961,9 @@ html[data-theme="dark"] .legend .filled {
     border-radius: 8px;
     padding: 14px;
 }
-.chapter-actions {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
-}
 #chapter-checks {
     display: grid;
     gap: 10px;
-    max-height: 330px;
-    overflow-y: auto;
 }
 .chapter-choice {
     display: flex;
@@ -989,4 +982,10 @@ html[data-theme="dark"] .legend .filled {
 .exam-bar {
     gap: 12px;
     flex-wrap: wrap;
+}
+
+.chapter-all {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
 }

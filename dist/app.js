@@ -6,7 +6,6 @@ let scope = String(saved.scope || 'all'), sessions = saved.sessions || {};
 const chapterIds = CHAPTERS.map(chapter => String(chapter.number));
 const scopeIds = () => scope === 'all' ? chapterIds : scope.replace(/^mix:/, '').split(',').filter(id => chapterIds.includes(id));
 if (scope !== 'all' && !scopeIds().length && scope !== 'mix:') scope = 'all';
-let customSelected = Boolean(saved.customSelected || scope.startsWith('mix:'));
 let activeReview = false;
 let questions = [], session, lastTick = Date.now(), running = false;
 let shuffled = !!saved.shuffled;
@@ -24,10 +23,6 @@ function renderText(text) {
 }
 for (const c of CHAPTERS) {
     const label = `${window.COURSE_CODE === "IT4785E" ? "" : `Chương ${c.number} · `}${c.title} (${c.questions.length} câu)`;
-    const option = document.createElement('option');
-    option.value = c.number;
-    option.textContent = label;
-    $('chapter').append(option);
     const row = document.createElement('label');
     row.className = 'chapter-choice';
     row.innerHTML = `<input type="checkbox" value="${c.number}" ${scopeIds().includes(String(c.number)) ? 'checked' : ''}><span>${esc(label)}</span>`;
@@ -36,25 +31,22 @@ for (const c of CHAPTERS) {
 function updateSelection() {
     const selected = [...$('chapter-checks').querySelectorAll('input:checked')].map(input => input.value);
     scope = selected.length === chapterIds.length ? 'all' : selected.length === 1 ? selected[0] : 'mix:' + selected.join(',');
+    updatePicker();
     updateResume();
 }
 function updatePicker() {
-    $('chapter-picker').hidden = !customSelected;
-    $('chapter').value = customSelected ? 'custom' : scope;
     $('chapter-checks').querySelectorAll('input').forEach(input => {
         input.checked = scopeIds().includes(input.value);
     });
+    $('select-all').checked = scopeIds().length === chapterIds.length;
+    $('select-all').indeterminate = scopeIds().length > 0 && scopeIds().length < chapterIds.length;
 }
 $('chapter-checks').addEventListener('change', updateSelection);
-$('select-all').onclick = () => {
-    $('chapter-checks').querySelectorAll('input').forEach(input => input.checked = true);
+$('select-all').onchange = () => {
+    $('chapter-checks').querySelectorAll('input').forEach(input => input.checked = $('select-all').checked);
     updateSelection();
 };
-$('select-none').onclick = () => {
-    $('chapter-checks').querySelectorAll('input').forEach(input => input.checked = false);
-    updateSelection();
-};
-function save() { try { localStorage.setItem(progressKey, JSON.stringify({ scope, customSelected, shuffled, sessions })) } catch { $('save-note').textContent = 'Không thể lưu tiến độ trên trình duyệt này' } }
+function save() { try { localStorage.setItem(progressKey, JSON.stringify({ scope, shuffled, sessions })) } catch { $('save-note').textContent = 'Không thể lưu tiến độ trên trình duyệt này' } }
 function selectedQuestions() {
     const selected = new Set(scopeIds());
     return CHAPTERS.filter(chapter => selected.has(String(chapter.number))).flatMap(chapter => chapter.questions);
@@ -253,12 +245,7 @@ function tick() { if (!running) return; const now = Date.now(); if (!session.pau
 function updateTimer() { const t = Math.floor(session.elapsed / 1000); $('timer').textContent = [Math.floor(t / 3600), Math.floor(t / 60) % 60, t % 60].map(n => String(n).padStart(2, '0')).join(':'); $('pause').textContent = session.paused ? '▶' : 'Ⅱ'; $('pause').setAttribute('aria-label', session.paused ? 'Tiếp tục thời gian' : 'Tạm dừng thời gian'); $('pause').title = session.paused ? 'Tiếp tục thời gian' : 'Tạm dừng thời gian' }
 $('confirm').onclick = () => { const q = questions[session.index], a = answer(q); if ($('confirm').disabled || a.confirmed) return; tick(); a.confirmed = true; session.answers[q.id] = a; save(); render() };
 $('prev').onclick = () => go(Math.max(0, session.index - 1)); $('next').onclick = () => go(Math.min(questions.length - 1, session.index + 1));
-$('chapter').onchange = () => {
-    customSelected = $('chapter').value === 'custom';
-    if (!customSelected) scope = $('chapter').value;
-    updatePicker();
-    updateResume();
-}; $('shuffle').onchange = () => { shuffled = $('shuffle').checked; updateResume() };
+$('shuffle').onchange = () => { shuffled = $('shuffle').checked; updateResume() };
 $('start').onclick = () => { if (!selectedQuestions().length) return; if (sessions[sessionKey()]) { $('reset-dialog').showModal(); return } sessions[sessionKey()] = newSession(); loadScope() };
 $('resume').onclick = () => { activeReview = false; loadScope(); };
 $('resume-wrong').onclick = () => { activeReview = true; loadScope(); };
