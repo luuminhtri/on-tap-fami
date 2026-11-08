@@ -64,7 +64,7 @@ def write_hoaduoc(dist, template):
 .study-guide p,.study-guide li {max-width:75ch}
 body:has(.study-guide) .katex {font-size:1.12em}
 .katex-display {overflow-x:auto;overflow-y:hidden;padding:.6rem 0}
-.content {min-width:0;overflow-wrap:anywhere}
+.content {min-width:0;overflow-wrap:anywhere;padding:.3rem 0}
 .content .katex {white-space:nowrap}
 .question-text {line-height:1.8}
 .result {line-height:1.7}
