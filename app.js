@@ -151,6 +151,7 @@ function isCorrect(q, selected) {
 }
 function renderSource(source) {
     if (!source) return '';
+    if (source.pdfPages) return `<p class="source-ref">Bài giảng · Trang PDF ${esc(source.pdfPages)}</p>`;
     if (source.url) {
         const url = new URL(source.url);
         if (url.protocol !== 'https:' || url.hostname !== 'developer.android.com') return '';
@@ -168,7 +169,8 @@ function renderExplanation(q) {
         try {
             const url = new URL(reference.url);
             const allowed = ['developer.android.com', 'kotlinlang.org', 'source.android.com',
-                'blog.google', 'support.google.com'];
+                'blog.google', 'support.google.com', 'www.epa.gov', 'nepis.epa.gov',
+                'www.who.int', 'codex.fao.org', 'www.fao.org', 'irac-online.org', 'www.acgih.org'];
             const material = url.hostname === 'github.com' && url.pathname.startsWith('/material-components/material-components-android/');
             if (url.protocol !== 'https:' || (!allowed.includes(url.hostname) && !material)) return [];
             return [`<a href="${esc(url.href)}" target="_blank" rel="noopener">${esc(reference.title)}</a>`];
