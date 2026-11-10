@@ -36,6 +36,8 @@ def load_google_questions():
                 "options": options, "answers": answers, "plain": True,
                 "note": "" if valid_key else "Nội dung nguồn đã thay đổi. Cần rà lại đáp án trước khi chấm.",
                 "explanation": key.get("explanation", "") if valid_key else "",
+                "references": key.get("references", []) if valid_key else [],
+                "reviewedOn": key.get("reviewedOn", "") if valid_key else "",
                 "source": {"url": quiz["url"],
                            "title": f"Google · Unit {quiz['unit']} · Pathway {quiz['pathway']}" + (" · Đáp án đã kiểm chứng" if verified else "")},
             })

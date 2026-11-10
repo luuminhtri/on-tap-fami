@@ -1,0 +1,2805 @@
+{
+  "reviewedOn": "2026-11-10",
+  "groups": [
+    {
+      "questions": {
+        "20231-1-1": {
+          "fingerprint": "50995b36dba2e1d24f7deebaf0eca88306ef3eb695906033e206d0e800a4f784",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-2-42": {
+          "fingerprint": "50995b36dba2e1d24f7deebaf0eca88306ef3eb695906033e206d0e800a4f784",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "res chứa layout, drawable, menu và các giá trị như strings, colors, dimens. Thư viện phụ thuộc được khai báo trong cấu hình Gradle của module, không phải một tài nguyên trong res.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/topics/resources/providing-resources",
+          "title": "Android · Tài nguyên"
+        },
+        {
+          "url": "https://developer.android.com/build",
+          "title": "Cấu hình build Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-2": {
+          "fingerprint": "032c74a233fe746ba9547bf5ac211b4b6d3d615e9341ed233b032c172a5ff06a",
+          "answers": [
+            "A",
+            "B",
+            "E"
+          ]
+        },
+        "20231-3-42": {
+          "fingerprint": "032c74a233fe746ba9547bf5ac211b4b6d3d615e9341ed233b032c172a5ff06a",
+          "answers": [
+            "A",
+            "B",
+            "E"
+          ]
+        },
+        "20231-4-20": {
+          "fingerprint": "032c74a233fe746ba9547bf5ac211b4b6d3d615e9341ed233b032c172a5ff06a",
+          "answers": [
+            "A",
+            "B",
+            "E"
+          ]
+        }
+      },
+      "explanation": "RadioGroup gom các RadioButton để chỉ chọn một nút trong nhóm; getCheckedRadioButtonId() cho biết nút đang chọn. Nó kế thừa LinearLayout nên có thể bố trí ngang hoặc dọc. Nó không biến RadioButton thành CheckBox và không phải phương án thay thế LinearLayout nói chung.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/RadioGroup",
+          "title": "RadioGroup"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-3": {
+          "fingerprint": "c67e55a0e00245e9e606a44543cf88c8f9f521cf281fa58e2669a59a031c3cfa",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-5": {
+          "fingerprint": "c67e55a0e00245e9e606a44543cf88c8f9f521cf281fa58e2669a59a031c3cfa",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-4-28": {
+          "fingerprint": "c67e55a0e00245e9e606a44543cf88c8f9f521cf281fa58e2669a59a031c3cfa",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Nhấn giữ được xử lý bằng setOnLongClickListener. onLongClick(view) trả về true nếu sự kiện đã được xử lý. setOnClickListener xử lý thao tác nhấn thông thường; các tên setLongClickListener và setOnLongTouchListener trong đề không phải API tương ứng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/view/View",
+          "title": "View"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-4": {
+          "fingerprint": "7bcb545a686dbe5d566da561352926c5469d3ca6591d072e91d62bf6eabe92cd",
+          "answers": [
+            "A",
+            "D"
+          ]
+        },
+        "20231-2-16": {
+          "fingerprint": "7bcb545a686dbe5d566da561352926c5469d3ca6591d072e91d62bf6eabe92cd",
+          "answers": [
+            "A",
+            "D"
+          ]
+        },
+        "20231-3-23": {
+          "fingerprint": "7bcb545a686dbe5d566da561352926c5469d3ca6591d072e91d62bf6eabe92cd",
+          "answers": [
+            "A",
+            "D"
+          ]
+        },
+        "20231-4-14": {
+          "fingerprint": "7bcb545a686dbe5d566da561352926c5469d3ca6591d072e91d62bf6eabe92cd",
+          "answers": [
+            "A",
+            "D"
+          ]
+        }
+      },
+      "explanation": "Theo cách tổ chức vòng đời chuẩn, onCreate() khởi tạo view, cấu hình RecyclerView và đọc intent.extras. Options menu được tạo trong onCreateOptionsMenu(), còn thao tác chọn menu được xử lý qua onOptionsItemSelected() hoặc listener của MenuItem. Cụm “can be performed” trong đề được hiểu là nơi thích hợp theo quy ước, không phải giới hạn kỹ thuật tuyệt đối.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/activities/activity-lifecycle",
+          "title": "Vòng đời Activity"
+        },
+        {
+          "url": "https://developer.android.com/develop/ui/views/components/menus",
+          "title": "Menu trong Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-5": {
+          "fingerprint": "120c0a9ac881d1ff181f97d090e079b59e8af3cf6894801df9ee7be3242f1a72",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-2-45": {
+          "fingerprint": "120c0a9ac881d1ff181f97d090e079b59e8af3cf6894801df9ee7be3242f1a72",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-3-6": {
+          "fingerprint": "120c0a9ac881d1ff181f97d090e079b59e8af3cf6894801df9ee7be3242f1a72",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-4-38": {
+          "fingerprint": "120c0a9ac881d1ff181f97d090e079b59e8af3cf6894801df9ee7be3242f1a72",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "Unit là kiểu trả về mặc định của hàm có thân khối khi không khai báo kiểu trả về, ví dụ fun log() { println(\"Hi\") }. Đề dùng từ “any” quá rộng: hàm thân biểu thức như fun twice(x: Int) = x * 2 được suy ra kiểu Int. Kotlin dùng Unit thay cho cách viết void của Java.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/functions.html",
+          "title": "Kotlin · Hàm"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-6": {
+          "fingerprint": "c2a4dccdae346b2e5babb5319682d9dabe7f686daf83f88e2dc03951fd2fd054",
+          "answers": [
+            "A",
+            "B"
+          ]
+        },
+        "20231-2-27": {
+          "fingerprint": "c2a4dccdae346b2e5babb5319682d9dabe7f686daf83f88e2dc03951fd2fd054",
+          "answers": [
+            "A",
+            "B"
+          ]
+        },
+        "20231-3-38": {
+          "fingerprint": "c2a4dccdae346b2e5babb5319682d9dabe7f686daf83f88e2dc03951fd2fd054",
+          "answers": [
+            "A",
+            "B"
+          ]
+        },
+        "20231-4-40": {
+          "fingerprint": "c2a4dccdae346b2e5babb5319682d9dabe7f686daf83f88e2dc03951fd2fd054",
+          "answers": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      "explanation": "Theo hành vi mặc định, xoay màn hình hoặc đổi ngôn ngữ là thay đổi cấu hình và có thể làm Activity bị hủy rồi tạo lại, gọi lại onCreate(). Bấm Home thường chỉ đưa Activity về nền. Ngoại lệ: ứng dụng tự xử lý cấu hình qua configChanges hoặc hệ thống khôi phục sau khi tiến trình bị hủy; vì vậy các lựa chọn được chấm theo trường hợp mặc định của đề.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/activities/activity-lifecycle",
+          "title": "Vòng đời Activity"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-7": {
+          "fingerprint": "8d674f4c82a0f7844e483bff0c3a5e6ebfcc7e116c80d967a607a9aae89a39f5",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-37": {
+          "fingerprint": "8d674f4c82a0f7844e483bff0c3a5e6ebfcc7e116c80d967a607a9aae89a39f5",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Phát biểu sai theo ngữ cảnh mở Activity là “implicit intent luôn hỏi người dùng chọn ứng dụng”. Hệ thống có thể mở thẳng ứng dụng mặc định hoặc ứng dụng duy nhất phù hợp. Explicit intent chỉ định component; implicit intent mô tả action/data. Intent còn dùng cho service và broadcast, nên startActivity() không phải API cho mọi loại Intent.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-filters",
+          "title": "Intent và intent filter"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-8": {
+          "fingerprint": "87116ae18ffe9fa8758bf6a634844c496f69e57f0d2fa8348bdacf87c7c9569e",
+          "answers": []
+        },
+        "20231-2-30": {
+          "fingerprint": "87116ae18ffe9fa8758bf6a634844c496f69e57f0d2fa8348bdacf87c7c9569e",
+          "answers": []
+        },
+        "20231-3-17": {
+          "fingerprint": "87116ae18ffe9fa8758bf6a634844c496f69e57f0d2fa8348bdacf87c7c9569e",
+          "answers": []
+        },
+        "20231-4-3": {
+          "fingerprint": "87116ae18ffe9fa8758bf6a634844c496f69e57f0d2fa8348bdacf87c7c9569e",
+          "answers": []
+        }
+      },
+      "explanation": "ImageButton là widget chuyên dùng cho nút có ảnh. Tuy nhiên ImageView cũng có thể nhận click listener, còn Button và TextView hỗ trợ compound drawable. Vì câu hỏi dùng “could be used” và không nói chỉ widget chuyên dụng nên có nhiều cách hiểu; không gán một đáp án duy nhất để chấm.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/Button",
+          "title": "Button"
+        },
+        {
+          "url": "https://developer.android.com/reference/android/widget/TextView",
+          "title": "TextView"
+        },
+        {
+          "url": "https://developer.android.com/reference/android/view/View",
+          "title": "View"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-9": {
+          "fingerprint": "eb74dfc5637b25231b0837081869ec7d74b7428cb6d684f4f612aad9e3c054e6",
+          "answers": [
+            "E"
+          ]
+        },
+        "20231-2-25": {
+          "fingerprint": "eb74dfc5637b25231b0837081869ec7d74b7428cb6d684f4f612aad9e3c054e6",
+          "answers": [
+            "E"
+          ]
+        },
+        "20231-3-13": {
+          "fingerprint": "eb74dfc5637b25231b0837081869ec7d74b7428cb6d684f4f612aad9e3c054e6",
+          "answers": [
+            "E"
+          ]
+        },
+        "20231-4-44": {
+          "fingerprint": "eb74dfc5637b25231b0837081869ec7d74b7428cb6d684f4f612aad9e3c054e6",
+          "answers": [
+            "E"
+          ]
+        }
+      },
+      "explanation": "CheckBox cho phép chọn độc lập nhiều sở thích cùng lúc. RadioButton trong một RadioGroup chỉ cho một lựa chọn, phù hợp câu hỏi loại trừ lẫn nhau. Số lượng sở thích không quyết định widget; điều quyết định ở đây là người dùng được chọn nhiều mục.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/RadioGroup",
+          "title": "RadioGroup"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-10": {
+          "fingerprint": "13819b1221878574b3837386bc14f762933e3533a4bb7d2458a6ec1542080508",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-2-14": {
+          "fingerprint": "13819b1221878574b3837386bc14f762933e3533a4bb7d2458a6ec1542080508",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-4-26": {
+          "fingerprint": "13819b1221878574b3837386bc14f762933e3533a4bb7d2458a6ec1542080508",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "centerInside giữ tỉ lệ và thu nhỏ ảnh khi cần để toàn bộ ảnh nằm trong vùng hiển thị. fitXY có thể kéo méo; centerCrop phủ kín vùng nhìn bằng cách cắt ảnh; center giữ kích thước gốc nên ảnh lớn có thể bị cắt. Tên XML chính xác là centerInside, phân biệt chữ hoa chữ thường.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/ImageView.ScaleType",
+          "title": "ImageView.ScaleType"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-11": {
+          "fingerprint": "926851c5ac8ea077e8d5e64853ff536f8b36db3843c719454605bb015e235288",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-2-32": {
+          "fingerprint": "926851c5ac8ea077e8d5e64853ff536f8b36db3843c719454605bb015e235288",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-3-40": {
+          "fingerprint": "926851c5ac8ea077e8d5e64853ff536f8b36db3843c719454605bb015e235288",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-4-23": {
+          "fingerprint": "926851c5ac8ea077e8d5e64853ff536f8b36db3843c719454605bb015e235288",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "android.widget.Button kế thừa trực tiếp android.widget.TextView. TextView lại kế thừa android.view.View. Chú ý cả tên lớp và package: android.view.TextView và android.widget.View trong các phương án là tên không đúng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/Button",
+          "title": "Button"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-12": {
+          "fingerprint": "372d0ff84fcdcb63ce91ac1778cf2d4d8555ae2e12c7f16bc19a9868fb876c79",
+          "answers": [
+            "B",
+            "D"
+          ]
+        },
+        "20231-2-21": {
+          "fingerprint": "372d0ff84fcdcb63ce91ac1778cf2d4d8555ae2e12c7f16bc19a9868fb876c79",
+          "answers": [
+            "B",
+            "D"
+          ]
+        },
+        "20231-4-42": {
+          "fingerprint": "372d0ff84fcdcb63ce91ac1778cf2d4d8555ae2e12c7f16bc19a9868fb876c79",
+          "answers": [
+            "B",
+            "D"
+          ]
+        }
+      },
+      "explanation": "onCreateView() tạo cây view; onViewCreated() được gọi sau khi cây view đã tồn tại. Vì vậy có thể lấy tham chiếu view, gắn dữ liệu và đặt adapter cho RecyclerView trong onViewCreated(). Không inflate layout lần nữa ở callback này; menu có cơ chế callback hoặc MenuProvider riêng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/fragments/lifecycle",
+          "title": "Vòng đời Fragment"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-13": {
+          "fingerprint": "ee1f64971b72d4fe5cbdb406c4942adb5fa17dfded949ab64d29ccf16d8e4c79",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-2-31": {
+          "fingerprint": "ee1f64971b72d4fe5cbdb406c4942adb5fa17dfded949ab64d29ccf16d8e4c79",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-3-9": {
+          "fingerprint": "ee1f64971b72d4fe5cbdb406c4942adb5fa17dfded949ab64d29ccf16d8e4c79",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-4-29": {
+          "fingerprint": "ee1f64971b72d4fe5cbdb406c4942adb5fa17dfded949ab64d29ccf16d8e4c79",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "onClick nhận chính View đã phát sinh sự kiện. Dùng view.id rồi so sánh với R.id của từng nút để xác định nút được nhấn. Vị trí, thứ tự trong XML hay tên biến Kotlin không phải định danh sự kiện ổn định.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/view/View",
+          "title": "View"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-14": {
+          "fingerprint": "ae7b9a7ace1663453514dbd628809404f3a87039d453e9a9e6778a05b1f607d6",
+          "answers": [
+            "A",
+            "B",
+            "E"
+          ]
+        },
+        "20231-2-6": {
+          "fingerprint": "ae7b9a7ace1663453514dbd628809404f3a87039d453e9a9e6778a05b1f607d6",
+          "answers": [
+            "A",
+            "B",
+            "E"
+          ]
+        },
+        "20231-3-30": {
+          "fingerprint": "ae7b9a7ace1663453514dbd628809404f3a87039d453e9a9e6778a05b1f607d6",
+          "answers": [
+            "A",
+            "B",
+            "E"
+          ]
+        },
+        "20231-4-39": {
+          "fingerprint": "ae7b9a7ace1663453514dbd628809404f3a87039d453e9a9e6778a05b1f607d6",
+          "answers": [
+            "A",
+            "B",
+            "E"
+          ]
+        }
+      },
+      "explanation": "Java/Kotlin là hướng native thông dụng; giao diện web có thể được đóng gói hoặc tích hợp qua WebView; Flutter cũng hỗ trợ xuất ứng dụng Android. UWP là nền tảng của Microsoft, còn Objective-C không phải lựa chọn Android native được hỏi ở đây. Các phương án đúng mô tả nhiều hướng phát triển, không chỉ một ngôn ngữ.",
+      "references": [
+        {
+          "url": "https://developer.android.com/ndk/guides",
+          "title": "Android NDK"
+        },
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/webapps/webview",
+          "title": "WebView"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-15": {
+          "fingerprint": "e20950d7b8425f2670a06c32b701388073a1672227700a243162748629c28b04",
+          "answers": []
+        },
+        "20231-2-3": {
+          "fingerprint": "e20950d7b8425f2670a06c32b701388073a1672227700a243162748629c28b04",
+          "answers": []
+        },
+        "20231-4-4": {
+          "fingerprint": "e20950d7b8425f2670a06c32b701388073a1672227700a243162748629c28b04",
+          "answers": []
+        }
+      },
+      "explanation": "Nếu intent thực sự null như giả thiết, intent.extras truy cập receiver null trước khi gặp dấu ?. nên có thể lỗi. Muốn bảo vệ cả chuỗi phải dùng intent?.extras?.getString(\"message\"). toString() trên giá trị nullable có thể tạo chuỗi \"null\". Hai lựa chọn mô tả crash trong đề trùng nghĩa, nên không chấm ép một lựa chọn.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/null-safety.html",
+          "title": "Kotlin · Null safety"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-16": {
+          "fingerprint": "d300d647fdd56305f6c7128a5ff0be9933b0a89b8259d09022b2b0b945aa368f",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-2-5": {
+          "fingerprint": "d300d647fdd56305f6c7128a5ff0be9933b0a89b8259d09022b2b0b945aa368f",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-3-44": {
+          "fingerprint": "d300d647fdd56305f6c7128a5ff0be9933b0a89b8259d09022b2b0b945aa368f",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-4-11": {
+          "fingerprint": "d300d647fdd56305f6c7128a5ff0be9933b0a89b8259d09022b2b0b945aa368f",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "onSaveInstanceState() lưu trạng thái UI nhỏ để tái tạo Activity, chẳng hạn sau khi xoay màn hình. Nó không thay thế cơ sở dữ liệu, file hay DataStore để lưu dữ liệu lâu dài, và không bảo đảm được gọi trong mọi tình huống đóng ứng dụng. Vì vậy lưu dữ liệu vĩnh viễn ra thẻ nhớ không phải mục đích phù hợp.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/activities/activity-lifecycle#saras",
+          "title": "Lưu và khôi phục trạng thái"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-17": {
+          "fingerprint": "ca9d5f171e4a428239ef9bc92ee5273377403aedbffe06c7f7e3aa3c47d6cc19",
+          "answers": [
+            "C"
+          ]
+        },
+        "20231-2-41": {
+          "fingerprint": "ca9d5f171e4a428239ef9bc92ee5273377403aedbffe06c7f7e3aa3c47d6cc19",
+          "answers": [
+            "C"
+          ]
+        },
+        "20231-3-36": {
+          "fingerprint": "ca9d5f171e4a428239ef9bc92ee5273377403aedbffe06c7f7e3aa3c47d6cc19",
+          "answers": [
+            "C"
+          ]
+        },
+        "20231-4-18": {
+          "fingerprint": "ca9d5f171e4a428239ef9bc92ee5273377403aedbffe06c7f7e3aa3c47d6cc19",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "startActivity(intent) yêu cầu Android mở Activity được Intent xác định hoặc phân giải. Với explicit intent có thể viết Intent(this, TargetActivity::class.java). Các tên newActivity(), beginActivity() và openActivity() không phải phương thức mở Activity chuẩn của ngữ cảnh này.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-filters",
+          "title": "Intent và intent filter"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-18": {
+          "fingerprint": "61db5b44fe66bb4df9c6e60bd8eddf4c56e9f5a66044a3b3d68b85fd520c3fa2",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-3-41": {
+          "fingerprint": "61db5b44fe66bb4df9c6e60bd8eddf4c56e9f5a66044a3b3d68b85fd520c3fa2",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "ScrollView cho phép cuộn nội dung theo chiều dọc khi nội dung cao hơn màn hình. Nó chỉ có một view con trực tiếp; thường đặt một LinearLayout chứa các trường nhập bên trong. HorizontalScrollView dùng cho chiều ngang, còn LinearLayout tự nó không cung cấp cuộn.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/ScrollView",
+          "title": "ScrollView"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-19": {
+          "fingerprint": "88040ce4dc9d3c73b298c913d8c26290166066448c5113ca86841b93acfede56",
+          "answers": []
+        },
+        "20231-2-19": {
+          "fingerprint": "88040ce4dc9d3c73b298c913d8c26290166066448c5113ca86841b93acfede56",
+          "answers": []
+        },
+        "20231-3-45": {
+          "fingerprint": "88040ce4dc9d3c73b298c913d8c26290166066448c5113ca86841b93acfede56",
+          "answers": []
+        },
+        "20231-4-13": {
+          "fingerprint": "88040ce4dc9d3c73b298c913d8c26290166066448c5113ca86841b93acfede56",
+          "answers": []
+        }
+      },
+      "explanation": "Tên lớp binding được suy ra từ tên file layout, không phải tên Activity. activity_sample.xml tạo ActivitySampleBinding; sample_activity.xml tạo SampleActivityBinding. Vì đề chỉ cho SampleActivity mà không cho file XML nên không đủ dữ kiện để chọn giữa hai lớp binding này.",
+      "references": [
+        {
+          "url": "https://developer.android.com/topic/libraries/data-binding/generated-binding",
+          "title": "Lớp binding sinh tự động"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-20": {
+          "fingerprint": "4c360b186886f68b5b91cf4c9392c64ce065f518e96b55c74cc8f2e68b58e7b4",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-2-33": {
+          "fingerprint": "4c360b186886f68b5b91cf4c9392c64ce065f518e96b55c74cc8f2e68b58e7b4",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-32": {
+          "fingerprint": "4c360b186886f68b5b91cf4c9392c64ce065f518e96b55c74cc8f2e68b58e7b4",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-4-1": {
+          "fingerprint": "4c360b186886f68b5b91cf4c9392c64ce065f518e96b55c74cc8f2e68b58e7b4",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Theo mô hình kiến trúc Android truyền thống của đề, OpenGL ES, SQLite và các thư viện web thuộc nhóm thư viện native. Dalvik là máy ảo thực thi bytecode, không phải một thư viện native trong cách phân lớp này; Android hiện đại dùng ART. OpenUI không phải thành phần chuẩn trong danh sách được hỏi.",
+      "references": [
+        {
+          "url": "https://source.android.com/docs/core/architecture",
+          "title": "Kiến trúc Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-21": {
+          "fingerprint": "00a8b23748a083868bc441b688051209f864c7428b1babfb2ad789772c8fb43f",
+          "answers": []
+        },
+        "20231-2-35": {
+          "fingerprint": "00a8b23748a083868bc441b688051209f864c7428b1babfb2ad789772c8fb43f",
+          "answers": []
+        },
+        "20231-3-8": {
+          "fingerprint": "00a8b23748a083868bc441b688051209f864c7428b1babfb2ad789772c8fb43f",
+          "answers": []
+        },
+        "20231-4-43": {
+          "fingerprint": "00a8b23748a083868bc441b688051209f864c7428b1babfb2ad789772c8fb43f",
+          "answers": []
+        }
+      },
+      "explanation": "Giá trị XML cần điền là textPassword, ví dụ android:inputType=\"textPassword\". Nó cấu hình kiểu nhập văn bản mật khẩu và cách che ký tự; numberPassword dùng cho mật khẩu dạng số. Che ký tự trên màn hình không đồng nghĩa với mã hóa hay lưu mật khẩu an toàn.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/touch-and-input/keyboard-input/style",
+          "title": "Kiểu nhập liệu"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-22": {
+          "fingerprint": "0a636c946b05188da43fccc2b381669be5a23a96807a47f66fee0001ae067f64",
+          "answers": [
+            "C"
+          ]
+        },
+        "20231-2-18": {
+          "fingerprint": "0a636c946b05188da43fccc2b381669be5a23a96807a47f66fee0001ae067f64",
+          "answers": [
+            "C"
+          ]
+        },
+        "20231-3-18": {
+          "fingerprint": "0a636c946b05188da43fccc2b381669be5a23a96807a47f66fee0001ae067f64",
+          "answers": [
+            "C"
+          ]
+        },
+        "20231-4-35": {
+          "fingerprint": "0a636c946b05188da43fccc2b381669be5a23a96807a47f66fee0001ae067f64",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "when là cấu trúc phân nhánh gần với switch trong Java, nhưng mạnh hơn: có thể kiểm tra khoảng, kiểu và dùng như biểu thức trả về giá trị. Nó không tự rơi xuống nhánh tiếp theo như switch kiểu cũ; không cần break để kết thúc mỗi nhánh.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/control-flow.html",
+          "title": "Kotlin · Điều khiển luồng"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-23": {
+          "fingerprint": "076e9833290c006fedb10d958349fd13fc6ee56f479f1f5968fde2bee0c4477f",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-2-37": {
+          "fingerprint": "076e9833290c006fedb10d958349fd13fc6ee56f479f1f5968fde2bee0c4477f",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-3-2": {
+          "fingerprint": "076e9833290c006fedb10d958349fd13fc6ee56f479f1f5968fde2bee0c4477f",
+          "answers": [
+            "D"
+          ]
+        },
+        "20231-4-7": {
+          "fingerprint": "076e9833290c006fedb10d958349fd13fc6ee56f479f1f5968fde2bee0c4477f",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "Trong bối cảnh đề năm 2023, lựa chọn được hỏi là Android cho cài APK từ nguồn ngoài Google Play khi người dùng cho phép. Đây không phải khẳng định Android luôn bảo mật hơn iOS hoặc iOS không bao giờ có phân phối ngoài cửa hàng trong mọi khu vực/thời điểm. Cài từ nguồn ngoài cũng đòi hỏi đánh giá độ tin cậy của ứng dụng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/distribute/marketing-tools/alternative-distribution",
+          "title": "Phân phối ứng dụng ngoài Google Play"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-24": {
+          "fingerprint": "f298de0aa48aeb9b5cae2618d27f8692ceaee1f7d7e608592183e5e78ca3181d",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-2-22": {
+          "fingerprint": "f298de0aa48aeb9b5cae2618d27f8692ceaee1f7d7e608592183e5e78ca3181d",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-26": {
+          "fingerprint": "f298de0aa48aeb9b5cae2618d27f8692ceaee1f7d7e608592183e5e78ca3181d",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Callback đúng tên là onCreateOptionsMenu(), dùng để tạo options menu, thường hiển thị trên app bar/action bar hoặc overflow. Context menu gắn với ngữ cảnh của một view; popup menu neo vào một view. Đề viết thiếu chữ s trong tên callback nhưng ý hỏi là options menu.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/components/menus",
+          "title": "Menu trong Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-25": {
+          "fingerprint": "62f8748e050cb542e311e80a25299a2cd3bac0ef6f32954fff2fab9801530a1d",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-2-13": {
+          "fingerprint": "62f8748e050cb542e311e80a25299a2cd3bac0ef6f32954fff2fab9801530a1d",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-7": {
+          "fingerprint": "62f8748e050cb542e311e80a25299a2cd3bac0ef6f32954fff2fab9801530a1d",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-4-32": {
+          "fingerprint": "62f8748e050cb542e311e80a25299a2cd3bac0ef6f32954fff2fab9801530a1d",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "setImageResource(R.drawable.mobile) nhận ID tài nguyên drawable dạng số nguyên. Không thêm đuôi .png trong R.drawable.mobile. R.id.mobile là ID view, còn setImageDrawable() cần một đối tượng Drawable, không nhận trực tiếp số ID tài nguyên như phương án trong đề.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/topics/resources/providing-resources",
+          "title": "Android · Tài nguyên"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-26": {
+          "fingerprint": "0217cbbb9cf7063b1999bad9c14c2a244fd553a518aa09712fc070d19e0af107",
+          "answers": [
+            "A",
+            "C"
+          ]
+        },
+        "20231-2-7": {
+          "fingerprint": "0217cbbb9cf7063b1999bad9c14c2a244fd553a518aa09712fc070d19e0af107",
+          "answers": [
+            "A",
+            "C"
+          ]
+        },
+        "20231-4-12": {
+          "fingerprint": "0217cbbb9cf7063b1999bad9c14c2a244fd553a518aa09712fc070d19e0af107",
+          "answers": [
+            "A",
+            "C"
+          ]
+        }
+      },
+      "explanation": "Theo nghĩa chặt của các phát biểu, chọn các ý: lớp con có thể kế thừa và triển khai thành viên abstract; lớp abstract có thể khai báo thuộc tính hoặc hàm abstract. Lớp abstract không khởi tạo trực tiếp và tự cho phép kế thừa, không cần open. Phương án ghép “not fully implemented and cannot be instantiated” quá mạnh: một lớp abstract có thể không có thành viên abstract, nên phần “not fully implemented” không luôn đúng.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/classes.html",
+          "title": "Kotlin · Lớp"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-27": {
+          "fingerprint": "a4ec2ab3efa56e39b59fc2d64ec9a478031b16d8880cb5c2bb1e0fcb3bc24371",
+          "answers": []
+        },
+        "20231-2-23": {
+          "fingerprint": "a4ec2ab3efa56e39b59fc2d64ec9a478031b16d8880cb5c2bb1e0fcb3bc24371",
+          "answers": []
+        },
+        "20231-3-1": {
+          "fingerprint": "a4ec2ab3efa56e39b59fc2d64ec9a478031b16d8880cb5c2bb1e0fcb3bc24371",
+          "answers": []
+        },
+        "20231-4-15": {
+          "fingerprint": "a4ec2ab3efa56e39b59fc2d64ec9a478031b16d8880cb5c2bb1e0fcb3bc24371",
+          "answers": []
+        }
+      },
+      "explanation": "Hai chỗ trống lần lượt là Uri và address: Uri.parse(...) biến URL thành Uri; Intent(Intent.ACTION_VIEW, address) yêu cầu mở địa chỉ đó. Trong ứng dụng thực tế cần xử lý trường hợp không có Activity nhận Intent. Tên Uri phải viết đúng hoa/thường và biến address phải khớp biến đã khai báo.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-common",
+          "title": "Các intent thường dùng"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-28": {
+          "fingerprint": "2dc6d4d84f070c7bee40d609537cf2a3f5e19b9e8a96fdf222a3623ad07470eb",
+          "answers": []
+        },
+        "20231-2-26": {
+          "fingerprint": "2dc6d4d84f070c7bee40d609537cf2a3f5e19b9e8a96fdf222a3623ad07470eb",
+          "answers": []
+        },
+        "20231-3-33": {
+          "fingerprint": "2dc6d4d84f070c7bee40d609537cf2a3f5e19b9e8a96fdf222a3623ad07470eb",
+          "answers": []
+        },
+        "20231-4-19": {
+          "fingerprint": "2dc6d4d84f070c7bee40d609537cf2a3f5e19b9e8a96fdf222a3623ad07470eb",
+          "answers": []
+        }
+      },
+      "explanation": "Constructor được dùng khi tạo instance của lớp và khởi tạo các giá trị cần thiết. Kotlin có primary constructor và có thể có secondary constructor; các khối init cũng chạy trong quá trình khởi tạo. Đây không phải lời gọi một phương thức Activity như onCreate().",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/classes.html",
+          "title": "Kotlin · Lớp"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-29": {
+          "fingerprint": "4322529c68ea2ba99a89c67b274812aa19816cbe3f963d7c08de77970939e0df",
+          "answers": []
+        },
+        "20231-3-15": {
+          "fingerprint": "4322529c68ea2ba99a89c67b274812aa19816cbe3f963d7c08de77970939e0df",
+          "answers": []
+        },
+        "20231-4-30": {
+          "fingerprint": "4322529c68ea2ba99a89c67b274812aa19816cbe3f963d7c08de77970939e0df",
+          "answers": []
+        }
+      },
+      "explanation": "Đáp án onPause() chỉ đúng khi một Activity khác, chẳng hạn Activity có giao diện dạng dialog, mở lên và làm Activity hiện tại mất trạng thái resumed trong mô hình của đề. Dialog hoặc DialogFragment hiển thị ngay trong chính Activity không mặc nhiên gọi onPause() của Activity. Câu hỏi không phân biệt hai trường hợp nên không chấm một đáp án bắt buộc.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/activities/activity-lifecycle",
+          "title": "Vòng đời Activity"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-30": {
+          "fingerprint": "a586c63521716e21abaf5728bf382603c374f58340030453514b14784f8d7930",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-2-8": {
+          "fingerprint": "a586c63521716e21abaf5728bf382603c374f58340030453514b14784f8d7930",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-3": {
+          "fingerprint": "a586c63521716e21abaf5728bf382603c374f58340030453514b14784f8d7930",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-4-10": {
+          "fingerprint": "a586c63521716e21abaf5728bf382603c374f58340030453514b14784f8d7930",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Logcat hiển thị log từ ứng dụng và hệ thống trên máy phát triển, có thể lọc theo tag, package và mức độ. Nó không chỉ chứa các dòng do lập trình viên tự ghi. Toast là thông báo ngắn trên thiết bị. “Cần kết nối” ở đây bao gồm thiết bị/emulator đang kết nối; file log đã lưu vẫn có thể xem về sau.",
+      "references": [
+        {
+          "url": "https://developer.android.com/studio/debug/logcat",
+          "title": "Logcat"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-31": {
+          "fingerprint": "8848c43f75c308170c1c1f07a84c0b61d7ad4f285b4450ad01b94678ff7ef4e3",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-2-38": {
+          "fingerprint": "8848c43f75c308170c1c1f07a84c0b61d7ad4f285b4450ad01b94678ff7ef4e3",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-19": {
+          "fingerprint": "8848c43f75c308170c1c1f07a84c0b61d7ad4f285b4450ad01b94678ff7ef4e3",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Context menu thường mở khi người dùng nhấn giữ một view đã đăng ký context menu. Options menu nằm trên app bar/overflow; navigation drawer là ngăn điều hướng. Nhấn giữ không tự động sinh context menu cho mọi view: ứng dụng cần cấu hình hành vi này.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/components/menus",
+          "title": "Menu trong Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-32": {
+          "fingerprint": "3c0af55587150b15bcfffabb9a62336088b9a2b0558ab9f112c97fbde0c1fd84",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-2-44": {
+          "fingerprint": "3c0af55587150b15bcfffabb9a62336088b9a2b0558ab9f112c97fbde0c1fd84",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-3-31": {
+          "fingerprint": "3c0af55587150b15bcfffabb9a62336088b9a2b0558ab9f112c97fbde0c1fd84",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-4-8": {
+          "fingerprint": "3c0af55587150b15bcfffabb9a62336088b9a2b0558ab9f112c97fbde0c1fd84",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "Activity khởi chạy từ biểu tượng ứng dụng được khai báo trong AndroidManifest.xml với intent-filter kết hợp android.intent.action.MAIN và android.intent.category.LAUNCHER. MainActivity.kt chứa mã thực thi, còn Gradle cấu hình build; chúng không thay thế khai báo launcher component trong manifest.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-filters",
+          "title": "Intent và intent filter"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-33": {
+          "fingerprint": "48aa0840e6169ccea83bec74135c4bb9d785bfe556058450a3653978674b38a5",
+          "answers": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "20231-2-24": {
+          "fingerprint": "48aa0840e6169ccea83bec74135c4bb9d785bfe556058450a3653978674b38a5",
+          "answers": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "20231-3-25": {
+          "fingerprint": "48aa0840e6169ccea83bec74135c4bb9d785bfe556058450a3653978674b38a5",
+          "answers": [
+            "A",
+            "C",
+            "D"
+          ]
+        },
+        "20231-4-6": {
+          "fingerprint": "48aa0840e6169ccea83bec74135c4bb9d785bfe556058450a3653978674b38a5",
+          "answers": [
+            "A",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "explanation": "Java và Kotlin dùng cho mã Android thông thường; C/C++ có thể dùng qua Android NDK cho phần native. HTML/CSS/JavaScript chủ yếu là công nghệ web, không thuộc các ngôn ngữ native được phân loại trong đề. Một ứng dụng dùng framework JavaScript vẫn có thể chứa mã native, nhưng đó là hướng phát triển khác với câu hỏi này.",
+      "references": [
+        {
+          "url": "https://developer.android.com/ndk/guides",
+          "title": "Android NDK"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-34": {
+          "fingerprint": "1d40bad8821397170a8e1bf200462ad417d16e6feabd40893183ee419bdc2c44",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-2-43": {
+          "fingerprint": "1d40bad8821397170a8e1bf200462ad417d16e6feabd40893183ee419bdc2c44",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-3-39": {
+          "fingerprint": "1d40bad8821397170a8e1bf200462ad417d16e6feabd40893183ee419bdc2c44",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-4-9": {
+          "fingerprint": "1d40bad8821397170a8e1bf200462ad417d16e6feabd40893183ee419bdc2c44",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "Lambda là biểu thức mô tả một hàm không có tên, ví dụ { x: Int -> x * 2 }. Có thể lưu nó trong biến kiểu hàm hoặc truyền làm đối số cho hàm bậc cao. Khi chỉ có một tham số và suy ra được kiểu, Kotlin cho phép dùng tên ngầm định it.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/lambdas.html",
+          "title": "Kotlin · Lambda"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-35": {
+          "fingerprint": "04a8097680c06a04107b36677f0a61ef35f416ba5acc78d70a878f7c250d6b3f",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-2-40": {
+          "fingerprint": "04a8097680c06a04107b36677f0a61ef35f416ba5acc78d70a878f7c250d6b3f",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-27": {
+          "fingerprint": "04a8097680c06a04107b36677f0a61ef35f416ba5acc78d70a878f7c250d6b3f",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-4-31": {
+          "fingerprint": "04a8097680c06a04107b36677f0a61ef35f416ba5acc78d70a878f7c250d6b3f",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Sai: vòng đời view của Fragment tách biệt vòng đời bản thân Fragment. View có thể bị hủy trong onDestroyView() rồi tạo lại, khiến onCreateView() được gọi nhiều lần trên cùng một Fragment. Cần tránh giữ tham chiếu binding của view cũ sau onDestroyView().",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/fragments/lifecycle",
+          "title": "Vòng đời Fragment"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-36": {
+          "fingerprint": "1a464d97dbbc48b3eb35d97196476ce788dcce193f4f88c403c4a648ef91d2c2",
+          "answers": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "20231-2-11": {
+          "fingerprint": "1a464d97dbbc48b3eb35d97196476ce788dcce193f4f88c403c4a648ef91d2c2",
+          "answers": [
+            "A",
+            "B",
+            "D"
+          ]
+        },
+        "20231-4-16": {
+          "fingerprint": "1a464d97dbbc48b3eb35d97196476ce788dcce193f4f88c403c4a648ef91d2c2",
+          "answers": [
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      },
+      "explanation": "Gradle tự động hóa build Android và có các task như installDebug để cài bản debug lên thiết bị phù hợp. build.gradle dùng Groovy DSL; build.gradle.kts dùng Kotlin DSL, không phải XML. Cấu hình module chứa các tùy chọn Android và dependencies, và có thể chỉnh sửa sau khi tạo dự án.",
+      "references": [
+        {
+          "url": "https://developer.android.com/build",
+          "title": "Cấu hình build Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-37": {
+          "fingerprint": "3ad047911db0fe955746cf5c42a03a8c235c6c79b72783bff5c7df3f5a8c8a3d",
+          "answers": [
+            "B",
+            "C"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "It is sufficient to provide a single bitmap image of your app icon in your project to make it appear high quality on a range of Android devices."
+            },
+            {
+              "id": "B",
+              "text": "mdpi, hdpi, xhdpi, xxhdpi, and xxxhdpi are density qualifiers for resource directories to indicate that these are resources to be used on devices with a specific screen density."
+            },
+            {
+              "id": "C",
+              "text": "Adaptive icons are made up of a foreground and background layer, and an OEM mask will be applied on top of them."
+            },
+            {
+              "id": "D",
+              "text": "Vector drawables only work for a certain screen density and should not be scaled."
+            }
+          ]
+        },
+        "20231-2-12": {
+          "fingerprint": "3ad047911db0fe955746cf5c42a03a8c235c6c79b72783bff5c7df3f5a8c8a3d",
+          "answers": [
+            "B",
+            "C"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "It is sufficient to provide a single bitmap image of your app icon in your project to make it appear high quality on a range of Android devices."
+            },
+            {
+              "id": "B",
+              "text": "mdpi, hdpi, xhdpi, xxhdpi, and xxxhdpi are density qualifiers for resource directories to indicate that these are resources to be used on devices with a specific screen density."
+            },
+            {
+              "id": "C",
+              "text": "Adaptive icons are made up of a foreground and background layer, and an OEM mask will be applied on top of them."
+            },
+            {
+              "id": "D",
+              "text": "Vector drawables only work for a certain screen density and should not be scaled."
+            }
+          ]
+        },
+        "20231-3-43": {
+          "fingerprint": "3ad047911db0fe955746cf5c42a03a8c235c6c79b72783bff5c7df3f5a8c8a3d",
+          "answers": [
+            "B",
+            "C"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "It is sufficient to provide a single bitmap image of your app icon in your project to make it appear high quality on a range of Android devices."
+            },
+            {
+              "id": "B",
+              "text": "mdpi, hdpi, xhdpi, xxhdpi, and xxxhdpi are density qualifiers for resource directories to indicate that these are resources to be used on devices with a specific screen density."
+            },
+            {
+              "id": "C",
+              "text": "Adaptive icons are made up of a foreground and background layer, and an OEM mask will be applied on top of them."
+            },
+            {
+              "id": "D",
+              "text": "Vector drawables only work for a certain screen density and should not be scaled."
+            }
+          ]
+        },
+        "20231-4-17": {
+          "fingerprint": "3ad047911db0fe955746cf5c42a03a8c235c6c79b72783bff5c7df3f5a8c8a3d",
+          "answers": [
+            "B",
+            "C"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "It is sufficient to provide a single bitmap image of your app icon in your project to make it appear high quality on a range of Android devices."
+            },
+            {
+              "id": "B",
+              "text": "mdpi, hdpi, xhdpi, xxhdpi, and xxxhdpi are density qualifiers for resource directories to indicate that these are resources to be used on devices with a specific screen density."
+            },
+            {
+              "id": "C",
+              "text": "Adaptive icons are made up of a foreground and background layer, and an OEM mask will be applied on top of them."
+            },
+            {
+              "id": "D",
+              "text": "Vector drawables only work for a certain screen density and should not be scaled."
+            }
+          ]
+        }
+      },
+      "explanation": "Nhóm mật độ đúng là mdpi, hdpi, xhdpi, xxhdpi, xxxhdpi; “dpi” đứng riêng trong bản OCR là lỗi mất chữ x. Adaptive icon có các lớp foreground/background và có thể được launcher áp mặt nạ; thiết bị mới còn hỗ trợ lớp monochrome. Bitmap cần xét mật độ màn hình, còn vector có thể co giãn. Phương án đã được sửa lỗi OCR trước khi chấm các ý về mật độ và lớp adaptive icon.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/compose/system/icon_design_adaptive",
+          "title": "Adaptive icon"
+        },
+        {
+          "url": "https://developer.android.com/guide/topics/resources/providing-resources",
+          "title": "Android · Tài nguyên"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-38": {
+          "fingerprint": "f29727b8f5145602e1f41e6756b09ae041279bba1caaf7bb82f9f5512c490dee",
+          "answers": []
+        },
+        "20231-2-10": {
+          "fingerprint": "f29727b8f5145602e1f41e6756b09ae041279bba1caaf7bb82f9f5512c490dee",
+          "answers": []
+        },
+        "20231-3-10": {
+          "fingerprint": "f29727b8f5145602e1f41e6756b09ae041279bba1caaf7bb82f9f5512c490dee",
+          "answers": []
+        },
+        "20231-4-45": {
+          "fingerprint": "f29727b8f5145602e1f41e6756b09ae041279bba1caaf7bb82f9f5512c490dee",
+          "answers": []
+        }
+      },
+      "explanation": "Android Studio chạy trên nhiều hệ điều hành máy tính, nên đây là một ưu điểm khách quan có thể kiểm chứng. Tuy nhiên “dễ thử thiết bị”, “dễ tiếp cận người dùng” hay trải nghiệm UI tốt hơn là so sánh phụ thuộc tiêu chí. Đề không nêu đủ tiêu chí và có thể có nhiều nhận định phù hợp; giữ câu để học kiến thức nhưng không chấm ép một đáp án.",
+      "references": [
+        {
+          "url": "https://developer.android.com/studio/install",
+          "title": "Cài Android Studio"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-39": {
+          "fingerprint": "c1c456bbf9177d3d91d256fb20f179579a63a50162f8fe959de256134c647d96",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-2-15": {
+          "fingerprint": "c1c456bbf9177d3d91d256fb20f179579a63a50162f8fe959de256134c647d96",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-4-41": {
+          "fingerprint": "c1c456bbf9177d3d91d256fb20f179579a63a50162f8fe959de256134c647d96",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "Android Studio có bản cho nhiều hệ điều hành máy tính; việc bắt buộc dùng các công cụ khác nhau theo hệ điều hành, hoặc chỉ được lập trình trên một hệ điều hành, không phải hạn chế Android trong đề. Tương thích phiên bản Android, kích thước/độ phân giải màn hình và bảo vệ dữ liệu đều là các vấn đề thực tế cần xử lý.",
+      "references": [
+        {
+          "url": "https://developer.android.com/studio/install",
+          "title": "Cài Android Studio"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-40": {
+          "fingerprint": "6423cc4bfc0fc4cf3f9becc10638f1e9d84e57628b863f560aa8edf67f6d4140",
+          "answers": [
+            "A",
+            "C",
+            "E"
+          ]
+        },
+        "20231-2-36": {
+          "fingerprint": "6423cc4bfc0fc4cf3f9becc10638f1e9d84e57628b863f560aa8edf67f6d4140",
+          "answers": [
+            "A",
+            "C",
+            "E"
+          ]
+        },
+        "20231-3-20": {
+          "fingerprint": "6423cc4bfc0fc4cf3f9becc10638f1e9d84e57628b863f560aa8edf67f6d4140",
+          "answers": [
+            "A",
+            "C",
+            "E"
+          ]
+        },
+        "20231-4-22": {
+          "fingerprint": "6423cc4bfc0fc4cf3f9becc10638f1e9d84e57628b863f560aa8edf67f6d4140",
+          "answers": [
+            "A",
+            "C",
+            "E"
+          ]
+        }
+      },
+      "explanation": "Material Components cung cấp widget và theme theo Material Design, giúp triển khai giao diện nhất quán và tùy biến màu, hình dạng, kiểu chữ. Thư viện không bảo đảm biên dịch nhanh hơn và không tự động thiết kế lại giao diện cho bạn. Câu này nói về thư viện Material cho hệ View, cần phân biệt với các composable Material trong Compose.",
+      "references": [
+        {
+          "url": "https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md",
+          "title": "Material Components for Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-41": {
+          "fingerprint": "8cb577520e76b32823ef15359f776964f138f64b3dc928401242143c52109d83",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-2-34": {
+          "fingerprint": "8cb577520e76b32823ef15359f776964f138f64b3dc928401242143c52109d83",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-28": {
+          "fingerprint": "8cb577520e76b32823ef15359f776964f138f64b3dc928401242143c52109d83",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-4-25": {
+          "fingerprint": "8cb577520e76b32823ef15359f776964f138f64b3dc928401242143c52109d83",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Các callback trong lựa chọn đúng là onCreate, onStart, onResume, onPause, onStop, onRestart và onDestroy. onRestart dùng khi Activity đã stopped quay lại. Danh sách trong đáp án là tập callback, không phải thứ tự chạy từ trái sang phải; onInit, onFinish và onActivityDestroy không thuộc tập callback Activity chuẩn đó.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/activities/activity-lifecycle",
+          "title": "Vòng đời Activity"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-42": {
+          "fingerprint": "c3b79b7f65f1023b935d8a85c1a7f9caffac14016a8073c05df48501342f5a63",
+          "answers": []
+        },
+        "20231-2-4": {
+          "fingerprint": "c3b79b7f65f1023b935d8a85c1a7f9caffac14016a8073c05df48501342f5a63",
+          "answers": []
+        },
+        "20231-3-14": {
+          "fingerprint": "c3b79b7f65f1023b935d8a85c1a7f9caffac14016a8073c05df48501342f5a63",
+          "answers": []
+        },
+        "20231-4-21": {
+          "fingerprint": "c3b79b7f65f1023b935d8a85c1a7f9caffac14016a8073c05df48501342f5a63",
+          "answers": []
+        }
+      },
+      "explanation": "Implicit intent mô tả action/data mà không chỉ định lớp đích. Android tìm component phù hợp theo intent-filter, có thể ở cùng ứng dụng hoặc ứng dụng khác. Vì C và D đều có thể xảy ra trong khi đề yêu cầu một lựa chọn nên không chấm ép C; để mở màn hình nội bộ xác định, explicit intent thường phù hợp hơn.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-filters",
+          "title": "Intent và intent filter"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-43": {
+          "fingerprint": "7c6f4ccd0438866a18ee3162a4ce8f193754f2ab9d5b23e38cbcb3f5c65f3871",
+          "answers": []
+        },
+        "20231-2-17": {
+          "fingerprint": "7c6f4ccd0438866a18ee3162a4ce8f193754f2ab9d5b23e38cbcb3f5c65f3871",
+          "answers": []
+        },
+        "20231-3-16": {
+          "fingerprint": "7c6f4ccd0438866a18ee3162a4ce8f193754f2ab9d5b23e38cbcb3f5c65f3871",
+          "answers": []
+        },
+        "20231-4-24": {
+          "fingerprint": "7c6f4ccd0438866a18ee3162a4ce8f193754f2ab9d5b23e38cbcb3f5c65f3871",
+          "answers": []
+        }
+      },
+      "explanation": "Trong Activity dùng Navigation Component với app bar, ghi đè onSupportNavigateUp() và gọi NavController.navigateUp(appBarConfiguration), có thể fallback về super. Đây là xử lý nút Up trên app bar, khác với thao tác Back của hệ thống. Tên hàm cần điền là onSupportNavigateUp.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/navigation/integrations/ui#appbarconfiguration",
+          "title": "NavigationUI · Nút Up"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-44": {
+          "fingerprint": "3399d65faa439709f9308307957a04a8d0a4c4163051c45d507e00759c396351",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-2-29": {
+          "fingerprint": "3399d65faa439709f9308307957a04a8d0a4c4163051c45d507e00759c396351",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-3-21": {
+          "fingerprint": "3399d65faa439709f9308307957a04a8d0a4c4163051c45d507e00759c396351",
+          "answers": [
+            "B"
+          ]
+        },
+        "20231-4-33": {
+          "fingerprint": "3399d65faa439709f9308307957a04a8d0a4c4163051c45d507e00759c396351",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "finish() yêu cầu kết thúc Activity hiện tại. Không gọi trực tiếp onDestroy(); hệ thống quản lý các callback vòng đời. finishActivity(requestCode) là API khác dành cho Activity con đã mở theo requestCode, không thay thế finish() trong câu hỏi này.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/activities/activity-lifecycle",
+          "title": "Vòng đời Activity"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-1-45": {
+          "fingerprint": "b4c53048fc7ff3b7848681d49ce5aa518410783bbc9c03a912ad06fe35de7054",
+          "answers": []
+        },
+        "20231-2-39": {
+          "fingerprint": "b4c53048fc7ff3b7848681d49ce5aa518410783bbc9c03a912ad06fe35de7054",
+          "answers": []
+        },
+        "20231-3-11": {
+          "fingerprint": "b4c53048fc7ff3b7848681d49ce5aa518410783bbc9c03a912ad06fe35de7054",
+          "answers": []
+        },
+        "20231-4-37": {
+          "fingerprint": "b4c53048fc7ff3b7848681d49ce5aa518410783bbc9c03a912ad06fe35de7054",
+          "answers": []
+        }
+      },
+      "explanation": "Để mở ứng dụng nhắn SMS, dùng ACTION_SENDTO cùng Uri có scheme smsto:, ví dụ Uri.parse(\"smsto:123456789\"), rồi thêm sms_body. Chuỗi \"123456789\" trong đề thiếu scheme nên không bảo đảm tìm được ứng dụng xử lý. ACTION_SENDTO là ý định của câu hỏi, nhưng nguyên đoạn code chưa đủ đúng nên không dùng làm câu chấm điểm.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-common",
+          "title": "Các intent thường dùng"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-2-1": {
+          "fingerprint": "cc77bdb19600719f9051159d16a7c9d9543b53186df11fafe6b3b05e132aa99f",
+          "answers": [
+            "E"
+          ],
+          "options": [
+            {
+              "id": "A",
+              "text": "Intent.ACTION_ACCESS_INTERNET"
+            },
+            {
+              "id": "B",
+              "text": "Intent.ACTION_WEB_VIEW"
+            },
+            {
+              "id": "C",
+              "text": "Intent.ACTION_MAIN"
+            },
+            {
+              "id": "D",
+              "text": "Intent.ACTION_GET_CONTENT"
+            },
+            {
+              "id": "E",
+              "text": "Intent.ACTION_VIEW"
+            }
+          ]
+        },
+        "20231-3-22": {
+          "fingerprint": "d05e24b20bf782c32fd8f0fed08f9e236ae2d44dd6fba845d60e3919dacd5f06",
+          "answers": []
+        },
+        "20231-4-5": {
+          "fingerprint": "e9567fbb760c8f7b2a87820d1880a65b51a64c5bc907c3a5286fa1e2123eaa2d",
+          "answers": [
+            "E"
+          ]
+        }
+      },
+      "explanation": "Mở trang web bằng Intent.ACTION_VIEW cùng Uri http:// hoặc https://. ACTION_GET_CONTENT yêu cầu người dùng chọn dữ liệu, còn ACTION_MAIN mô tả điểm vào chính chứ không mở URL cụ thể. Một số bản OCR làm mất dấu gạch dưới hoặc dính lựa chọn; chỉ bản có lựa chọn đọc được rõ mới được chấm.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-common",
+          "title": "Các intent thường dùng"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-2-2": {
+          "fingerprint": "7fe54837086f4f7dc2b9c1b6f136a1568147f6f1a36ead7863c0d02cdc33e91a",
+          "answers": []
+        },
+        "20231-4-34": {
+          "fingerprint": "7fe54837086f4f7dc2b9c1b6f136a1568147f6f1a36ead7863c0d02cdc33e91a",
+          "answers": []
+        }
+      },
+      "explanation": "Implicit intent không cần biết tên lớp Activity đích, nên nhận định yêu cầu tên lớp là sai. Nhưng nhận định “có nhiều ứng dụng phù hợp thì luôn hiện chooser” cũng không đúng tuyệt đối: có thể đã có ứng dụng mặc định. Đề yêu cầu một lựa chọn trong khi có hơn một ý sai, và một bản OCR còn dính lựa chọn vào câu hỏi; không chấm ép một đáp án.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-filters",
+          "title": "Intent và intent filter"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-2-9": {
+          "fingerprint": "57f63e1f3d56aab8a2e35d7d9654408ba41035781adfdbc84a7514a9e064dca4",
+          "answers": []
+        },
+        "20231-3-29": {
+          "fingerprint": "57f63e1f3d56aab8a2e35d7d9654408ba41035781adfdbc84a7514a9e064dca4",
+          "answers": []
+        },
+        "20231-4-36": {
+          "fingerprint": "57f63e1f3d56aab8a2e35d7d9654408ba41035781adfdbc84a7514a9e064dca4",
+          "answers": []
+        }
+      },
+      "explanation": "Fragment cho phép tái sử dụng phần giao diện, kết hợp nhiều phần trong layout thích ứng và tổ chức các luồng điều hướng. Các ý về điều hướng, layout thích ứng và tái sử dụng mô tả các lợi ích đó. Fragment không thay thế Activity trong mọi trường hợp. Vì phương án D bị cắt giữa câu ở bản đang có, chưa đủ thông tin để chấm toàn bộ câu nhiều lựa chọn.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/fragments",
+          "title": "Fragment"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-2-20": {
+          "fingerprint": "756267dbb707f58b6c91d4125d42370207bc49e2ef09c407836f7747a4579879",
+          "answers": [
+            "A"
+          ]
+        },
+        "20231-3-34": {
+          "fingerprint": "756267dbb707f58b6c91d4125d42370207bc49e2ef09c407836f7747a4579879",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "RadioGroup kế thừa trực tiếp android.widget.LinearLayout; LinearLayout tiếp tục kế thừa ViewGroup. Vì hỏi lớp cha trực tiếp nên chọn LinearLayout, không chọn ViewGroup. Điều này cũng giải thích tại sao RadioGroup có thuộc tính orientation để sắp nút ngang hoặc dọc.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/RadioGroup",
+          "title": "RadioGroup"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-2-28": {
+          "fingerprint": "1061127ae1c7cc281ba34a0578babb697a7ee8279f2ed48d8e59f4fcc94115c8",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "Google chuyển cách gọi phiên bản công khai sang số bắt đầu từ Android 10, sau Android 9 Pie. Điều này không có nghĩa mọi tên mã nội bộ liên quan món tráng miệng đều biến mất. Một bản OCR có “Android 11” lẫn vào phần câu hỏi; bản đó được giữ để đối chiếu và không chấm.",
+      "references": [
+        {
+          "url": "https://blog.google/products-and-platforms/platforms/android/evolving-android-brand/",
+          "title": "Google · Tên Android 10"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-3-4": {
+          "fingerprint": "3b67c5b937754bc0667f376ee77aa58041107211c6c2f052b8bcef309515d37c",
+          "answers": [
+            "B",
+            "D"
+          ]
+        }
+      },
+      "explanation": "onCreateView() tạo cây view; onViewCreated() được gọi sau khi cây view đã tồn tại. Vì vậy có thể lấy tham chiếu view, gắn dữ liệu và đặt adapter cho RecyclerView trong onViewCreated(). Không inflate layout lần nữa ở callback này; menu có cơ chế callback hoặc MenuProvider riêng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/fragments/lifecycle",
+          "title": "Vòng đời Fragment"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-3-12": {
+          "fingerprint": "bc366a6031db6df3c5376a8ea85ddb9f187a52d0e9348f912ed4c1fcb19451b3",
+          "answers": []
+        }
+      },
+      "explanation": "Implicit intent không cần biết tên lớp Activity đích, nên nhận định yêu cầu tên lớp là sai. Nhưng nhận định “có nhiều ứng dụng phù hợp thì luôn hiện chooser” cũng không đúng tuyệt đối: có thể đã có ứng dụng mặc định. Đề yêu cầu một lựa chọn trong khi có hơn một ý sai, và một bản OCR còn dính lựa chọn vào câu hỏi; không chấm ép một đáp án.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/components/intents-filters",
+          "title": "Intent và intent filter"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-3-24": {
+          "fingerprint": "a79e2d5997d9ae8fce98a1b02a125d2196706b7d9a686f207f0a0cbd85922757",
+          "answers": [
+            "B",
+            "E"
+          ]
+        },
+        "20231-4-27": {
+          "fingerprint": "a79e2d5997d9ae8fce98a1b02a125d2196706b7d9a686f207f0a0cbd85922757",
+          "answers": [
+            "B",
+            "E"
+          ]
+        }
+      },
+      "explanation": "TextView A có start_toStartOf parent, nên cạnh start của A trùng cạnh start của cha. Cả A và B đều có top_toTopOf parent nên cạnh trên thẳng với cha. B được căn end, không phải start hoặc center. wrap_content của A không làm nó rộng bằng ConstraintLayout; do đó chọn các ý về cạnh start của A và cạnh top của cả hai view.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/constraint-layout",
+          "title": "ConstraintLayout"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-3-35": {
+          "fingerprint": "d995c87294314ec278ad16a896ec206625a689518c06d23841071b0aa2c9bb17",
+          "answers": []
+        }
+      },
+      "explanation": "Google chuyển cách gọi phiên bản công khai sang số bắt đầu từ Android 10, sau Android 9 Pie. Điều này không có nghĩa mọi tên mã nội bộ liên quan món tráng miệng đều biến mất. Một bản OCR có “Android 11” lẫn vào phần câu hỏi; bản đó được giữ để đối chiếu và không chấm.",
+      "references": [
+        {
+          "url": "https://blog.google/products-and-platforms/platforms/android/evolving-android-brand/",
+          "title": "Google · Tên Android 10"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20231-4-2": {
+          "fingerprint": "5a7a5e13620626429f1e51fbb32e1778e3ddfdecfb867ddd34ac5719a3e873ef",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "RadioGroup kế thừa trực tiếp android.widget.LinearLayout; LinearLayout tiếp tục kế thừa ViewGroup. Vì hỏi lớp cha trực tiếp nên chọn LinearLayout, không chọn ViewGroup. Điều này cũng giải thích tại sao RadioGroup có thuộc tính orientation để sắp nút ngang hoặc dọc.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/RadioGroup",
+          "title": "RadioGroup"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-1": {
+          "fingerprint": "c2521b42adabf3eaaa7ce3de3c6329cc5c9c66ad5250af04d9629030109e51c8",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "android.widget.Button kế thừa trực tiếp android.widget.TextView. TextView lại kế thừa android.view.View. Chú ý cả tên lớp và package: android.view.TextView và android.widget.View trong các phương án là tên không đúng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/Button",
+          "title": "Button"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-2": {
+          "fingerprint": "eaac8f63a7952a44bfbc831092bd7639f44b15be9c053528640fdae7aa6be04f",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-2-13": {
+          "fingerprint": "301a21bd118998bd5ff834d8b776127cb4cb7cdad6c4b4ea766b0c8b3c689687",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "Android Studio có bản cho nhiều hệ điều hành máy tính; việc bắt buộc dùng các công cụ khác nhau theo hệ điều hành, hoặc chỉ được lập trình trên một hệ điều hành, không phải hạn chế Android trong đề. Tương thích phiên bản Android, kích thước/độ phân giải màn hình và bảo vệ dữ liệu đều là các vấn đề thực tế cần xử lý.",
+      "references": [
+        {
+          "url": "https://developer.android.com/studio/install",
+          "title": "Cài Android Studio"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-3": {
+          "fingerprint": "ddc2acd5370734dd3abebefd644747b6ee9e871d80cd29660a47c19fcef33403",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "ConstraintLayout được hỗ trợ trực quan mạnh trong Layout Editor để tạo và điều chỉnh các ràng buộc. Layout Editor vẫn làm việc với các layout khác; câu hỏi dùng “phù hợp nhất” trong nhóm lựa chọn, không có nghĩa chỉ ConstraintLayout mới chỉnh được bằng công cụ này.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/constraint-layout",
+          "title": "ConstraintLayout"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-4": {
+          "fingerprint": "81739a98a9b9aa7909d18449bc665ae669703d6236283c02e8ae0cb30420e5df",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "R là lớp tài nguyên được công cụ build sinh tự động. R.layout.activity_main là ID của tài nguyên layout tên activity_main; R.string, R.drawable và R.id là các nhóm ID khác. R không phải Room, Receiver hay Runnable.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/topics/resources/providing-resources",
+          "title": "Android · Tài nguyên"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-5": {
+          "fingerprint": "20e7a13afddd557072779356470d5ec1c07936d751ceffb4cf872545200dba38",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "open đặt ở khai báo lớp cha để cho phép kế thừa hoặc ghi đè thành viên vốn final mặc định. override đặt ở khai báo lớp con đang thực hiện ghi đè. Thành viên abstract vốn đã cho phép override; trong lựa chọn của câu hỏi này, open là từ khóa thể hiện chủ đích “có thể được viết chồng”.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/inheritance.html",
+          "title": "Kotlin · Kế thừa"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-6": {
+          "fingerprint": "9edf28c8dbeca42e85b9b72784066c72ff36f9d2aaeccdd794b5ff34cd4d003f",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-4-8": {
+          "fingerprint": "a34718b9978b98c595abb552003336249502a3c76a521f4d2ce6367c86b9ca6b",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "TextView.setText(Int) hiểu số nguyên là ID tài nguyên chuỗi, không phải số cần hiển thị. Vì vậy setText(count) với count = 123 có thể gây Resources.NotFoundException. Dùng count.toString(), \"$count\" hoặc nối chuỗi để chọn overload nhận văn bản.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/TextView",
+          "title": "TextView"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-7": {
+          "fingerprint": "9bc514628f52788e3f1ec29b25aa68b4a58e924e88aea1fdec0093b3d3b5e9ff",
+          "answers": []
+        }
+      },
+      "explanation": "Không có lựa chọn duy nhất phù hợp với cách hỏi: ImageView và ImageButton hiển thị ảnh, còn TextView và Button đều hỗ trợ compound drawable ở cạnh văn bản. Nếu chỉ nói đến ảnh làm nội dung chính thì đề phải nêu rõ. Không chấm một widget là tuyệt đối “không hiển thị được ảnh”.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/TextView",
+          "title": "TextView"
+        },
+        {
+          "url": "https://developer.android.com/reference/android/widget/Button",
+          "title": "Button"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-8": {
+          "fingerprint": "e8eb4119419de31c0d9353b28fb907ac9d09c92de0fb00d5da4607e673161c94",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-2-20": {
+          "fingerprint": "2ff52fc1a1e6cf842bd5ca07a54861834efd21bd069ce13cf999fbd320354c4c",
+          "answers": []
+        },
+        "20241-3-16": {
+          "fingerprint": "e58af5e361ffeafd2d9715714d3d284ec0e3f0e6a54d243b678b6b5e2429d2b6",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-4-10": {
+          "fingerprint": "e58af5e361ffeafd2d9715714d3d284ec0e3f0e6a54d243b678b6b5e2429d2b6",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "Kotlin thường không cần dấu chấm phẩy cuối dòng; dấu ; dùng để phân tách nhiều câu lệnh viết trên cùng một dòng. Ví dụ val a = 1; println(a). Đây là lựa chọn phù hợp nhất của đề; không suy ra Kotlin cấm dấu ; cuối câu lệnh. Bản bị cắt mất lựa chọn đúng không được chấm.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/basic-syntax.html",
+          "title": "Kotlin · Cú pháp cơ bản"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-9": {
+          "fingerprint": "3539bbd34b111e1e85c119d07de97da4694d11cde65d5b5bfe967db67bd51c2e",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "calc(6, 4) tính phần dư 6 % 4 bằng 2. Với thân biểu thức = x % y, Kotlin suy ra kiểu trả về Int nên việc không ghi : Int không phải lỗi. Không nhầm % với phép chia nguyên 6 / 4 cho kết quả 1.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/functions.html",
+          "title": "Kotlin · Hàm"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-10": {
+          "fingerprint": "d6787acd8cb4bd676137728bebb80348c0b5bbf210a194e94fdf8184522e868e",
+          "answers": [
+            "B"
+          ]
+        },
+        "20241-4-15": {
+          "fingerprint": "fada2d62937bafbb49d211f5b87ce5125e69c033a558926b59de8031104a8548",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "Chế độ Android trong cửa sổ Project gom file theo các nhóm quen thuộc như manifests, mã nguồn, res và Gradle Scripts. Đây là cách hiển thị logic phục vụ lập trình Android, không phải cấu trúc thư mục vật lý nguyên bản như Project. Tên và cách nhóm có thể khác nhẹ theo phiên bản Android Studio.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/declaring-layout",
+          "title": "Layout trong Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-11": {
+          "fingerprint": "642cb48430c8f5c3c7fca59228c81b2bf584c190b7fd237bc3fd069c1430c9f8",
+          "answers": [
+            "A"
+          ]
+        },
+        "20241-2-12": {
+          "fingerprint": "cbb39000c329b2e1af563ab60e5d25974f8cbcbc79bf586cb506a15321404db7",
+          "answers": [
+            "D"
+          ]
+        },
+        "20241-3-10": {
+          "fingerprint": "38c074fe2a31da8cf93decf399d68e38b1323e6ebe4db8f7a5907cd59fd3447b",
+          "answers": [
+            "B"
+          ]
+        },
+        "20241-4-1": {
+          "fingerprint": "3772d1e7937d4584558b49a03db13d09fcdef0b50e2002544d5677014bf6856d",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "val khai báo một tham chiếu chỉ được gán một lần; var cho phép gán lại. Điều này không đồng nghĩa đối tượng mà val trỏ tới luôn bất biến: val list = mutableListOf(1) vẫn cho phép list.add(2). Trong câu hỏi nhập môn, chọn phương án biến không gán lại giá trị.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/basic-syntax.html",
+          "title": "Kotlin · Cú pháp cơ bản"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-12": {
+          "fingerprint": "de47406502f0fdc38984adac797b88d5f7fe6b2a7fff7dfde1023585422b3c29",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-3-13": {
+          "fingerprint": "aaabd40d81c3f6226cf9db5af208904d275690d2828dde40ba8e56a9f246850d",
+          "answers": [
+            "A"
+          ]
+        },
+        "20241-4-14": {
+          "fingerprint": "61c1b7a5688104ddf55c8da8595d8412889db26ce4d90def7fe1644e8dfbbc20",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "Trong nhóm layout của đề, layout_weight thuộc LinearLayout.LayoutParams và phân chia phần không gian còn lại theo tỉ lệ trọng số. Với chiều ngang thường đặt layout_width=\"0dp\" cho các view chia đều. Không nhầm thuộc tính này với chain weight của ConstraintLayout.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/linear",
+          "title": "LinearLayout"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-13": {
+          "fingerprint": "8d7c1db12a987d3f8c8f1ac5dbf0587c5ce35cc14640d2eb103aa84f609641e0",
+          "answers": [
+            "B"
+          ]
+        },
+        "20241-2-11": {
+          "fingerprint": "46110c05d94af93ee1d5452d6f64237c06d3425eeecbacb875a7046798cea918",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-3-11": {
+          "fingerprint": "dcca586e4c591d776db68401a0b9ac1f5740dc33f7010220f5a74f0e30ac0819",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "Dùng android:fontFamily=\"@font/my_font\" để tham chiếu font đặt trong res/font/my_font.ttf. android:typeface không phải cách tham chiếu file font tùy chỉnh này. Trong Kotlin có thể lấy Typeface bằng ResourcesCompat.getFont(...) rồi gán cho TextView.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/text-and-emoji/fonts-in-xml",
+          "title": "Font trong XML"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-14": {
+          "fingerprint": "b6ad62d4c4f5bdac5fab7a48b554c30d84d0f658be3ff95f8076bbe552a452dc",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "File build.gradle của module, hoặc build.gradle.kts với Kotlin DSL, khai báo các cấu hình như versionCode/versionName và dependencies. AndroidManifest.xml mô tả component/quyền; proguard-rules.pro cấu hình thu gọn/làm rối. Dự án hiện đại còn có version catalog nên không nhất thiết mọi giá trị phiên bản đều viết trực tiếp trong một file.",
+      "references": [
+        {
+          "url": "https://developer.android.com/build",
+          "title": "Cấu hình build Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-15": {
+          "fingerprint": "b69a75a4a266238e24e7e9ff5fbc6bfb5f8b64ceea3460816e728271a3f53cd8",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "when là cấu trúc phân nhánh gần với switch trong Java, nhưng mạnh hơn: có thể kiểm tra khoảng, kiểu và dùng như biểu thức trả về giá trị. Nó không tự rơi xuống nhánh tiếp theo như switch kiểu cũ; không cần break để kết thúc mỗi nhánh.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/control-flow.html",
+          "title": "Kotlin · Điều khiển luồng"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-16": {
+          "fingerprint": "735d65bfcf1507ca64be4723013c885a060374b84444a96d3c90e692f8f93644",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "Trong hệ giao diện Android View dùng XML, activity_main.xml mô tả layout và được Activity nạp vào. MainActivity.kt chứa logic, AndroidManifest.xml khai báo ứng dụng, còn Gradle cấu hình build. Với Jetpack Compose có thể mô tả UI bằng Kotlin thay vì file layout XML; đáp án ở đây theo hệ View của đề.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/declaring-layout",
+          "title": "Layout trong Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-17": {
+          "fingerprint": "207f6aa9a670494a656c575a6ffe8e6d92c0a2dc5684e0b4322481dbfedeeea8",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "TextView.append(...) thêm văn bản vào cuối nội dung hiện có; setText(...) thay toàn bộ nội dung. Ví dụ textView.append(\" thêm\") giữ phần chữ trước đó. Các tên insertText, addText và appendText trong lựa chọn không phải API TextView tương ứng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/TextView",
+          "title": "TextView"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-18": {
+          "fingerprint": "1e236955daf945ddf1596e66279a0a56ff4c97154b26f7640a1e3787ac76b6ce",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "layout_alignParentLeft là quy tắc do RelativeLayout.LayoutParams xử lý, căn cạnh trái view theo cạnh trái vùng nội dung cha. Với ứng dụng hỗ trợ ngôn ngữ RTL nên cân nhắc layout_alignParentStart. Thuộc tính layout_* được layout cha diễn giải, không phải mọi layout đều hiểu cùng một thuộc tính.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams",
+          "title": "RelativeLayout.LayoutParams"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-19": {
+          "fingerprint": "2b811a117fb37ed991fd7f9e3b16c02c9579410873318ed763d835c517de1fd0",
+          "answers": [
+            "A"
+          ]
+        },
+        "20241-2-7": {
+          "fingerprint": "2e84df5a773a56a19126b86ca5a10d5faba715d97681b4a1f9dff944a003ab9a",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-3-18": {
+          "fingerprint": "ab08f395fb20e5f17c0a711a19c576138a0dd37c71ac1ede8c3610def213bbda",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Hai quy tắc alignParentLeft và alignParentRight ghim hai cạnh ngang của view vào hai cạnh vùng nội dung RelativeLayout, nên chiều rộng bị kéo theo khoảng giữa chúng dù khai báo wrap_content. Với giả thiết cha không padding và view không margin, nó rộng bằng cha. Nếu có padding/margin thì cần trừ phần đó; câu hỏi không cung cấp các giá trị này.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams",
+          "title": "RelativeLayout.LayoutParams"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-1-20": {
+          "fingerprint": "b2680b8a4479d9aaed802aba391661f4d6c53114b1627c0f46173d86afd85abd",
+          "answers": [
+            "B"
+          ]
+        },
+        "20241-2-8": {
+          "fingerprint": "33d0e99e0b00fc2707cf37f128efb4e26aa89de60f4c02757cfd85a04f7fca71",
+          "answers": [
+            "D"
+          ]
+        },
+        "20241-4-18": {
+          "fingerprint": "47ca4a3e548823c38e1953c619bc6b2b5ae4833111332377b102d07609be2eb4",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "FrameLayout thường dùng làm vùng chứa một view chính hoặc xếp chồng các view. Nó vẫn cho phép nhiều con, nên câu hỏi nói “thường” chứ không phải giới hạn bắt buộc chỉ một view. LinearLayout xếp theo hàng/cột; RelativeLayout và ConstraintLayout diễn tả quan hệ vị trí.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/FrameLayout",
+          "title": "FrameLayout"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-1": {
+          "fingerprint": "71d7fe2f443c8aadc7385a97c49d718bb73900dda90a4790d05790fdb273d467",
+          "answers": [
+            "A"
+          ]
+        },
+        "20241-3-2": {
+          "fingerprint": "e759f1bd18b402d2a985189d50c495f941a992f0d9d0aecbdb746ac3a64ec7f3",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "repeat(5) chạy lambda 5 lần với it lần lượt là 0, 1, 2, 3, 4. Vì s bắt đầu bằng 0 nên tổng là 0 + 1 + 2 + 3 + 4 = 10. Không dùng 1 đến 5, và biến s phải là var vì được cập nhật mỗi lượt.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/repeat.html",
+          "title": "Kotlin · repeat"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-2": {
+          "fingerprint": "a7559621accdfd83a060b7221e37243f5faa5cd3856b4c8640c44a8030db438f",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-3-14": {
+          "fingerprint": "65fd66a7730e4096e8dd483619997375b06fae865df4ea8d29b025062f9f080c",
+          "answers": [
+            "D"
+          ]
+        },
+        "20241-4-4": {
+          "fingerprint": "e24fbc5310fd56b8159d0d054f8bc1f37cc2a7c11495b8031c13941db473a47e",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "Nhấn giữ được xử lý bằng setOnLongClickListener. onLongClick(view) trả về true nếu sự kiện đã được xử lý. setOnClickListener xử lý thao tác nhấn thông thường; các tên setLongClickListener và setOnLongTouchListener trong đề không phải API tương ứng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/view/View",
+          "title": "View"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-3": {
+          "fingerprint": "81d97690ce4838869344fd741524799035fb0dd32bb66847a77b7c390e79c02d",
+          "answers": [
+            "D"
+          ]
+        },
+        "20241-4-11": {
+          "fingerprint": "a0026006e3224ce323bf4fdb076e25785ae4dca2d7982555f7e8fc33269e03b9",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Chuỗi trong strings.xml được đặt trong res/values; bản dịch có thể đặt trong values-vi, values-en và các thư mục có qualifier khác. Tên file strings.xml là quy ước quen dùng, còn loại tài nguyên được nhận biết từ phần tử string trong XML. res/strings không phải thư mục tài nguyên chuỗi chuẩn.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/topics/resources/providing-resources",
+          "title": "Android · Tài nguyên"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-4": {
+          "fingerprint": "55a420a5c86f82449cf70267014a025e0eb292bb5c3c084ca56d52a47de0efc0",
+          "answers": [
+            "D"
+          ]
+        },
+        "20241-4-17": {
+          "fingerprint": "cbdd4719c7688943a5b015cc43770eda2d83f33cc12a4940fe30e8340455c660",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "arrayOf(1, 2, 3, 4, 5) tạo Array<Int> và khởi tạo các phần tử. Dấu [ ] dùng khi truy cập phần tử, không dùng trực tiếp làm literal mảng kiểu JavaScript trong Kotlin. Với mảng số nguyên chuyên biệt có thể dùng intArrayOf(...).",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/arrays.html",
+          "title": "Kotlin · Mảng"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-5": {
+          "fingerprint": "5afb5d3d73135c985dc1e40ac7b1dc78e31e2d5480080281f221e9150469c1be",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "ScrollView cho phép cuộn nội dung theo chiều dọc khi nội dung cao hơn màn hình. Nó chỉ có một view con trực tiếp; thường đặt một LinearLayout chứa các trường nhập bên trong. HorizontalScrollView dùng cho chiều ngang, còn LinearLayout tự nó không cung cấp cuộn.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/ScrollView",
+          "title": "ScrollView"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-6": {
+          "fingerprint": "b045fc499bc4531e7f3f023d11a2bcf25e319cd0a017932f5f37af1faefa67be",
+          "answers": [
+            "A"
+          ]
+        },
+        "20241-3-15": {
+          "fingerprint": "df6849176861c411ea840b18f5c2f3e3d0621169dc729427f4738306e131e052",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "ConstraintLayout cho phép ràng buộc cạnh, baseline, tỉ lệ và chain để xây dựng màn hình phức tạp với cây view tương đối phẳng. Không phải mọi giao diện đều cần nó: LinearLayout hoặc FrameLayout vẫn phù hợp trường hợp đơn giản. Trong nhóm lựa chọn của đề, ConstraintLayout đáp ứng rõ nhất yêu cầu kiểm soát nhiều vị trí.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/constraint-layout",
+          "title": "ConstraintLayout"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-9": {
+          "fingerprint": "9b72892618ef76955ec11e8c55ba895b42f4a5804c03caed1b1d6faa8fd0c2ca",
+          "answers": [
+            "A"
+          ]
+        },
+        "20241-4-12": {
+          "fingerprint": "f53e360c7188022b483a58aadc0747fdde6c6eff3ac964caf50907f730115558",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "id được khai báo trong android.view.View, là lớp nền của các widget như TextView, Button và EditText. TextView truyền tiếp khả năng này qua kế thừa; ViewGroup cũng là một View nhưng không phải lớp mà mọi widget văn bản kế thừa trực tiếp. Trong XML dùng android:id để đặt ID.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/view/View",
+          "title": "View"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-10": {
+          "fingerprint": "7d6c0c09a856573ace64550bd2f7f47028a853fe4bddbcfd5929cd03cd193d44",
+          "answers": [
+            "C"
+          ]
+        },
+        "20241-3-8": {
+          "fingerprint": "aaadfef49ad81c73d44c77babd19c28cd1ad5af53644857802a13c890d07b53e",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "Android dùng Linux kernel làm nền tảng hệ điều hành, bên trên là các lớp như HAL, thư viện native, runtime và framework. Android không phải Ubuntu; cả hai có thể dùng nhân Linux nhưng khác nền tảng và hệ ứng dụng. Vì vậy đáp án là Linux, không phải tên một hệ điều hành máy tính khác.",
+      "references": [
+        {
+          "url": "https://source.android.com/docs/core/architecture",
+          "title": "Kiến trúc Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-14": {
+          "fingerprint": "66388da90fa59aa4d4e4a8f47762d980c5452505385038fd914aab3276c442fc",
+          "answers": [
+            "B"
+          ]
+        },
+        "20241-3-9": {
+          "fingerprint": "c124de0371f0b694727aec218f012e0c57cba4a766156aefa7ee0a97ef525951",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Tạo horizontal chain cho hai Button, đặt chiều rộng 0dp (match constraints) và trọng số ngang bằng nhau để chia đều khoảng rộng khả dụng. Chỉ tạo chain mà vẫn để wrap_content thì chưa bảo đảm mỗi nút rộng một nửa. Horizontal bias điều chỉnh vị trí, không tự chia kích thước đều; layout_weight là thuộc tính của LinearLayout.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/constraint-layout",
+          "title": "ConstraintLayout"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-15": {
+          "fingerprint": "f363ff3cec5d6e38a124d36ba8b78f21681b207972c548264c0faac27927c1a6",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Gradle tự động hóa build Android và có các task như installDebug để cài bản debug lên thiết bị phù hợp. build.gradle dùng Groovy DSL; build.gradle.kts dùng Kotlin DSL, không phải XML. Cấu hình module chứa các tùy chọn Android và dependencies, và có thể chỉnh sửa sau khi tạo dự án.",
+      "references": [
+        {
+          "url": "https://developer.android.com/build",
+          "title": "Cấu hình build Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-16": {
+          "fingerprint": "6af17f9572d90a8c7fe06954ac3934ed58894d0735971734ffda8d9ef897c060",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "i được khai báo bằng val nên không được gán lại. Toán tử i++ cần cập nhật i, vì vậy đoạn code không biên dịch dù nằm trong string template. Nếu dùng var i = 10 thì phép tăng hậu tố in 10 trước rồi mới tăng i thành 11.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/basic-syntax.html",
+          "title": "Kotlin · Cú pháp cơ bản"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-17": {
+          "fingerprint": "34a834fbee8285411b99c0f285872b97f688152539d3ffb32c38b13e5fe671d6",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "SDK Manager cài đặt và quản lý SDK Platforms, Build Tools và các công cụ Android. Device Manager quản lý thiết bị ảo, còn Project Structure cấu hình dự án/module. Có nhiều SDK được cài không tự thay compileSdk của dự án; giá trị đó vẫn nằm trong cấu hình build.",
+      "references": [
+        {
+          "url": "https://developer.android.com/studio/intro/update#sdk-manager",
+          "title": "SDK Manager"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-18": {
+          "fingerprint": "e74c0507a8825119ca115bd668a5ab3e53605142bbf0527c669f5cc51e2d2775",
+          "answers": [
+            "B"
+          ]
+        },
+        "20241-3-1": {
+          "fingerprint": "0d71bc3f99ad855c7679b4864ca28cc2f907b8ea77cae2b311a05e679ad39dc2",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "EditText.getText() trả về Editable, là giao diện văn bản có thể chỉnh sửa. Editable cũng là một CharSequence, nhưng trong các lựa chọn câu hỏi muốn kiểu trả về cụ thể của EditText. Muốn lấy String có thể gọi editText.text.toString().",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/EditText#getText()",
+          "title": "EditText.getText"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-2-19": {
+          "fingerprint": "35f9f0a6a6147956eea3fe59c59ba2a77a5af391b7763ac4992fd79102fcb5e5",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "R.string.app_name là số ID của tài nguyên chuỗi. textView.setText(stringId) dùng overload nhận resource ID để nạp nội dung app_name. Gọi stringId.toString() hoặc \"$stringId\" chỉ tạo chuỗi chữ số của ID, không lấy nội dung tài nguyên; cách khác đúng là getString(stringId).",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/TextView",
+          "title": "TextView"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-3": {
+          "fingerprint": "814436546c29baf59f4fa146fdf068deb8a8309c4d9a22ad3cd3bcfff723b8ac",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "android:id là thuộc tính đặt định danh view, ví dụ android:id=\"@+id/title\". Dấu + tạo khai báo ID nếu chưa có; @id/title tham chiếu ID đã tồn tại. XML phân biệt chữ hoa chữ thường, nên android:ID khác android:id và không phải thuộc tính đúng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/view/View",
+          "title": "View"
+        },
+        {
+          "url": "https://developer.android.com/guide/topics/resources/providing-resources",
+          "title": "Android · Tài nguyên"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-4": {
+          "fingerprint": "a43427160ab18ebcdc5f34037a4bd4d844418c440c2df20dabf3462c327626ef",
+          "answers": [
+            "B"
+          ]
+        },
+        "20241-4-7": {
+          "fingerprint": "70db46cff631b92b675474df26eda18e82e1f6b479f464ccf6914e3ad75e0f0b",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "Lambda { it.uppercase() } biến \"SoICT\" thành \"SOICT\". Hàm process nhận kết quả đó rồi gọi lowercase() trước khi println, nên kết quả cuối cùng là \"soict\". Đây là hàm bậc cao vì method có kiểu (String) -> String.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/lambdas.html",
+          "title": "Kotlin · Lambda"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-5": {
+          "fingerprint": "51aefd5696fc4519eb6195cd71fc86bf13b710fa95684b04d9dc8573b7b9dc18",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "setImageResource(R.drawable.mobile) nhận ID tài nguyên drawable dạng số nguyên. Không thêm đuôi .png trong R.drawable.mobile. R.id.mobile là ID view, còn setImageDrawable() cần một đối tượng Drawable, không nhận trực tiếp số ID tài nguyên như phương án trong đề.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/topics/resources/providing-resources",
+          "title": "Android · Tài nguyên"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-6": {
+          "fingerprint": "d41f0ff398492ce5d2d35a85b24c427a530d0304cc6f574710630b7e195aaa56",
+          "answers": []
+        }
+      },
+      "explanation": "Android Studio chạy trên nhiều hệ điều hành máy tính, nên đây là một ưu điểm khách quan có thể kiểm chứng. Tuy nhiên “dễ thử thiết bị”, “dễ tiếp cận người dùng” hay trải nghiệm UI tốt hơn là so sánh phụ thuộc tiêu chí. Đề không nêu đủ tiêu chí và có thể có nhiều nhận định phù hợp; giữ câu để học kiến thức nhưng không chấm ép một đáp án.",
+      "references": [
+        {
+          "url": "https://developer.android.com/studio/install",
+          "title": "Cài Android Studio"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-7": {
+          "fingerprint": "9297fc78faa5e80f7a493a5e9f7bd752deab62ddff69bd4ceb1da030655bd51b",
+          "answers": []
+        },
+        "20241-4-9": {
+          "fingerprint": "c5633b54be47d6054dd404fee818bb03989cd9d3db93a4be98e5ed0365ae92b2",
+          "answers": []
+        }
+      },
+      "explanation": "LinearLayout chỉ dùng layout_gravity để căn theo trục không phải trục sắp xếp; RelativeLayout dùng các quy tắc layout_align... thay vì layout_gravity. Vì cách hỏi “không tự căn chỉnh theo cả 2 hướng” có thể chỉ một trục hoặc không hỗ trợ thuộc tính, có nhiều cách hiểu. Đề thiếu điều kiện nên không chấm ép một loại layout.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/linear",
+          "title": "LinearLayout"
+        },
+        {
+          "url": "https://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams",
+          "title": "RelativeLayout.LayoutParams"
+        },
+        {
+          "url": "https://developer.android.com/reference/android/widget/FrameLayout",
+          "title": "FrameLayout"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-12": {
+          "fingerprint": "20b76cd93e984f8d32a22d9a29d798232cb6e37e1989c7035fe25eb7cbe34548",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "Lambda là biểu thức mô tả một hàm không có tên, ví dụ { x: Int -> x * 2 }. Có thể lưu nó trong biến kiểu hàm hoặc truyền làm đối số cho hàm bậc cao. Khi chỉ có một tham số và suy ra được kiểu, Kotlin cho phép dùng tên ngầm định it.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/lambdas.html",
+          "title": "Kotlin · Lambda"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-17": {
+          "fingerprint": "5a46610325000f85a77fae4dfc991376e5fc4756e1e2ee6d1ae58676049a4c5f",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Logcat hiển thị log từ ứng dụng và hệ thống trên máy phát triển, có thể lọc theo tag, package và mức độ. Nó không chỉ chứa các dòng do lập trình viên tự ghi. Toast là thông báo ngắn trên thiết bị. “Cần kết nối” ở đây bao gồm thiết bị/emulator đang kết nối; file log đã lưu vẫn có thể xem về sau.",
+      "references": [
+        {
+          "url": "https://developer.android.com/studio/debug/logcat",
+          "title": "Logcat"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-19": {
+          "fingerprint": "9d693c4b76e78967915ebd049f5ec8df9f29bc661c113caf9caacb1dfb886e96",
+          "answers": [
+            "D"
+          ]
+        },
+        "20241-4-6": {
+          "fingerprint": "281b634c7b6229bc72bcc427eb4f123f075edb8d12f0e45cf1a82c3a0b76cb6c",
+          "answers": [
+            "C"
+          ]
+        }
+      },
+      "explanation": "Java và Kotlin dùng cho mã Android thông thường; C/C++ có thể dùng qua Android NDK cho phần native. HTML/CSS/JavaScript chủ yếu là công nghệ web, không thuộc các ngôn ngữ native được phân loại trong đề. Một ứng dụng dùng framework JavaScript vẫn có thể chứa mã native, nhưng đó là hướng phát triển khác với câu hỏi này.",
+      "references": [
+        {
+          "url": "https://developer.android.com/ndk/guides",
+          "title": "Android NDK"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-3-20": {
+          "fingerprint": "bc46834759126043744a4de1eb32e817a5345f5a2e73f36ddf7394bce5661ac7",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Trong Kotlin, textView.typeface tương ứng getter/setter Typeface của TextView và dùng để thay phông chữ. textStyle điều khiển kiểu đậm/nghiêng; fontFamily là tên thuộc tính XML thường dùng chứ không phải thuộc tính Kotlin tương ứng trong nhóm này. Có thể gán textView.typeface = ResourcesCompat.getFont(context, R.font.my_font).",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/TextView",
+          "title": "TextView"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-4-2": {
+          "fingerprint": "ba5675fb1e4fd7fc9574cdc4dfd6a843ab59c8c6005fb4fccb09871811d8fd9e",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "LinearLayout, RelativeLayout và androidx.constraintlayout.widget.ConstraintLayout đều kế thừa trực tiếp ViewGroup. ViewGroup tiếp tục kế thừa View và quản lý các view con. FrameLayout là một layout khác cùng nhóm, không phải lớp cha trực tiếp chung của ba lớp được hỏi.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/declaring-layout",
+          "title": "Layout trong Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-4-3": {
+          "fingerprint": "1613a76a0b4bcdea2814a8d77e9d3697095a4235bd7d2ded83c793dc3e23a251",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Đáp án là center. Với ảnh 200×200 và vùng nhìn 100×100, center giữ kích thước gốc nên chỉ thấy phần giữa ảnh. centerCrop, centerInside và fitXY đều đưa ảnh vuông này về 100×100 nên cho cùng kết quả trong giả thiết không padding và không tác động mật độ tài nguyên. Nhận định cũ cho rằng centerInside cũng khác trong bài này là không đúng.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/widget/ImageView.ScaleType",
+          "title": "ImageView.ScaleType"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-4-5": {
+          "fingerprint": "b8221b4c4858147eca6606e7fa080ce0d6fa14914902a7fb15c07b5cabf616d7",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "3.14 mặc định là literal Double; thêm hậu tố f hoặc F để tạo Float, như val x = 3.14f. Kotlin không dùng cú pháp float x hoặc double x kiểu Java. Float có độ chính xác thấp hơn Double nên không chỉ khác tên kiểu.",
+      "references": [
+        {
+          "url": "https://kotlinlang.org/docs/numbers.html",
+          "title": "Kotlin · Kiểu số"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-4-13": {
+          "fingerprint": "388d70ec18402e07a774438548dfa02ac79a24d737012853683ba73aab5ce60c",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "Các thuộc tính start_toStartOf và end_toEndOf là ràng buộc của ConstraintLayout, thường có tiền tố app:layout_constraint... trong XML. Chúng xác định quan hệ giữa cạnh của view và cạnh view khác/parent. Dùng start/end hỗ trợ hướng bố cục tốt hơn left/right khi có ngôn ngữ RTL.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/ui/views/layout/constraint-layout",
+          "title": "ConstraintLayout"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-4-16": {
+          "fingerprint": "be7c1fa25788967d047f823270ac63ae8dd3fa4038f3678557b349c0249f6e40",
+          "answers": [
+            "A"
+          ]
+        }
+      },
+      "explanation": "Service là component không cung cấp UI, phù hợp đáp án phân loại component trong đề. Nó không tự tạo luồng nền: callback Service mặc định chạy trên main thread, nên tác vụ nặng cần cơ chế xử lý riêng. Android hiện đại giới hạn background service; công việc trì hoãn cần cân nhắc WorkManager, còn công việc người dùng thấy có thể cần foreground service.",
+      "references": [
+        {
+          "url": "https://developer.android.com/develop/background-work/services",
+          "title": "Service"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-4-19": {
+          "fingerprint": "c1a578746b18e6a1aa46d8208e76f337ffdf5bfcf50c1922cb4b2adbe35397cf",
+          "answers": [
+            "B"
+          ]
+        }
+      },
+      "explanation": "res chứa layout, drawable, menu và các giá trị như strings, colors, dimens. Thư viện phụ thuộc được khai báo trong cấu hình Gradle của module, không phải một tài nguyên trong res.",
+      "references": [
+        {
+          "url": "https://developer.android.com/guide/topics/resources/providing-resources",
+          "title": "Android · Tài nguyên"
+        },
+        {
+          "url": "https://developer.android.com/build",
+          "title": "Cấu hình build Android"
+        }
+      ]
+    },
+    {
+      "questions": {
+        "20241-4-20": {
+          "fingerprint": "c88cc6eccc823af042f3897298159dc831d4bcd42f0acedf1ef7eab9e4ab4201",
+          "answers": [
+            "D"
+          ]
+        }
+      },
+      "explanation": "onClick nhận chính View đã phát sinh sự kiện. Dùng view.id rồi so sánh với R.id của từng nút để xác định nút được nhấn. Vị trí, thứ tự trong XML hay tên biến Kotlin không phải định danh sự kiện ổn định.",
+      "references": [
+        {
+          "url": "https://developer.android.com/reference/android/view/View",
+          "title": "View"
+        }
+      ]
+    }
+  ]
+}

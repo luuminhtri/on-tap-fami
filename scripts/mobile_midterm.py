@@ -107,10 +107,6 @@ def write_mobile_pages(target, bank, bank_html):
             question = deepcopy(by_id[first])
             if other_ids:
                 question["otherSources"] = [by_id[item]["source"] for item in other_ids]
-            if first == "20231-1-37":
-                # The scan on page 11 reads xhdpi. Correct the OCR in this copy.
-                for option in question["options"]:
-                    option["text"] = option["text"].replace("mdpi, hdpi, dpi,", "mdpi, hdpi, xhdpi,")
             questions.append(question)
         midterm.append({"number": number, "title": title, "questions": questions})
 

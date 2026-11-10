@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 
 from mobile_midterm import write_mobile_pages
+from it4785e_review import review_bank
 from hoaduoc_quiz import write_hoaduoc
 
 project = Path(__file__).resolve().parents[1]
@@ -85,6 +86,7 @@ for code, chapters in courses.items():
         '<a href="scans.html">Xem ảnh nguồn</a>' if code == "IT4785E" else "",
     )
     if code == "IT4785E":
+        review_bank(chapters)
         write_mobile_pages(target, chapters, page)
     else:
         (target / "index.html").write_text(page, encoding="utf-8")

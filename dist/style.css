@@ -989,3 +989,15 @@ html[data-theme="dark"] .legend .filled {
     padding-top: 12px;
     border-top: 1px solid var(--line);
 }
+
+.explanation {
+    margin: 0 24px 24px;
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg);
+    overflow-wrap: anywhere;
+}
+.explanation h3 { margin: 0 0 10px; font-size: 16px; }
+.explanation p { margin: 0; line-height: 1.75; color: var(--text); }
+.explanation .source-ref { margin-top: 12px; color: var(--muted); }
