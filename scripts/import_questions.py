@@ -6,6 +6,7 @@ from pathlib import Path
 from mobile_midterm import write_mobile_pages
 from it4785e_review import review_bank
 from hoaduoc_quiz import write_hoaduoc
+from bvtv_quiz import write_bvtv
 
 project = Path(__file__).resolve().parents[1]
 dist = project / "dist"
@@ -100,6 +101,7 @@ for code, chapters in courses.items():
     print(f"/{code} · {len(chapters)} chương · {count} câu")
 
 links.append(write_hoaduoc(dist, template))
+links.append(write_bvtv(dist, template))
 
 home = """<!doctype html>
 <html lang="vi">
