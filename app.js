@@ -163,6 +163,21 @@ function renderSource(source) {
     const id = source.code ? `#${esc(source.code)}` : `mục ${Number(source.number)}`;
     return `<p class="source-ref">Nguồn ${esc(source.term)} · ${id} · Trang ${links.join(', ')}</p>`;
 }
+function renderExplanation(q) {
+    const links = (q.references || []).flatMap(reference => {
+        try {
+            const url = new URL(reference.url);
+            const allowed = ['developer.android.com', 'kotlinlang.org', 'source.android.com',
+                'blog.google', 'support.google.com'];
+            const material = url.hostname === 'github.com' && url.pathname.startsWith('/material-components/material-components-android/');
+            if (url.protocol !== 'https:' || (!allowed.includes(url.hostname) && !material)) return [];
+            return [`<a href="${esc(url.href)}" target="_blank" rel="noopener">${esc(reference.title)}</a>`];
+        } catch { return []; }
+    });
+    return `<section class="explanation" aria-label="Giải thích"><h3>Giải thích</h3>
+        <p class="preserve-lines">${esc(q.explanation)}</p>
+        ${links.length ? `<p class="source-ref">Đọc thêm: ${links.join(' · ')}</p>` : ''}</section>`;
+}
 function answer(q) { return session.answers[q.id] || { selected: [], confirmed: false } }
 function render() {
     const q = questions[session.index], a = answer(q);
@@ -207,7 +222,7 @@ function render() {
     </div>
     ${options ? `<div class="options" role="group" aria-labelledby="question-text">${options}</div>` : ''}
     <div class="result ${resultStyle}" role="status">${result}</div>
-    ${a.confirmed && q.explanation ? `<p class="result">${format(q.explanation)}</p>` : ''}`;
+    ${a.confirmed && q.explanation ? renderExplanation(q) : ''}`;
     if (!q.plain && window.renderMathInElement) renderMathInElement($('question'), {
         delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }, { left: '\\\\(', right: '\\\\)', display: false }, { left: '\\\\[', right: '\\\\]', display: true }],
         throwOnError: false, trust: false
