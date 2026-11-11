@@ -6,6 +6,7 @@ from pathlib import Path
 from mobile_midterm import write_mobile_pages
 from it4785e_review import review_bank
 from hoaduoc_quiz import write_hoaduoc
+from hoaduoc_ch4510 import write_ch4510
 from bvtv_quiz import write_bvtv
 
 project = Path(__file__).resolve().parents[1]
@@ -100,6 +101,7 @@ for code, chapters in courses.items():
     links.append(f'<a class="secondary course-link" href="./{code}/">{label}<span>{count} câu</span></a>')
     print(f"/{code} · {len(chapters)} chương · {count} câu")
 
+links.append(write_ch4510(dist, template))
 links.append(write_hoaduoc(dist, template))
 links.append(write_bvtv(dist, template))
 

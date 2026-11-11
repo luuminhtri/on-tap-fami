@@ -57,6 +57,9 @@ def write_hoaduoc(dist, template):
     page = template.replace("__COURSE__", "HOADUOC").replace("__TOTAL__", str(count)).replace("__SOURCE_LINK__", guide)
     page = page.replace("Ôn tập HOADUOC", "Hóa dược · Ôn giữa kì")
     page = page.replace('<link rel="stylesheet" href="../style.css">', '<link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="chemistry.css">')
+    page = page.replace('<fieldset id="chapter-picker">',
+                        '<a class="secondary" href="chuong-1-2.html">CH4510 · Bộ đầy đủ 253 câu</a>'
+                        '<fieldset id="chapter-picker">')
     (target / "index.html").write_text(page)
     (target / "chemistry.css").write_text("""
 .study-guide {margin:1.2rem 0;line-height:1.7}
@@ -68,5 +71,12 @@ body:has(.study-guide) .katex {font-size:1.12em}
 .content .katex {white-space:nowrap}
 .question-text {line-height:1.8}
 .result {line-height:1.7}
+.open-answer {display:grid;gap:.5rem}
+.open-answer textarea {width:100%;min-width:0;resize:vertical;padding:.75rem;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--text);font:inherit}
+.slide-evidence {display:grid;gap:1rem;margin-top:1rem}
+.slide-evidence figure {margin:0}
+.slide-evidence img {display:block;width:100%;height:auto;border-radius:.375rem}
+.slide-evidence figcaption {margin-top:.375rem}
+.explanation .review-flag {margin:.75rem 0;font-weight:600}
 """)
     return f'<a class="secondary course-link" href="./HOADUOC/">Hóa dược · Giữa kì<span>{count} câu · Chương 1–2</span></a>'

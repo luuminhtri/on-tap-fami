@@ -1,7 +1,7 @@
 'use strict';
 const $ = id => document.getElementById(id), KEY = window.COURSE_CODE === 'MI2021' ? 'xstk-study-v1' : `xstk-study-v1:${window.COURSE_CODE}`;
 const mockExam = window.STUDY_MODE === 'mock';
-const progressKey = ['midterm', 'google', 'mock'].includes(window.STUDY_MODE) ? KEY + ':' + window.STUDY_MODE : KEY;
+const progressKey = ['midterm', 'google', 'mock', 'ch4510'].includes(window.STUDY_MODE) ? KEY + ':' + window.STUDY_MODE : KEY;
 let saved = {}; try { saved = JSON.parse(localStorage.getItem(progressKey)) || {} } catch { }
 let scope = String(saved.scope || 'all'), sessions = saved.sessions || {};
 const chapterIds = CHAPTERS.map(chapter => String(chapter.number));
@@ -121,7 +121,7 @@ function updateResume() {
     $('resume-wrong').hidden = !sessions[reviewSessionKey()];
     const list = selectedQuestions();
     $('start').disabled = !list.length;
-    $('selection-count').textContent = `${scopeIds().length} ${window.COURSE_CODE === "HOADUOC" ? "cụm" : "chương"} · ${list.length} câu`;
+    $('selection-count').textContent = `${scopeIds().length} ${window.COURSE_CODE === "HOADUOC" && window.STUDY_MODE !== "ch4510" ? "cụm" : "chương"} · ${list.length} câu`;
     save();
 }
 function wrongQuestions(list = questions, attempt = session) {
@@ -166,6 +166,17 @@ function renderSource(source) {
     const id = source.code ? `#${esc(source.code)}` : `mục ${Number(source.number)}`;
     return `<p class="source-ref">Nguồn ${esc(source.term)} · ${id} · Trang ${links.join(', ')}</p>`;
 }
+function slideUrl(page) {
+    return `chuong-1-2-slides/${String(Number(page)).padStart(3, '0')}.jpg`;
+}
+function renderSlides(pages) {
+    return pages?.length ? `<div class="slide-evidence">${pages.map(page => `<figure>
+        <a href="${slideUrl(page)}" target="_blank" rel="noopener">
+            <img src="${slideUrl(page)}" alt="Slide gốc · Trang PDF ${Number(page)}" loading="lazy">
+        </a>
+        <figcaption class="source-ref">Trang PDF ${Number(page)} · Bấm ảnh để phóng to</figcaption>
+    </figure>`).join('')}</div>` : '';
+}
 function renderExplanation(q) {
     const links = (q.references || []).flatMap(reference => {
         try {
@@ -179,7 +190,11 @@ function renderExplanation(q) {
         } catch { return []; }
     });
     return `<section class="explanation" aria-label="Giải thích"><h3>Giải thích</h3>
+        ${q.modelAnswer ? `<p class="preserve-lines"><strong>${q.type === 'open' ? 'Đáp án mẫu' : 'Đáp án đúng'}:</strong> ${esc(q.modelAnswer)}</p>` : ''}
         <p class="preserve-lines">${esc(q.explanation)}</p>
+        ${q.flag ? '<p class="review-flag">Cần đối chiếu lưu ý trong lời giải với slide gốc.</p>' : ''}
+        ${q.origin ? `<p class="source-ref">${esc(q.topic)} · Nguồn câu: ${esc(q.origin)}</p>` : ''}
+        ${renderSlides(q.slidePages)}
         ${links.length ? `<p class="source-ref">Đọc thêm: ${links.join(' · ')}</p>` : ''}</section>`;
 }
 function answer(q) { return session.answers[q.id] || { selected: [], confirmed: false } }
@@ -187,15 +202,18 @@ function render() {
     const q = questions[session.index], a = answer(q);
     const multi = q.type === 'multi' || q.answers.length > 1;
     const fill = q.type === 'fill';
-    const review = q.type === 'review' || (!fill && !q.options.length);
+    const open = q.type === 'open';
+    const review = q.type === 'review' || (!open && !fill && !q.options.length);
     const graded = canGrade(q);
-    const result = !a.confirmed ? '' : mockExam && session.submitted && !a.selected.length ? 'Bỏ trống' : !graded ? 'Đã lưu · Không tính điểm' :
+    const result = !a.confirmed ? '' : mockExam && session.submitted && !a.selected.length ? 'Bỏ trống' : !graded ? (open ? 'Đã mở đáp án mẫu · Tự đối chiếu' : 'Đã lưu · Không tính điểm') :
         isCorrect(q, a.selected) ? '✓ Chính xác' : '✕ Chưa chính xác';
     const resultStyle = a.confirmed && graded ? (isCorrect(q, a.selected) ? 'good' : 'bad') : '';
     const format = q.plain ? esc : renderText;
-    const badge = review ? 'Đối chiếu đề' : fill ? 'Điền khuyết' :
+    const badge = open ? q.kind + ' · Tự đối chiếu' : review ? 'Đối chiếu đề' : fill ? 'Điền khuyết' :
         multi ? '▢ Chọn nhiều đáp án' : '◯ Chọn 1 đáp án';
-    const options = review ? '' : fill ? q.fields.map((accepted, i) =>
+    const options = open ? `<label class="open-answer">Câu trả lời của bạn (không bắt buộc)
+        <textarea id="open-answer" rows="4" ${a.confirmed ? 'readonly' : ''}>${esc(a.selected[0] || '')}</textarea>
+    </label>` : review ? '' : fill ? q.fields.map((accepted, i) =>
         `<label class="fill-field">Ô ${i + 1}
             <input type="text" data-blank="${i}" autocomplete="off" spellcheck="false"
                 value="${esc(a.selected[i] || '')}" ${a.confirmed ? 'disabled' : ''}>
@@ -219,6 +237,8 @@ function render() {
         <div class="question-meta"><span class="question-number">${activeReview ? "Ôn câu sai · " : ""}Câu ${session.index + 1} / ${questions.length}</span>
             <span class="badge ${multi ? 'multi' : ''}">${badge}</span></div>
         ${awaitingSubmission() ? '' : renderSource(q.source)}
+        ${q.slidePages?.length ? `<p class="source-ref">Trang PDF ${q.slidePages.map(page =>
+            `<a href="${slideUrl(page)}" target="_blank" rel="noopener">${Number(page)}</a>`).join(', ')}</p>` : ''}
         ${q.otherSources?.length ? `<details class="source-ref"><summary>Nguồn trùng (${q.otherSources.length})</summary>
             ${q.otherSources.map(renderSource).join('')}</details>` : ''}
         <div class="question-text ${q.plain ? 'preserve-lines' : ''}" id="question-text">${format(q.text)}</div>
@@ -245,8 +265,14 @@ function render() {
         });
     });
     $('confirm').hidden = mockExam && !activeReview;
-    $('confirm').disabled = a.confirmed || (!review && !ready(a.selected));
-    $('confirm').textContent = a.confirmed ? 'Đã xác nhận ✓' : review ? 'Đã xem' : 'Xác nhận';
+    if (open && !a.confirmed) {
+        $('open-answer').oninput = event => {
+            session.answers[q.id] = { selected: [event.target.value], confirmed: false };
+            save();
+        };
+    }
+    $('confirm').disabled = a.confirmed || (!open && !review && !ready(a.selected));
+    $('confirm').textContent = a.confirmed ? (open ? 'Đã mở đáp án ✓' : 'Đã xác nhận ✓') : open ? 'Xem đáp án mẫu' : review ? 'Đã xem' : 'Xác nhận';
     $('prev').disabled = session.index === 0;
     $('next').disabled = session.index === questions.length - 1;
     renderProgress();
@@ -269,7 +295,10 @@ function renderProgress() {
     $('done').textContent = `${done.length}/${questions.length}`; $('right').textContent = right; $('wrong').textContent = gradedDone.length - right; $('percent').textContent = pct + '%'; $('progress').style.width = pct + '%';
     $('grid').innerHTML = questions.map((q, i) => `<button class="qnav ${done.includes(q) ? 'done' : ''} ${i === session.index ? 'current' : ''}" ${i === session.index ? 'aria-current="step"' : ''} aria-label="Câu ${i + 1}, ${done.includes(q) ? 'đã làm' : 'chưa làm'}" data-index="${i}">${i + 1}</button>`).join('');
     $('grid').querySelectorAll('button').forEach(b => b.onclick = () => go(Number(b.dataset.index)));
-    if (mockExam && session.submitted) {
+    if (window.STUDY_MODE === 'ch4510') {
+        const reviewed = done.filter(q => q.type === 'open').length;
+        $('complete').textContent = reviewed ? `Đã đối chiếu ${reviewed} câu trả lời mở` : '';
+    } else if (mockExam && session.submitted) {
         const blank = questions.filter(q => !answer(q).selected.length).length;
         const score = (right * 10 / questions.length).toLocaleString('vi-VN', { maximumFractionDigits: 2 });
         $('complete').textContent = `Đã nộp · ${score}/10 · Đúng ${right}/${questions.length} · Bỏ trống ${blank}`;
