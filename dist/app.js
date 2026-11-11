@@ -1,6 +1,7 @@
 'use strict';
 const $ = id => document.getElementById(id), KEY = window.COURSE_CODE === 'MI2021' ? 'xstk-study-v1' : `xstk-study-v1:${window.COURSE_CODE}`;
-const progressKey = ['midterm', 'google'].includes(window.STUDY_MODE) ? KEY + ':' + window.STUDY_MODE : KEY;
+const mockExam = window.STUDY_MODE === 'mock';
+const progressKey = ['midterm', 'google', 'mock'].includes(window.STUDY_MODE) ? KEY + ':' + window.STUDY_MODE : KEY;
 let saved = {}; try { saved = JSON.parse(localStorage.getItem(progressKey)) || {} } catch { }
 let scope = String(saved.scope || 'all'), sessions = saved.sessions || {};
 const chapterIds = CHAPTERS.map(chapter => String(chapter.number));
@@ -9,6 +10,7 @@ if (scope !== 'all' && !scopeIds().length && scope !== 'mix:') scope = 'all';
 let activeReview = false;
 let questions = [], session, lastTick = Date.now(), running = false;
 let shuffled = !!saved.shuffled;
+const awaitingSubmission = () => mockExam && !activeReview && !session.submitted;
 const baseSessionKey = () => scope + (shuffled ? ':random' : '');
 const reviewSessionKey = () => baseSessionKey() + ':wrong';
 const sessionKey = () => activeReview ? reviewSessionKey() : baseSessionKey();
@@ -187,7 +189,7 @@ function render() {
     const fill = q.type === 'fill';
     const review = q.type === 'review' || (!fill && !q.options.length);
     const graded = canGrade(q);
-    const result = !a.confirmed ? '' : !graded ? 'Đã lưu · Không tính điểm' :
+    const result = !a.confirmed ? '' : mockExam && session.submitted && !a.selected.length ? 'Bỏ trống' : !graded ? 'Đã lưu · Không tính điểm' :
         isCorrect(q, a.selected) ? '✓ Chính xác' : '✕ Chưa chính xác';
     const resultStyle = a.confirmed && graded ? (isCorrect(q, a.selected) ? 'good' : 'bad') : '';
     const format = q.plain ? esc : renderText;
@@ -216,7 +218,7 @@ function render() {
     $('question').innerHTML = `<div class="question-head">
         <div class="question-meta"><span class="question-number">${activeReview ? "Ôn câu sai · " : ""}Câu ${session.index + 1} / ${questions.length}</span>
             <span class="badge ${multi ? 'multi' : ''}">${badge}</span></div>
-        ${renderSource(q.source)}
+        ${awaitingSubmission() ? '' : renderSource(q.source)}
         ${q.otherSources?.length ? `<details class="source-ref"><summary>Nguồn trùng (${q.otherSources.length})</summary>
             ${q.otherSources.map(renderSource).join('')}</details>` : ''}
         <div class="question-text ${q.plain ? 'preserve-lines' : ''}" id="question-text">${format(q.text)}</div>
@@ -238,29 +240,69 @@ function render() {
             session.answers[q.id] = { selected, confirmed: false };
             save();
             if (!fill) $('question').querySelectorAll('.option').forEach(el => el.classList.toggle('selected', el.querySelector('input').checked));
+            if (awaitingSubmission()) { renderProgress(); return; }
             $('confirm').disabled = !ready(selected);
         });
     });
+    $('confirm').hidden = mockExam && !activeReview;
     $('confirm').disabled = a.confirmed || (!review && !ready(a.selected));
     $('confirm').textContent = a.confirmed ? 'Đã xác nhận ✓' : review ? 'Đã xem' : 'Xác nhận';
     $('prev').disabled = session.index === 0;
     $('next').disabled = session.index === questions.length - 1;
-    const done = questions.filter(q => answer(q).confirmed);
-    const gradedDone = done.filter(canGrade);
+    renderProgress();
+}
+function renderProgress() {
+    const pending = awaitingSubmission();
+    const done = questions.filter(q => pending ? answer(q).selected.length : answer(q).confirmed);
+    const gradedDone = pending ? [] : done.filter(canGrade);
     const right = gradedDone.filter(q => isCorrect(q, answer(q).selected)).length;
     const wrong = wrongQuestions();
+    if (mockExam) {
+        $('submit-exam').hidden = !pending;
+        $('retry-wrong').hidden = pending;
+        $('right').parentElement.hidden = pending;
+        $('wrong').parentElement.hidden = pending;
+    }
     $('retry-wrong').disabled = !wrong.length;
     $('retry-wrong').textContent = `Làm lại câu sai (${wrong.length})`;
     const pct = Math.round(done.length / questions.length * 100);
     $('done').textContent = `${done.length}/${questions.length}`; $('right').textContent = right; $('wrong').textContent = gradedDone.length - right; $('percent').textContent = pct + '%'; $('progress').style.width = pct + '%';
-    $('grid').innerHTML = questions.map((q, i) => `<button class="qnav ${answer(q).confirmed ? 'done' : ''} ${i === session.index ? 'current' : ''}" ${i === session.index ? 'aria-current="step"' : ''} aria-label="Câu ${i + 1}, ${answer(q).confirmed ? 'đã làm' : 'chưa xác nhận'}" data-index="${i}">${i + 1}</button>`).join('');
+    $('grid').innerHTML = questions.map((q, i) => `<button class="qnav ${done.includes(q) ? 'done' : ''} ${i === session.index ? 'current' : ''}" ${i === session.index ? 'aria-current="step"' : ''} aria-label="Câu ${i + 1}, ${done.includes(q) ? 'đã làm' : 'chưa làm'}" data-index="${i}">${i + 1}</button>`).join('');
     $('grid').querySelectorAll('button').forEach(b => b.onclick = () => go(Number(b.dataset.index)));
-    $('complete').textContent = done.length === questions.length ? `Hoàn thành · Đúng ${right}/${gradedDone.length} câu có chấm điểm` : '';
+    if (mockExam && session.submitted) {
+        const blank = questions.filter(q => !answer(q).selected.length).length;
+        const score = (right * 10 / questions.length).toLocaleString('vi-VN', { maximumFractionDigits: 2 });
+        $('complete').textContent = `Đã nộp · ${score}/10 · Đúng ${right}/${questions.length} · Bỏ trống ${blank}`;
+    } else {
+        $('complete').textContent = !pending && done.length === questions.length
+            ? `Hoàn thành · Đúng ${right}/${gradedDone.length} câu có chấm điểm` : '';
+    }
 }
 function go(index) { session.index = index; save(); render() }
 function tick() { if (!running) return; const now = Date.now(); if (!session.paused && questions.some(q => !answer(q).confirmed)) session.elapsed += Math.max(0, now - lastTick); lastTick = now; updateTimer() }
 function updateTimer() { const t = Math.floor(session.elapsed / 1000); $('timer').textContent = [Math.floor(t / 3600), Math.floor(t / 60) % 60, t % 60].map(n => String(n).padStart(2, '0')).join(':'); $('pause').textContent = session.paused ? '▶' : 'Ⅱ'; $('pause').setAttribute('aria-label', session.paused ? 'Tiếp tục thời gian' : 'Tạm dừng thời gian'); $('pause').title = session.paused ? 'Tiếp tục thời gian' : 'Tạm dừng thời gian' }
-$('confirm').onclick = () => { const q = questions[session.index], a = answer(q); if ($('confirm').disabled || a.confirmed) return; tick(); a.confirmed = true; session.answers[q.id] = a; save(); render() };
+if (mockExam) {
+    $('submit-exam').onclick = () => {
+        const blank = questions.filter(q => !answer(q).selected.length).length;
+        $('submit-note').textContent = blank
+            ? `Còn ${blank} câu bỏ trống. Bạn sẽ không thể sửa câu trả lời sau khi nộp.`
+            : 'Bạn sẽ không thể sửa câu trả lời sau khi nộp.';
+        $('submit-dialog').showModal();
+    };
+    $('cancel-submit').onclick = () => $('submit-dialog').close();
+    $('accept-submit').onclick = () => {
+        if (!awaitingSubmission()) return;
+        tick();
+        for (const q of questions) {
+            session.answers[q.id] = { selected: answer(q).selected, confirmed: true };
+        }
+        session.submitted = true;
+        $('submit-dialog').close();
+        save();
+        render();
+    };
+}
+$('confirm').onclick = () => { const q = questions[session.index], a = answer(q); if (awaitingSubmission() || $('confirm').disabled || a.confirmed) return; tick(); a.confirmed = true; session.answers[q.id] = a; save(); render() };
 $('prev').onclick = () => go(Math.max(0, session.index - 1)); $('next').onclick = () => go(Math.min(questions.length - 1, session.index + 1));
 $('shuffle').onchange = () => { shuffled = $('shuffle').checked; updateResume() };
 $('start').onclick = () => { if (!selectedQuestions().length) return; if (sessions[sessionKey()]) { $('reset-dialog').showModal(); return } sessions[sessionKey()] = newSession(); loadScope() };
@@ -278,7 +320,7 @@ $('back').onclick = () => {
     }
 };
 $('pause').onclick = () => { tick(); session.paused = !session.paused; updateTimer(); save() };
-$('reset').onclick = () => $('reset-dialog').showModal(); $('cancel-reset').onclick = () => $('reset-dialog').close(); $('accept-reset').onclick = () => { sessions[sessionKey()] = newSession(); $('reset-dialog').close(); loadScope() };
+$('reset').onclick = () => $('reset-dialog').showModal(); $('cancel-reset').onclick = () => $('reset-dialog').close(); $('accept-reset').onclick = () => { if (mockExam && !activeReview) delete sessions[reviewSessionKey()]; sessions[sessionKey()] = newSession(); $('reset-dialog').close(); loadScope() };
 function updateTheme() { const dark = document.documentElement.dataset.theme === 'dark'; $('theme').textContent = dark ? '☀ Chế độ sáng' : '☾ Chế độ tối'; $('theme').setAttribute('aria-pressed', String(dark)) }
 $('theme').onclick = () => { document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; try { localStorage.setItem('xstk-theme', document.documentElement.dataset.theme) } catch { } updateTheme() };
 setup(); updateTheme(); setInterval(() => { if (running) { tick(); save() } }, 1000); window.addEventListener('pagehide', () => { tick(); save() });

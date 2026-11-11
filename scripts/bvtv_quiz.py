@@ -22,10 +22,10 @@ REFERENCES = {
 }
 
 
-def load_questions():
+def load_questions(filename="bvtv_questions.txt", id_prefix="bvtv"):
     chapters = []
     seen_ids = set()
-    bank = Path(__file__).with_name("bvtv_questions.txt")
+    bank = Path(__file__).with_name(filename)
     for line in bank.read_text(encoding="utf-8").splitlines():
         if line.startswith("# "):
             number, title = line[2:].split("|")
@@ -33,7 +33,7 @@ def load_questions():
             continue
         number, pages, reference, prompt, *choices, explanation = line.split("|")
         chapter = chapters[-1]
-        question_id = f"bvtv-{chapter['number']}-{number}"
+        question_id = f"{id_prefix}-{chapter['number']}-{number}"
         options = [
             {"id": str(i), "text": choice.removeprefix("+")}
             for i, choice in enumerate(choices)
@@ -75,5 +75,39 @@ def write_bvtv(dist, template):
             .replace("Ôn tập CH4486", "Hóa học Bảo vệ thực vật · CH4486")
             .replace("__TOTAL__", str(count))
             .replace("__SOURCE_LINK__", '<p class="source-ref">Chương 1–3 · Giải thích sau khi xác nhận</p>'))
+    exam_count = write_midterm(target, template)
+    link = f'<a class="secondary" href="midterm.html">Thi thử giữa kì · {exam_count} câu</a>'
+    page = page.replace('<fieldset id="chapter-picker">', link + '<fieldset id="chapter-picker">')
     (target / "index.html").write_text(page, encoding="utf-8")
     return f'<a class="secondary course-link" href="./CH4486/">CH4486 · Hóa học Bảo vệ thực vật<span>{count} câu · Chương 1–3</span></a>'
+
+def write_midterm(target, template):
+    chapters = load_questions("bvtv_midterm.txt", "bvtv-exam")
+    count = sum(len(chapter["questions"]) for chapter in chapters)
+    (target / "midterm.js").write_text(
+        'window.COURSE_CODE = "CH4486";\nwindow.STUDY_MODE = "mock";\nwindow.CHAPTERS = '
+        + json.dumps(chapters, ensure_ascii=False, indent=2) + ';\n', encoding="utf-8",
+    )
+    instructions = (
+        f'<p class="source-ref">{count} câu · Chương 1–3 · 35 phút gợi ý</p>'
+        '<p class="source-ref">Đề thi thử tự biên soạn. Mỗi câu đúng tính điểm như nhau. '
+        'Câu nhiều đáp án cần chọn đúng và đủ. Có thể đổi lựa chọn trước khi nộp bài.</p>'
+    )
+    submit_dialog = (
+        '<dialog id="submit-dialog"><h2>Nộp bài?</h2><p id="submit-note"></p>'
+        '<div><button id="cancel-submit" class="secondary" autofocus>Làm tiếp</button>'
+        '<button id="accept-submit" class="primary">Xác nhận nộp</button></div></dialog>'
+    )
+    page = (template.replace("__COURSE__", "CH4486")
+            .replace("Ôn tập CH4486", "CH4486 · Thi thử giữa kì")
+            .replace("__TOTAL__", str(count))
+            .replace("__SOURCE_LINK__", instructions)
+            .replace("../CH4486/data.js", "midterm.js")
+            .replace('href="../index.html" class="secondary">← Chọn môn', 'href="./" class="secondary">← CH4486')
+            .replace('<fieldset id="chapter-picker">', '<fieldset id="chapter-picker" hidden>')
+            .replace('<label class="shuffle-label">', '<label class="shuffle-label" hidden>')
+            .replace('id="pause" aria-label', 'id="pause" hidden aria-label')
+            .replace('<button class="text-button" id="reset">', '<button id="submit-exam" class="primary">Nộp bài</button><button class="text-button" id="reset">')
+            .replace('</main>', submit_dialog + '</main>'))
+    (target / "midterm.html").write_text(page, encoding="utf-8")
+    return count
