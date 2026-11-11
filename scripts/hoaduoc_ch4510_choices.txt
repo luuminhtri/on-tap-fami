@@ -1,0 +1,193 @@
+001|Chỉ bào chế dạng thuốc, nằm giữa cơ khí và hóa phân tích|Chỉ thử hiệu lực trên người, nằm giữa y học và dịch tễ học|Chỉ tách nguyên liệu tự nhiên, nằm giữa thực vật học và nông học
+002|1953|1984|1990
+003|1842–1847: DNA; 1953: HIV/AIDS; 1984: gây mê|1842–1847: gây mê; 1953: HIV/AIDS; 1984: DNA|1842–1847: HIV/AIDS; 1953: DNA; 1984: gây mê
+004|Nhu cầu phát triển thuốc gây mê; ví dụ ether, chloroform, N₂O|Nhu cầu thay kháng sinh bằng vitamin; ví dụ SARS, MERS-CoV, COVID-19|Nhu cầu nghiên cứu bệnh mạn không lây; ví dụ gút, tiểu đường, tăng huyết áp
+005|Cấu trúc hóa học và độ tan của thuốc|Đường dùng và thời gian tác dụng của thuốc|Quy mô pilot và sản xuất
+006|Nghiên cứu cơ bản và quản lý lưu hành|Kiểm nghiệm và phân phối|Hóa phân tích và vi sinh vật
+007|D → R → P; pilot → công nghiệp → phòng thí nghiệm|R → P → D; phòng thí nghiệm → công nghiệp → pilot|P → D → R; công nghiệp → phòng thí nghiệm → pilot
+008|Chất lượng; tấn lượng; phân phối bán lẻ; bảo hiểm; tiếp thị|Mùa vụ; diện tích canh tác; năng suất cây; thời gian thu hoạch; thị trường|Chất lượng; tấn lượng; quy trình đơn giản; rủi ro thấp; lợi nhuận thấp
+009|Chỉ cần định lượng và mẫu mã bao bì đạt yêu cầu|Định lượng có thể thay thế việc xác định tạp chất|Chỉ cần thêm thử độ tan, mọi chế phẩm đều bỏ qua các chỉ tiêu khác
+010|Có, vì hàm lượng đạt thì kim loại nhiễm không đáng xét|Có, nếu thành phẩm có bao bì đúng quy cách|Chỉ cần kiểm tra lại màu sắc, nguồn nguyên liệu không liên quan
+011|Ghi tên thương mại và giá, chỉ kiểm tra mẫu sau xuất xưởng|Ghi tên thiết bị và năng suất, kiểm nghiệm khi thay nhãn|Ghi hoạt chất và thời gian bảo quản, bỏ qua kiểm tra vệ sinh khi đã đạt định lượng
+012|Chỉ cần thêm dữ liệu về tên thương mại|Hiệu suất trong bình nhỏ đã chứng minh chi phí ở quy mô công nghiệp|Chỉ cần tăng kích thước thiết bị theo cùng một hệ số
+013|Đúng, vì không khí nén loại bỏ nguy cơ cháy|Đúng, vì chi phí thấp là đủ để chọn phương án|Đúng, vì áp suất làm dung môi mất tính dễ cháy
+014|Giảm yêu cầu đào tạo vì có thể giao hoàn toàn cho thiết bị|Ưu tiên năng suất và bỏ qua việc cải tiến quy trình|Chỉ cần nhân viên kiểm nghiệm, không cần hiểu công đoạn sản xuất
+015|Cuối thế kỷ XVIII; ngành đã bão hòa|Giữa thế kỷ XIX; ngành phát triển chậm và ít đổi mới|Cuối thế kỷ XX; ngành không có khả năng tăng trưởng
+016|Acid, base, muối, dung môi và xúc tác|Phòng thí nghiệm, pilot, phân xưởng, kho và thị trường|Than đá, dầu mỏ, khí tự nhiên, naphtha và diesel
+017|Pyrolusite–BaSO₄; barite–MnO₂; dolomite–CaSO₄·2H₂O; gypsum–MgCO₃·CaCO₃|Pyrolusite–MnO₂; barite–CaSO₄·2H₂O; dolomite–MgCO₃·CaCO₃; gypsum–BaSO₄|Pyrolusite–MgCO₃·CaCO₃; barite–BaSO₄; dolomite–MnO₂; gypsum–CaSO₄·2H₂O
+018|NaCl, KCl, NaOH, KOH, HCl|BaSO₄, MnO₂, CaSO₄, CaCO₃, MgCO₃|NaCl, KCl, KNO₃, NH₄NO₃, AgNO₃
+019|H₂SO₄ và NaOH là acid; ba chất còn lại là kiềm|HCl và KOH là kiềm; ba chất còn lại là acid|HNO₃ là muối; H₂SO₄ và HCl là kiềm; NaOH và KOH là acid
+020|Nguồn than đá; ví dụ barite, gypsum và dolomite|Nguồn động vật; ví dụ insulin, heparin và cholesterol|Nguồn dầu khí; ví dụ BaSO₄, KCl và MnO₂
+021|Xác định cấu trúc → tạo dẫn xuất → dùng cây → phân lập → điều chế|Phân lập → điều chế lượng lớn → dùng cây → tạo dẫn xuất → xác định cấu trúc|Dùng cây → tạo dẫn xuất → điều chế lượng lớn → xác định cấu trúc → phân lập
+022|Thuốc phiện–reserpine; ba gạc–morphine; canhkina–quinine; lâu–emetine; hoàng liên–berberine; bình vôi–rotundine|Thuốc phiện–morphine; ba gạc–reserpine; canhkina–emetine; lâu–quinine; hoàng liên–berberine; bình vôi–rotundine|Thuốc phiện–morphine; ba gạc–reserpine; canhkina–quinine; lâu–emetine; hoàng liên–rotundine; bình vôi–berberine
+023|Hạ huyết áp; giảm đau; trị sốt rét; trị lỵ amíp; trị tiêu chảy; an thần gây ngủ|Giảm đau; hạ huyết áp; trị lỵ amíp; trị sốt rét; trị tiêu chảy; an thần gây ngủ|Giảm đau; hạ huyết áp; trị sốt rét; trị lỵ amíp; an thần gây ngủ; trị tiêu chảy
+024|Dừa cạn–vincamine; vinca–vinblastine; tỏi độc–colchicine; trúc đào–glycoside trợ tim; dứa sợi–hecogenin|Dừa cạn–vinblastine; vinca–vincamine; tỏi độc–hecogenin; trúc đào–glycoside trợ tim; dứa sợi–colchicine|Dừa cạn–vinblastine; vinca–vincamine; tỏi độc–colchicine; trúc đào–hecogenin; dứa sợi–glycoside trợ tim
+025|Dừa cạn–vinblastine: gút; tỏi độc–colchicine: ung thư|Canhkina–quinine: ung thư; bình vôi–rotundine: gút|Hoàng liên–berberine: ung thư; ba gạc–reserpine: gút
+026|Canhkina|Hoa hòe|Bình vôi
+027|Tỳ giải–rutin; hoa hòe–diosgenin; hạt gấc–β-carotene; lá chè–caffeine|Tỳ giải–diosgenin; hoa hòe–rutin; hạt gấc–caffeine; lá chè–β-carotene|Tỳ giải–β-carotene; hoa hòe–caffeine; hạt gấc–rutin; lá chè–diosgenin
+028|Chỉ có xương và da, không gồm phủ tạng hay dịch|Rễ, thân, lá, hoa, quả và hạt|Than đá, dầu mỏ, khí tự nhiên và nước biển
+029|Máu người: penicillin G; vi sinh vật: albumin; nấm hạ đẳng: acid glutamic|Máu người: vitamin B₁₂; vi sinh vật: heparin; nấm hạ đẳng: albumin|Máu người: γ-globulin và albumin; vi sinh vật: penicillin G; nấm hạ đẳng: acid folic và acid glutamic
+030|ACTH; cholesterol; adrenaline/cortisone|Adrenaline/cortisone; ACTH; cholesterol|Cholesterol; ACTH; adrenaline/cortisone
+031|Phổi bò–insulin; tụy–heparin; gan cá–dầu gan cá; nước tiểu ngựa–folliculin|Phổi bò–heparin; tụy–insulin; gan cá–folliculin; nước tiểu ngựa–dầu gan cá|Phổi bò–dầu gan cá; tụy–folliculin; gan cá–heparin; nước tiểu ngựa–insulin
+032|Heparin–trị tiểu đường; insulin–chống đông; dầu gan cá–vitamin A và D|Heparin–chống đông; insulin–vitamin A và D; dầu gan cá–trị tiểu đường|Heparin–vitamin A và D; insulin–trị tiểu đường; dầu gan cá–chống đông
+033|15–20% trong khoảng 8.000–10.000 hợp chất|40–45% trong khoảng 8.000–10.000 hợp chất|80–85% trong khoảng 800–1.000 hợp chất
+034|Sáng chế chỉ tăng quy mô hoạt chất đã biết, ứng dụng chỉ tìm bộ khung mới|Hai hướng đều chỉ có nhiệm vụ theo dõi thuốc sau lưu hành|Sáng chế chỉ kiểm định nguyên liệu, ứng dụng chỉ thiết kế bao bì
+035|Màu nhãn, giá bán và kênh phân phối|Định mức nguyên liệu, bảo quản và kiểm toán sau lưu hành|Quy mô pilot, thẩm định bao bì và thu hồi thành phẩm
+036|Chỉ tổng hợp, thiết kế bao bì và đăng ký nhãn hiệu|Chỉ thử tác dụng, bỏ qua độc tính và bào chế|Hóa học và độc tính là đủ, hồ sơ không cần dữ liệu lâm sàng
+037|Giá bán; màu nhãn; thị trường và quảng cáo|Chỉ định; chống chỉ định; lịch theo dõi sau lưu hành|Liều dùng; dạng bào chế; thời gian thử trên người
+038|In vitro: động vật sống; in vivo: ống nghiệm|In vitro: chỉ trên người; in vivo: chỉ trên vi sinh vật nuôi cấy|Cả hai đều là phép thử trên cơ thể sống
+039|Vì cân nặng là yếu tố duy nhất quyết định đáp ứng ở mọi loài|Vì mọi động vật có đáp ứng giống người nếu dùng cùng liều tuyệt đối|Vì kết quả động vật chỉ phụ thuộc màu sắc dạng thuốc
+040|Cấp là theo dõi dài hạn, mạn là phản ứng ngắn; sàng lọc sớm để chọn nhãn|Cấp và mạn chỉ phân biệt theo đường uống hay đường tiêm|Chỉ cần thử độc tính mạn, vì độc tính cấp không liên quan loại mẫu
+041|Giảm cân luôn đủ để chấp nhận thuốc dù phát hiện độc tính|Mọi hoạt chất gây giảm cân đều làm tăng độ tan|Đục thủy tinh thể là chỉ dấu để xác nhận hiệu quả giảm cân
+042|Định tên hoạt chất dựa vào màu mẫu|Đo duy nhất độ tinh khiết hóa học, không liên quan tác dụng|Xác định giá bán tương đương với chất chuẩn
+043|Độ nén viên và màu bao bì|Tỉ lệ sản phẩm phụ và hiệu suất thu hồi dung môi|Kích thước phân xưởng và số lượng thiết bị
+044|Thuốc từ máu đi đến mô đích|Thuốc biến đổi hóa học nhờ enzym|Thuốc hoặc chất chuyển hóa bị loại khỏi cơ thể
+045|Vì thay trạng thái luôn làm thay công thức phân tử|Vì mọi dạng của một hoạt chất giải phóng giống nhau|Vì thời gian tác dụng chỉ phụ thuộc tên hoạt chất
+046|Thuốc từ vị trí dùng đi vào máu|Thuốc biến đổi thành chất chuyển hóa|Thuốc được đào thải khỏi cơ thể qua nước tiểu
+047|Đúng, vì gắn protein luôn là phản ứng phân hủy không thuận nghịch|Đúng, vì phần gắn bị chuyển hóa tức thì|Đúng, vì gắn protein là một tên khác của bài xuất
+048|Thuốc đi từ máu tới mô, không xảy ra biến đổi hóa học|Thuốc được bài xuất nguyên dạng, không chịu tác dụng của enzyme|Thuốc biến đổi hóa học và mọi chất chuyển hóa đều mất hoạt tính
+049|Pha I gồm ba phản ứng sau; pha II gồm ba phản ứng đầu|Cả sáu đều thuộc pha I|Oxy hóa, tạo glucuronide và sulfo hóa thuộc pha I; ba phản ứng còn lại thuộc pha II
+050|Chỉ dạ dày|Chỉ tuyến yên|Chỉ ruột già
+051|Chuyển thuốc từ nơi dùng vào máu qua da hoặc ruột|Phân phối thuốc từ máu tới mô mỡ và mô đích|Gắn thuốc lên protein huyết tương mà không loại bỏ khỏi cơ thể
+052|Bộ khung hóa học của hoạt chất chỉ dùng để đặt tên|Quy trình loại bỏ tạp trước khi tổng hợp hoạt chất|Chỉ là lớp bao bên ngoài dùng để phân biệt nhà sản xuất
+053|Tiêm: siro; viên: thuốc mỡ; uống lỏng: viên nén; dạng mềm: cao mềm; dạng xịt: thuốc xịt|Tiêm: tiêm bắp; viên: viên nang; uống lỏng: thuốc mỡ; dạng mềm: siro; dạng xịt: thuốc xịt|Tiêm: tiêm tĩnh mạch; viên: viên bao; uống lỏng: siro; dạng mềm: thuốc xịt; dạng xịt: cao mềm
+054|Chỉ cần đạt nồng độ đỉnh một lần, thời gian không liên quan|Nồng độ càng thấp thì hiệu lực luôn kéo dài hơn|Chỉ thời gian duy trì quan trọng, dù nồng độ dưới mức tác dụng
+055|DE: liều tối thiểu tác dụng; DC: liều độc; DT: liều điều trị; Dt: liều chịu đựng; DL₅₀: liều chết 50%; DL: liều chết|DE: liều điều trị; DC: liều tối thiểu tác dụng; DT: liều chịu đựng; Dt: liều độc; DL₅₀: liều chết; DL: liều chết 50%|DE: liều tối thiểu tác dụng; DC: liều điều trị; DT: liều độc; Dt: liều chịu đựng; DL₅₀: liều chết 50%; DL: liều chết
+056|Thử trên người là thử in vitro; động vật là thử lâm sàng|Thử trên người luôn là theo dõi sau lưu hành|Thử trên người được xếp tiền lâm sàng nếu đối tượng khỏe mạnh
+057|Để thay thế toàn bộ thử nghiệm trước đăng ký|Để cố định mọi chỉ định dù có tín hiệu mới|Để đo lại cấu trúc phân tử sau mỗi lần cấp phát
+058|Chỉ tên thương mại, quảng cáo và giá bán|Chỉ sơ đồ phản ứng và tên dung môi|Chỉ công thức nhãn và bằng bảo hộ, không cần dữ liệu an toàn
+059|Phát hiện hoạt chất mới vì dùng nguyên liệu mới|Nghiên cứu lâm sàng do hoạt chất hết bảo hộ|Theo dõi sau lưu hành vì cần sản xuất trong nước
+060|Chỉ các bệnh do thiếu vitamin|Chỉ gút và bệnh thoái hóa khớp|Chỉ bệnh ngoài da, không gồm ung thư hoặc bệnh thần kinh
+061|Chi phí tăng vì không còn cần thử nghiệm an toàn|Chi phí tăng chỉ vì tăng kích thước bao bì|Chi phí tăng vì có thể bỏ qua độc tính và lâm sàng
+062|1858–1945; XIII–XIX; 1945–1954; 1954–1965|XIII–XIX; 1945–1954; 1858–1945; 1954–1965|XIII–XIX; 1858–1945; 1954–1965; 1945–1954
+063|Đông y Việt Nam thời XIII–XIX|Giai đoạn 1858–1945 trước công nghiệp hóa|Giai đoạn 1945–1954 phục vụ kháng chiến
+064|Vận hành liên tục dây chuyền công nghiệp đã thẩm định|Chỉ kiểm tra lô thương mại và tổ chức phân phối|Chỉ tối ưu thu hồi dung môi ở pilot trên quy trình đã chốt
+065|Chỉ tên sản phẩm và hiệu suất tốt nhất|Chỉ ảnh sản phẩm và tên người làm|Chỉ tên dung môi và số lượng thiết bị
+066|Giai đoạn P vì phải giải quyết lần đầu ngay ở quy mô công nghiệp|Giai đoạn R nếu chỉ lặp lại đúng quy mô bình nhỏ|Theo dõi sau lưu hành vì đây là biến cố ở người
+067|Chỉ hiệu suất và độ đẹp của sản phẩm|Giá bán, tên thương mại, quảng cáo, kênh bán, trưng bày và phân phối|Liều dùng, chỉ định, chống chỉ định, thuốc đối chứng, biến cố và nhãn quảng cáo
+068|Chỉ phân phối thuốc, thu hồi lô và định giá|Chỉ sàng lọc bộ khung, đặt giả thuyết tác dụng và tìm cây dân gian|Chỉ vận hành thường quy, đóng gói thương mại và giao hàng
+069|Chỉ khảo sát phản ứng trong bình nhỏ|Chỉ kiểm tra ý tưởng trước khi thiết kế pilot|Chỉ mở hồ sơ lưu hành mà chưa gắn quy trình với thiết bị
+070|GABA: dopamine; COMT: catechol-O-methyltransferase; MAOI: chất ức chế monoamine oxidase; DA: acid γ-aminobutyric|GABA: acid γ-aminobutyric; COMT: chất ức chế monoamine oxidase; MAOI: catechol-O-methyltransferase; DA: dopamine|GABA: chất ức chế monoamine oxidase; COMT: dopamine; MAOI: acid γ-aminobutyric; DA: catechol-O-methyltransferase
+071|Phản ứng: thiết bị; khối: cấu trúc hóa học; dây chuyền: tên dược chất|Phản ứng: công đoạn; khối: thiết bị; dây chuyền: phương trình phân tử|Ba sơ đồ đều chỉ thể hiện công thức cấu tạo
+072|Phenol là sản phẩm phụ, o-nitrophenol là sản phẩm cuối|Phenol là nguyên liệu, o-nitrophenol là trung gian chính, p-aminophenol là sản phẩm cuối|Paracetamol là nguyên liệu, phenol và p-nitrophenol là sản phẩm cuối
+073|Khử → acetyl hóa → nitro hóa|Acetyl hóa → nitro hóa → khử|Nitro hóa → acetyl hóa trực tiếp nhóm nitro → khử
+074|Đổi p-aminophenol thành p-nitrophenol|Tăng lượng sản phẩm nhờ xúc tác acetyl hóa|Làm tinh thể tan hết vào nước cái
+075|HNO₃; hệ hấp thụ NH₃|NaOH; hệ hấp thụ CO₂|H₂/Raney Ni; hệ hấp thụ O₂
+076|Ester hóa, thủy phân, khử carbonyl|Alkyl hóa, acyl hóa, ngưng tụ aldol|Oxy hóa, hydro hóa, chuyển vị
+077|Cả hai đều là thế nucleophile với NO₂⁻|Nhân thơm thế gốc NO₂; hydrocarbon no thế electrophile với NO₂⁺|Cả hai đều là phản ứng cộng vào liên kết C=C
+078|H₂/Raney Ni và LiAlH₄|NaOH, KOH và NaHCO₃|NaCl, KCl và BaSO₄
+079|Nhân thơm đi theo cơ chế gốc; mạch no đi theo thế electrophile của SO₃|Cả hai đều là thủy phân ester|Nhân thơm dùng nucleophile SO₃²⁻; mạch no chỉ trải qua phản ứng acid–base
+080|Cả hai bắt buộc là thế nucleophile|Nhân thơm chỉ thế gốc; mạch no chỉ thế electrophile|Cả hai bắt buộc là phản ứng cộng
+081|Alkyl hóa đưa RCO; acyl hóa đưa R|Cả hai chỉ đưa nhóm OH|Alkyl hóa đưa NO₂; acyl hóa đưa Cl
+082|RCOOH + R′OH → RCONHR′ + H₂O; xúc tác base|RCOOH + R′OH ⇌ RCOOR′ + H₂; xúc tác Pd|RCOOH + R′OH ⇌ ROR′ + CO₂ + H₂O; xúc tác NaOH
+083|ArNH₂ + NaNO₂ + HX → ArNO₂ + NaX + NH₃|ArNH₂ + NaNO₂ + 2HX → ArOH + NaX + N₂|ArNH₂ + NaNO₃ + 2HX → ArN₂⁺X⁻ + H₂O + NaX
+084|Trong acid: carboxylate và alcohol; trong kiềm: acid và alcohol|Trong acid: amide và alcohol; trong kiềm: ketone và nước|Cả hai cho aldehyde và alcohol
+085|RCOOH → RCHO → RCH₂OH → RCH₃|RCH₂OH → RCH₃ → RCOOH → RCHO|RCH₃ → RCHO → RCH₂OH → RCOOH
+086|Oxy hóa: H₂/xúc tác và LiAlH₄; khử: KMnO₄, H₂O₂, Na₂S|Oxy hóa: KMnO₄ và LiAlH₄; khử: H₂O₂, H₂/xúc tác, Na₂S|Oxy hóa: KMnO₄, Na₂S; khử: H₂O₂, H₂/xúc tác, LiAlH₄
+087|Wolff: C–O; Hofmann–Curtius: C–N; Baeyer–Villiger: C–C; Stevens: N–C|Wolff: C–C; Hofmann–Curtius: N–C; Baeyer–Villiger: C–O; Stevens: C–N|Wolff: C–N; Hofmann–Curtius: C–O; Baeyer–Villiger: N–C; Stevens: C–C
+088|Wolff|Stevens|Hofmann
+089|Imine|Carboxylate|Aryl diazonium
+090|H₂, O₂, N₂ và CO|NaOH, KOH, Ca(OH)₂ và Mg(OH)₂|AlCl₃, FeCl₃, ZnCl₂ và BF₃
+091|Ester chứa –COO–|Amide chứa –CONH–|Ether chứa –O–
+092|Nhóm C=O; xúc tác acid trong sơ đồ|Nhóm C≡N; xúc tác Pd trong sơ đồ|Nhóm C–Cl; xúc tác FeCl₃ trong sơ đồ
+093|Nhóm –CH₂CN; sản phẩm R–CH₂CN|Nhóm –CH₂–CH₃; sản phẩm R–CH₂–CH₃|Nhóm –CO–CH₂–CN; sản phẩm R–CO–CH₂–CN
+094|Hai liên kết đôi tích lũy dạng C=C=C|Hai liên kết đôi cách nhau bởi một nguyên tử carbon no|Một liên kết đơn không có hệ π
+095|Ban đầu là carbonyl α,β-không no; sau loại nước là β-hydroxy carbonyl|Ban đầu là amide; sau loại nước là nitrile|Ban đầu là ester; sau loại nước là carboxylate
+096|Blanc–aminomethyl hóa; Mannich–chloromethyl hóa; Claisen–ngưng tụ ester|Blanc–ngưng tụ ester; Mannich–aminomethyl hóa; Claisen–chloromethyl hóa|Blanc–chloromethyl hóa; Mannich–ngưng tụ ester; Claisen–aminomethyl hóa
+097|Ar–H → Ar–CH₂NH₂ bằng NH₃/H₂|Ar–H → Ar–COCH₃ bằng acetyl chloride|Ar–H → Ar–Cl bằng Cl₂/FeCl₃
+098|H₂SO₄, HCl và HNO₃|NaCl, KCl và BaSO₄|H₂, O₂ và N₂
+099|Alkyl hóa dùng RCOX tạo Ar–COR; acyl hóa dùng R–X tạo Ar–R|Cả hai dùng R–X và đều tạo Ar–R|Cả hai dùng RCOX và đều tạo Ar–COR
+100|R¹COX + R²–M → R¹COOR² + MX|R¹COX + R²–M → R¹CHO + R²X|R¹COX + R²–M → R¹R² + CO₂ + MX
+101|Mỗi công đoạn nối tiếp trên một nhánh duy nhất|Hai nhánh tạo cùng một chất rồi trộn để tăng hiệu suất|Mạch bên được gắn từ đầu và chỉ biến đổi cùng nhân quinoline
+102|Cl ở vị trí 7 bị thay và Cl ở vị trí 4 còn lại|Cả Cl ở vị trí 4 và 7 đều bị thay|Không có Cl nào bị thay, mạch bên chỉ tạo muối
+103|Nhóm nitro định hướng ortho và para|Chlor hóa diễn ra bằng thế gốc trên một mạch methyl có sẵn|Nhóm nitro định hướng duy nhất vào vị trí para
+104|Fe/HCl chlor hóa; POCl₃ khử nitro; gia nhiệt acetyl hóa|Fe/HCl decarboxyl hóa; POCl₃ nitro hóa; gia nhiệt khử amino|Fe/HCl oxy hóa amino; POCl₃ ester hóa; gia nhiệt hydro hóa
+105|Friedel–Crafts|Claisen|Baeyer–Villiger
+106|Ethylene → ethanol → ethyl chloride → acetaldehyde → acetic acid → ethyl acetate → ethyl acetoacetate|Ethylene → ethyl chloride → ethanol → acetic acid → acetaldehyde → ethyl acetate → ethyl acetoacetate|Ethylene → ethyl chloride → ethyl acetate → ethanol → acetaldehyde → ethyl acetoacetate
+107|Ngưng tụ aldol|Phản ứng Mannich|Phản ứng Blanc
+108|Thủy phân cho imine, sau đó loại N₂ để tạo ketone|Thủy phân trực tiếp tạo alcohol rồi CO₂ gắn vào mạch|Loại CO₂ từ ester chưa thủy phân là bước gắn thêm một carbon
+109|Ester qua trung gian carboxylate|Alcohol qua trung gian acid carboxylic|Nitrile qua trung gian amide
+110|Hai nhánh độc lập được ghép ở bước cuối|Mọi trung gian được điều chế song song rồi trộn một lần|Quy trình không có chất trung gian nào
+111|Cl₂/FeCl₃: benzylic; Cl₂/peroxide: nhân thơm|Cả hai chỉ chlor hóa vào nhân thơm|Cả hai chỉ chlor hóa vào mạch methyl
+112|Nhóm aryl nitrile trực tiếp Ar–CN|Nhóm benzyl alcohol Ar–CH₂OH|Nhóm carboxylic Ar–COOH
+113|Urea; tạo vòng chỉ có oxygen|Aniline; chỉ tạo muối và không tham gia tạo vòng|Acetamide; đưa nhóm carboxyl vào vòng
+114|CH₃ → COOC₂H₅ → COOH → CH₂OH|CH₃ → CH₂OH → CHO → CN|CH₃ → COOH → CONHNH₂ → COOC₂H₅
+115|Ester hóa acid với ethanol tạo ester mới|Thủy phân trong nước tạo acid carboxylic là sản phẩm cuối|Oxy hóa hydrazine để tạo aldehyde
+116|Lọc để thu acid dưới dạng MnO₂; acid hóa để tạo ester|Lọc để giữ mangan hòa tan; acid hóa để tạo carboxylate|Lọc để thu sản phẩm hydrazide; acid hóa để tăng pH
+117|Thông tin về ái lực với thụ thể|Số liệu hấp thu và thải trừ trên người|Thông tin định danh các đồng phân đối quang
+118|Slide kết luận tăng hiệu lực trong mọi trường hợp; ví dụ RCOOH → RCH₂OH|Slide mô tả đưa nhóm acyl thay alkyl; ví dụ RNH₂ → RNHCOCH₃|Slide mô tả oxy hóa nhóm chức; ví dụ RCH₂OH → RCHO
+119|Bậc 3 > bậc 2 > bậc 1 theo slide|Bậc 2 > bậc 3 > bậc 1 theo slide|Cả ba bậc luôn có hiệu lực bằng nhau
+120|Alcohol kích thích mạnh hơn hydrocarbon; bậc 3 mạnh nhất theo slide|Alcohol kích thích yếu hơn hydrocarbon; bậc 3 mạnh nhất theo slide|Alcohol và hydrocarbon kích thích ngang nhau; bậc alcohol không liên quan
+121|Vì aldehyde luôn ít phản ứng hơn ketone|Vì aldehyde không có nhóm carbonyl|Vì ketone và aldehyde có công thức cấu tạo giống nhau
+122|Có thể giảm ion hóa trong mọi môi trường và luôn giảm độ tan nước|Độ tan không thể đổi khi thêm nhóm acid|Tăng độ tan nước luôn đồng nghĩa không còn tác dụng sinh học
+123|Slide gọi RCOCl là “âm” và halogen ở vị trí liên hợp là “dương”|Slide phân loại theo màu của nguyên tố halogen|Slide dùng “âm” và “dương” để mô tả điện tích toàn phân tử
+124|Tăng dần theo số thứ tự nguyên tố|Không thay đổi theo số thứ tự nguyên tố|Tăng rồi giảm tại carbon thứ sáu của mạch
+125|Vì chuyển vị trí nhóm thế luôn thay công thức phân tử|Vì mọi đồng phân vị trí có cấu hình đối quang khác nhau|Vì vị trí nhóm thế không ảnh hưởng hình học hoặc tương tác
+126|Vì hai đối quang có số nguyên tử khác nhau|Vì tất cả thụ thể đều đối xứng hoàn toàn|Vì một đối quang luôn có khối lượng mol lớn hơn
+127|Cis đặt hai nhóm khác phía hơn trans|Cis có công thức phân tử khác trans|Trans luôn có hoạt tính mạnh hơn cis trong mọi mô hình
+128|Axial/equatorial chỉ cùng/khác phía; cis/trans chỉ hướng trục/xích đạo|Cả hai luôn mô tả cùng một đặc tính và đổi đồng thời khi lật vòng|Axial/equatorial mô tả khối lượng; cis/trans mô tả số nhóm chức
+129|Có, vì bỏ một OH không đổi bất kỳ tương tác nào|Có, nếu cấu trúc vẫn còn vòng thơm|Có, nếu cả hai hợp chất đều có một nhóm amino
+130|Độ tan; khối lượng viên; màu; mùi; độ cứng; độ rã; độ ẩm; hạn dùng; bao bì|Điện tích; hấp thu; phân bố; chuyển hóa; thải trừ; liều; thử nghiệm; hồ sơ; đăng ký|Độ tan; hoạt tính nhiệt động; hằng số phân ly; khoảng cách; giá bán; bao gói; khối lượng lô; công suất; độ ẩm
+131|Dạng muối ít tan làm giải phóng tức thời nhanh hơn|Procaine làm penicillin đổi thành vitamin tan trong nước|Kéo dài tác dụng vì thuốc phân hủy hoàn toàn ngay sau dùng
+132|Estradiol và stilbestrol|Epinephrine và norepinephrine|Estradiol benzoate và penicillin procaine
+133|Chỉ so sánh khối lượng phân tử|Chỉ so sánh độ tinh khiết hóa học|Chỉ so sánh cường độ tối đa, bỏ qua hấp thu và thời gian
+134|Loại lệ thuộc cấu trúc chỉ dựa vào áp suất hơi; loại không đặc hiệu chỉ dựa vào thụ thể đặc hiệu|Cả hai loại chỉ phụ thuộc khối lượng phân tử|Hai loại được phân biệt bằng đường tiêm hay đường uống
+135|Khả năng tạo liên kết ion với mọi protein huyết tương|Số lần ion hóa của acid mạnh trong nước|Khối lượng bao bì và độ cứng của viên
+136|PV = RT; a và b đều bằng hằng số khí| (P − a/V²)(V + b) = RT; a hiệu chỉnh lực hút, b hiệu chỉnh thể tích| (P + a/V)(V − b²) = RT; a hiệu chỉnh thể tích, b hiệu chỉnh lực hút
+137|Tác dụng kháng đông của chất rắn|Tác dụng hạ đường huyết của insulin|Tác dụng điều trị sốt rét của quinine
+138|Điểm mà tất cả các chất có cùng độ tan|Điểm tại đó pH luôn bằng 7|Điểm tác dụng bắt đầu tăng đều và không giảm nữa
+139|2 carbon|4 carbon|12 carbon
+140|Nhiệt độ sôi và khối lượng bao bì|Số nguyên tử oxygen và thời gian bảo quản|Độ cứng viên và tỷ lệ tá dược
+141|pH = pKa + log([HA]/[A⁻])|pH = pKa − log([A⁻] + [HA])|pH = pKa × [A⁻]/[HA]
+142|pH = pKa + log([BH⁺]/[B])|pH = pKa − log([B] + [BH⁺])|pH = pKa × [BH⁺]/[B]
+143|A⁻/HA = 100; HA ≈ 0,99%|A⁻/HA = 0,01; HA ≈ 0,99%|A⁻/HA = 1; HA = 50%
+144|0,99%|50,00%|90,00%
+145|99,01%|50,00%|9,09%
+146|0,01; BH⁺ ưu thế khoảng 99,01%|100; BH⁺ ưu thế khoảng 99,01%|1; hai dạng bằng nhau
+147|Acid ở hoàn toàn dạng ion hóa|Base ở hoàn toàn dạng trung hòa|Hai dạng chỉ có tỉ lệ 1:1 tại pH = 7
+148|6,95|6,00|4,00
+149|7,05|8,00|9,90
+150|Dùng để quy đổi khối lượng mol thành liều điều trị|Dùng để xác định mọi thuốc có cùng thời gian tác dụng|Dùng để tính áp suất của khí lý tưởng
+151|14,5 Å: X–N; 7,2 Å: nhóm bắt chước curare; 5 Å: CO–N|14,5 Å: CO–N; 7,2 Å: X–N; 5 Å: dẫn xuất estrogen|Cả ba khoảng cách đều chỉ mô tả cùng một cặp nhóm X–N
+152|Morphine, colchicine, rutin, caffeine|Insulin, heparin, albumin, γ-globulin|Benzene, thiophene, pyridine, nitrobenzene
+153|Chỉ có một nhóm carboxyl, không cần bố trí không gian|Chỉ có một chuỗi mềm tự do, không cần tâm base|Chỉ có vòng thơm, không có vai trò của phần hydrocarbon hoặc định hướng
+154|Chỉ khối lượng viên và thời gian rã|Chỉ số liên kết C–H và độ cứng của tinh thể|Màu nhãn, thể tích bao bì và liều tối đa
+155|Hấp thụ tia tử ngoại tạo vitamin D₃ và gây mê bằng ether|Oxy hóa paracetamol và thủy phân aspirin|Định hướng meta của nitrobenzene và chuyển vị Wolff
+156|Ngăn tạo phức hoạt hóa, bảo toàn mọi liên kết và làm sản phẩm kém bền|Chỉ thay đổi màu, không ảnh hưởng quá trình biến đổi liên kết|Chỉ tăng độ tan, đồng thời làm mọi liên kết bền hơn
+157|−1,0 đến +1,5 V, cực đại +0,30 V|−0,15 đến +0,10 V, cực đại −0,03 V|+0,10 đến +0,15 V, cực đại +0,15 V
+158|Cholecalciferol|Ergosterol|Acid pantothenic
+159|Đẳng cấu điện tử chỉ xét cùng tác dụng, đẳng cấu sinh học chỉ xét số electron|Cả hai khái niệm yêu cầu hai phân tử có công thức y hệt|Đẳng cấu sinh học chỉ dựa vào độ tan, không xét tác dụng
+160|Mọi thay thế đẳng cấu đều cho hoạt tính mạnh hơn|Mọi thay thế đẳng cấu đều giữ nguyên hoạt tính|Phép thay chỉ làm mất hoạt tính nếu hai nhóm có cùng số electron
+161|Langmuir: đẳng cấu sinh học; Friedman: đẳng cấu điện tử|Langmuir: phương trình khí thực; Friedman: điểm gãy|Cả hai chỉ dùng để gọi tên hệ số phân bố
+162|–O–, –S–, –NH–, –CH₂–, –Se–, –Te–|–N=, –P=, –As=, –Sb=, –CH=|Carbon bốn lần thế và nitrogen amoni bậc bốn
+163|Br > H > Cl > F|Cl > F > Br > H|H > F > Cl > Br
+164|Vì CH₃ và Cl là cùng một nguyên tố|Vì CH₃ và Cl có cùng khối lượng mol|Vì phép thay CH₃/Cl luôn giữ nguyên mọi hoạt tính sinh học
+165|F, Cl, Br, I, OH, SH, NH₂, PH₂, CH₃|–N=, –P=, –As=, –Sb=, –CH=|Carbon bốn lần thế và nitrogen amoni bậc bốn
+166|112°±2°; 108°±3°; 111°±3°; 115°±3°|108°±3°; 112°±2°; 115°±3°; 111°±3°|115°±3°; 111°±3°; 112°±2°; 108°±3°
+167|Thioester, ketone, amide|Amide, thioester, ketone|Ketone, amide, thioester
+168|O và NH mạnh nhất; S và CH₂ mất tác dụng|S mạnh nhất; O, NH và CH₂ có tác dụng như nhau|Cả bốn chất có hiệu lực như nhau vì cùng bộ khung
+169|–O–, –S–, –NH–, –CH₂–|F, Cl, Br, I, OH|Carbon bốn lần thế và nitrogen amoni bậc bốn
+170|Sulfapyridine > sulfadiazine > dẫn xuất vòng benzene|Dẫn xuất vòng benzene > sulfapyridine > sulfadiazine|Ba chất có hoạt tính ngang nhau trong ví dụ
+171|X=CH luôn làm mất mọi hoạt tính|Chỉ X=N có tác dụng kháng khuẩn được nêu|Cả hai được nêu vì có tác dụng gây mê
+172|Hai halogen đơn hóa trị F và Cl|O và S nối hai nhóm hữu cơ|–N= và –CH= thuộc nhóm hóa trị ba
+173|–COOH, –SO₃H và –SO₂NH₂; ví dụ pantoyltaurine|F, Cl, Br, I; ví dụ các halogen một hóa trị|Carbon bốn lần thế và nitrogen amoni bậc bốn; ví dụ acetylcholine
+174|Đẳng cấu cổ điển hóa trị một; thay F bằng Cl|Đẳng cấu cổ điển hóa trị hai; thay –O– bằng –S–|Đảo ester; thay –COO– bằng –OCO–
+175|OH → F|NH₂ → NO₂|CH₃ → Cl
+176|Vì F có kích thước lớn nhất trong các halogen|Vì H và F luôn có cùng độ âm điện|Vì thay H bằng F không bao giờ làm đổi phân bố electron
+177|Đảo chiều của cùng một nhóm ester|Thay một halogen bằng một halogen khác|Thay carbon bốn lần thế bằng nitrogen amoni bậc bốn
+178|Có, vì alphaprodine không còn nhóm carbonyl|Có, vì ester và ether là cùng một nhóm chức|Có, vì cả hai chất chỉ còn nhóm –O– giữa hai carbon no
+179|Hai nhóm chắc chắn đẳng cấu điện tử và có cùng công thức|Hai nhóm luôn tạo hiệu lực sinh học bằng nhau|Hai nhóm được so sánh vì có cùng điện tích toàn phần và cùng số nguyên tử oxygen
+180|Cả hai hoạt hóa vòng và đều hướng ortho/para mạnh hơn benzene|Cả hai có phản ứng thế electrophile nhanh hơn benzene|Cả hai chỉ phản ứng bằng thế gốc tại nhóm methyl
+221|Tạo amide tại nhóm COOH|Ether hóa riêng nhóm OH phenol|Oxy hóa nhóm COOH thành aldehyde
+222|Nước là chất đầu nên thúc đẩy tạo thêm ester|Nước chỉ làm tăng hiệu suất mà không ảnh hưởng cân bằng|Nước làm phản ứng trở thành không thuận nghịch về phía ester
+223|Dịch chuyển về phía acid và alcohol|Làm thay đổi hằng số cân bằng ở cùng nhiệt độ|Trung hòa xúc tác acid bằng một đương lượng base
+224|NaOH yếu hơn NaHCO₃ nên không trung hòa được acid|NaOH chỉ làm đổi màu, không thể tác động đến ester|NaOH và NaHCO₃ luôn cho kết quả giống hệt khi rửa ester
+225|Nhóm COOH tạo N-acetyl amide|Nhóm COOH tạo alkyl ether, OH phenol không đổi|Vòng thơm bị acetyl hóa trực tiếp ở carbon kề OH
+226|(CH₃CO)₂O + H₂O → CH₃COOH + CH₃OH|(CH₃CO)₂O + H₂O → CH₃COOH + CO₂|(CH₃CO)₂O + H₂O → 2 CH₃CHO + O₂
+227|Paracetamol: acetyl hóa O tạo ester; aspirin: acetyl hóa N tạo amide|Cả hai là N-acetyl hóa tạo amide|Cả hai là O-acetyl hóa tạo ester
+228|Vì K₂CO₃ hoàn toàn không có ion carbonate|Vì K₂CO₃ luôn tạo thêm tạp chloride trong NaCl|Vì thay cation K⁺ bằng Na⁺ không bao giờ ảnh hưởng chỉ tiêu tinh khiết
+229|Nguồn lá chè–caffeine và phản ứng diazo hóa|Nguồn tỳ giải–diosgenin và phản ứng tạo ketene|Nguồn hạt gấc–β-carotene và thủy phân ester
+230|Sự khác nhau về thể tích bao bì|Sự giống nhau về độ tan của chất và tạp|Sự thay đổi số nguyên tử carbon trong aspirin
+231|TI chuẩn luôn bằng DC/DT bất kể ý nghĩa ký hiệu|TI chuẩn luôn bằng ED₅₀/TD₅₀|TI chỉ là độ tan trong nước chia độ tan trong dầu
+232|NADPH là NAD phosphate dạng oxy hóa; DOPA là dopamine|NADPH là nicotinamide adenine dinucleotide không phosphoryl hóa; DOPA là epinephrine|NADPH là adenosine triphosphate dạng khử; DOPA là 3,4-dihydroxyphenylacetic acid
+233|Có, vì mọi ví dụ về đối quang trong slide mặc nhiên đã kiểm chứng|Có, vì L luôn hoạt tính cao hơn D trong mọi hệ sinh học|Có, vì hai đối quang luôn có hoạt tính sinh học như nhau

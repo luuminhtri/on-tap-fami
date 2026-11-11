@@ -84,7 +84,11 @@ function loadScope() {
     session.order.push(...(shuffled ? shuffle(added) : added).map(q => q.id));
     session.options ||= {};
     for (const q of list) {
-        const current = session.options[q.id] || (shuffled ? shuffle(q.options) : q.options).map(option => option.id);
+        const savedOptions = session.options[q.id];
+        // Answers saved before this question had choices cannot be graded as selections.
+        if (q.convertedToQuiz && !savedOptions?.length) delete session.answers[q.id];
+        const current = savedOptions?.length
+            ? savedOptions : (shuffled ? shuffle(q.options) : q.options).map(option => option.id);
         const ids = new Set(q.options.map(option => option.id));
         session.options[q.id] = [
             ...current.filter(id => ids.has(id)),
@@ -295,10 +299,7 @@ function renderProgress() {
     $('done').textContent = `${done.length}/${questions.length}`; $('right').textContent = right; $('wrong').textContent = gradedDone.length - right; $('percent').textContent = pct + '%'; $('progress').style.width = pct + '%';
     $('grid').innerHTML = questions.map((q, i) => `<button class="qnav ${done.includes(q) ? 'done' : ''} ${i === session.index ? 'current' : ''}" ${i === session.index ? 'aria-current="step"' : ''} aria-label="Câu ${i + 1}, ${done.includes(q) ? 'đã làm' : 'chưa làm'}" data-index="${i}">${i + 1}</button>`).join('');
     $('grid').querySelectorAll('button').forEach(b => b.onclick = () => go(Number(b.dataset.index)));
-    if (window.STUDY_MODE === 'ch4510') {
-        const reviewed = done.filter(q => q.type === 'open').length;
-        $('complete').textContent = reviewed ? `Đã đối chiếu ${reviewed} câu trả lời mở` : '';
-    } else if (mockExam && session.submitted) {
+    if (mockExam && session.submitted) {
         const blank = questions.filter(q => !answer(q).selected.length).length;
         const score = (right * 10 / questions.length).toLocaleString('vi-VN', { maximumFractionDigits: 2 });
         $('complete').textContent = `Đã nộp · ${score}/10 · Đúng ${right}/${questions.length} · Bỏ trống ${blank}`;
